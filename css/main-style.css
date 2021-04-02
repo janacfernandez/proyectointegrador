@@ -1,6 +1,7 @@
 /*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
 *{
     box-sizing:border-box;
+    margin:0px;
 }
 
 /*Reseteamos valores a 0 y retiramos estilos predeterminados para trabajarlos posteriormente a nuestra voluntad*/
