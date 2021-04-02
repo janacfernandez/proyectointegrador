@@ -1,0 +1,127 @@
+/*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
+*{
+    box-sizing:border-box;
+}
+
+/*Reseteamos valores a 0 y retiramos estilos predeterminados para trabajarlos posteriormente a nuestra voluntad*/
+ul, li, a{
+    list-style:none;
+    text-decoration:none;
+    margin:0px;
+    padding:0px;
+}
+
+/*Con flexbox diseñaremos el layout del header para que el logo y el menu(nav) queden alineados en el centro, a los extremos del mismo y ocupando el 100% del ancho de la pantalla*/
+header{
+    background-color:black;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    align-items:center;  
+}
+
+/*A continuación se trabajará con cada elemento del header para lograr la disposición deseada, anchos, espacios,alineaciones,tamaños,etc.*/
+header nav {
+    width:20%;  
+}
+
+header nav ul{
+    display:flex;
+}
+
+header nav a{
+    font-family: 'Heebo', sans-serif;
+    color:rgb(255, 255, 255);
+    padding:20px;
+}
+
+header nav a:hover{
+    color:rgb(186, 4, 4)
+}
+
+header img{
+    width:9%;
+    flex-grow:0;
+    margin-left:30px;
+}
+
+/*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevament usamos flexbox para poder ubicar títulos y botones según lo deseado*/
+.sec-ppal{
+    background-image:linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
+      ), url("images/pexels-sebastian-ervi-1763075.jpg");
+    height:85vh;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+/*Le damos estilo al título principal y al secundario*/
+.sec-ppal h1{
+    color: white;
+    font-size:5.5em;
+    margin-bottom:0px;
+    font-family: 'Heebo', sans-serif;
+    text-shadow: 5px 5px 7px black;
+}
+
+.sec-ppal h2{
+    color:white;
+    font-family: 'Heebo', sans-serif;
+    font-size:2em;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 3px;
+}
+
+/*Con flexbox diseñamos la disposición de los botones*/
+.sec-ppal .but{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:60%;   
+}
+
+/*Le damos estilo al botón principal*/
+.sec-ppal .but-ppal{
+    font-family: 'Open Sans', sans-serif;
+    width:30%;
+    text-align:center;
+    font-size:20px;
+    color:white;
+    background-color:rgba(186, 4, 4, 0.8);
+    border-radius:30px;
+    box-shadow:black;
+    padding:17px;
+    margin:20px;
+}
+
+/*La pseudo-clase :hover nos permite determinar el estilo de un link cuando el usuario se posiciona sobre el mismo con el ratón, en este caso cambia a un fondo blanco con una tipografía bold*/
+.sec-ppal .but-ppal:hover{
+    color:black;
+    font-weight:bold;
+    background-color:rgba(255, 255, 255, 0.7);
+}
+
+/*Le damos estilo al botón secundario*/
+.sec-ppal .but-sec{
+    font-family: 'Open Sans', sans-serif;
+    width:30%;
+    text-align:center;
+    font-size:20px;
+    color:white;
+    border-radius:30px;
+    box-shadow:black;
+    border:solid 1px white;
+    padding:15px;
+    margin:20px;
+}
+
+/*Nuevamente usamos la pseudo-clase :hover para darle estilo al botón secundario cuando el usuario se posa sobre él con el ratón*/
+.sec-ppal .but-sec:hover{
+    color:black;
+    font-weight:bold;
+    background-color:rgba(255, 255, 255, 0.7);
+}
