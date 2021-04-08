@@ -1,131 +1,203 @@
+ /********************************************************************************************************
+*                                               ESTILOS INDEX
+*****************************************************************************************************¨****/
+
 /*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
 *{
-    box-sizing:border-box;
-    margin:0px;
-    padding:0px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*Reseteamos valores a 0 y retiramos estilos predeterminados para trabajarlos posteriormente a nuestra voluntad*/
 ul, li, a{
-    list-style:none;
-    text-decoration:none;
+    list-style: none;
+    text-decoration: none;
 }
 
 /*Utilizaremos flexbox para lograr el layout deseado de nuestro header en la versión mobile*/
 header{
-    background-color:black;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:5px 0px 0px 0px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px 0px 0px;
 }
 
 header nav{
-    width:100%;
-    padding:5px;
+    width: 100%;
+    padding: 5px;
 }
 
 /*Utilizaremos flexbox para lograr un menú horizontal*/
 header nav ul{ 
-    width:100%;
-    display:flex;
-    justify-content:space-around;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 header nav a{
-    font-family:'Heebo', sans-serif;
-    color:rgb(255, 255, 255);
-    padding:20px;
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 20px;
 }
 
 header nav a:hover{
-    color:rgb(186, 4, 4)
+    color: rgb(186, 4, 4)
 }
 
 header img{
-    max-width:100px;
-    margin-bottom:10px;
+    max-width: 100px;
+    margin: 7px 0px;
 }
 
 /*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevamente usamos flexbox para poder ubicar títulos y botones según lo deseado*/
 .sec-ppal{
-    background-image:linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
+    background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
       ), url("../images/pexels-sebastian-ervi-1763075.jpg");
-    height:85vh;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Le damos estilo al título principal y al secundario*/
 .sec-ppal h1{
-    text-align:center;
-    color:white;
-    font-family:'Heebo', sans-serif;
-    font-size:3em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 3em;
     text-shadow: 5px 5px 7px black;
 }
 
 .sec-ppal h2{
-    text-align:center;
-    color:white;
-    font-family:'Heebo', sans-serif;
-    font-size:1em;
-    text-shadow:1px 1px 2px black;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px black;
     letter-spacing: 3px;
-    margin:12px;
+    margin: 12px;
 }
 
 /*Con flexbox diseñamos la disposición de los botones*/
 .sec-ppal .but{
-    display:flex;
-    width:100%;
-    flex-direction:column;
-    align-items:center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;  
 }
 
 /*Le damos estilo al botón principal*/
 .sec-ppal .but-ppal{
     font-family: 'Open Sans', sans-serif;
-    width:60%;
-    text-align:center;
-    font-size:1em;
-    color:white;
-    background-color:rgba(186, 4, 4, 0.8);
-    border-radius:30px;
-    padding:17px;
-    margin:20px 0px 20px 0px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(186, 4, 4, 0.8);
+    border-radius: 30px;
+    padding: 17px;
+    margin: 20px 0px 20px 0px;
 }
 
 /*La pseudo-clase :hover nos permite determinar el estilo de un link cuando el usuario se posiciona sobre el mismo con el ratón, en este caso cambia a un fondo blanco con una tipografía bold*/
 .sec-ppal .but-ppal:hover{
-    color:black;
-    font-weight:bold;
-    background-color:rgba(255, 255, 255, 0.7);
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Le damos estilo al botón secundario*/
 .sec-ppal .but-sec{
     font-family: 'Open Sans', sans-serif;
-    width:60%;
-    text-align:center;
-    font-size:1em;
-    color:white;
-    border-radius:30px;
-    box-shadow:black;
-    border:solid 1px white;
-    padding:15px;
-    margin:auto;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    border-radius: 30px;
+    box-shadow: black;
+    border: solid 1px white;
+    padding: 15px;
+    margin: auto;
 }
 
 /*Nuevamente usamos la pseudo-clase :hover para darle estilo al botón secundario cuando el usuario se posa sobre él con el ratón*/
 .sec-ppal .but-sec:hover{
-    color:black;
-    font-weight:bold;
-    background-color:rgba(255, 255, 255, 0.7);
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma*/
+/*Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
+.sec-sec{
+    margin: 0px 20px;
+}
+
+.sec-sec h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #676770;
+}
+
+.sec-sec h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #8e8e9c;
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.circles h4{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #676770;
+    text-transform: uppercase;
+    margin: 10px;
+    letter-spacing: 5px;
+}
+
+/*Utilizaremos este selector avanzado para decir que queremos que le aplique las siguientes reglas de estilo a todas las imagenes que esten en un div cuya class empiece exactamente con la cadena "icon"*/
+div[class^="icon"] img{
+    background-color: rgb(186, 4, 4);
+    width: 20%;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px red;
+    margin: 15px 0px;
+} 
+
+div[class^="icon"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px #f7dcdc;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.circles p{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    color: #676770;
 }
