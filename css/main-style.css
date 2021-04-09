@@ -1,6 +1,6 @@
  /********************************************************************************************************
 *                                               ESTILOS INDEX
-*****************************************************************************************************¨****/
+**********************************************************************************************************/
 
 /*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
 *{
@@ -66,6 +66,26 @@ header img{
     align-items: center;
 }
 
+header img{
+    animation-duration: 3s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes logo{
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotateY(0deg);
+    }
+    /*50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotateY(180deg);*/
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotateY(360deg);
+        }
+}
+
 /*Le damos estilo al título principal y al secundario*/
 .sec-ppal h1{
     text-align: center;
@@ -115,6 +135,7 @@ header img{
     color: black;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 0 0 2px rgb(186, 4, 4);
 }
 
 /*Le damos estilo al botón secundario*/
@@ -142,7 +163,11 @@ header img{
 /*Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma*/
 /*Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
 .sec-sec{
-    margin: 0px 20px;
+    padding: 0px 20px;
+    background-image: url("../images/background.jpg");
+    /*background-repeat:no-repeat;
+    background-size: cover;
+    VA PARA RESPONSIVE*/
 }
 
 .sec-sec h2{
@@ -151,8 +176,8 @@ header img{
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     color: #676770;
 }
 
@@ -179,6 +204,7 @@ header img{
 /*Utilizaremos este selector avanzado para decir que queremos que le aplique las siguientes reglas de estilo a todas las imagenes que esten en un div cuya class empiece exactamente con la cadena "icon"*/
 div[class^="icon"] img{
     background-color: rgb(186, 4, 4);
+    max-width: 100px;
     width: 20%;
     padding: 10px;
     border-radius: 50%;
@@ -201,3 +227,60 @@ div[class^="icon"]{
     margin: 10px;
     color: #676770;
 }
+
+
+/*Comenzamos a darle estilo a la sección de artistas*/
+
+.artists{
+    padding: 20px;
+    background-color: #2b2b2b;  
+}
+
+.artists h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    letter-spacing: 3px;
+    padding-bottom:10%;
+}
+
+.artists h3{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
+div[class^="artist"] img{
+    filter: brightness(60%);
+    -webkit-transition: all .9s ease; /* Utilizaremos esto para safari y para chrome */
+    -moz-transition: all .9s ease; /* Utilizaremos esto para Firefox */
+    -o-transition: all .9s ease; /* Utilizaremos esto para I. Explorer 9 */
+    -ms-transition: all .9s ease; /* Utilizaremos esto para Opera */
+    transition: all .9s ease; /*Este es genérico para maximizar compatibilidad*/
+    width: 100%;
+    border-radius: 5%;
+}
+
+/*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
+div[class^="artist"]:hover img {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    filter: brightness(100%);
+}
+
+div[class^="artist"] {
+    width:100%;
+    overflow: hidden;   
+}
+
+
