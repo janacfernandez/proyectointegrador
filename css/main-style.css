@@ -202,7 +202,7 @@ header img{
 }
 
 /*Utilizaremos este selector avanzado para decir que queremos que le aplique las siguientes reglas de estilo a todas las imagenes que esten en un div cuya class empiece exactamente con la cadena "icon"*/
-div[class^="icon"] img{
+article[class^="icon"] img{
     background-color: rgb(186, 4, 4);
     max-width: 100px;
     width: 20%;
@@ -212,7 +212,7 @@ div[class^="icon"] img{
     margin: 15px 0px;
 } 
 
-div[class^="icon"]{
+article[class^="icon"]{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,9 +242,9 @@ div[class^="icon"]{
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    color:white;
+    color: white;
     letter-spacing: 3px;
-    padding-bottom:10%;
+    padding-bottom: 10%;
 }
 
 .artists h3{
@@ -257,7 +257,7 @@ div[class^="icon"]{
 }
 
 /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
-div[class^="artist"] img{
+.artist img{
     filter: brightness(60%);
     -webkit-transition: all .9s ease; /* Utilizaremos esto para safari y para chrome */
     -moz-transition: all .9s ease; /* Utilizaremos esto para Firefox */
@@ -269,7 +269,7 @@ div[class^="artist"] img{
 }
 
 /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
-div[class^="artist"]:hover img {
+.artist:hover img {
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
     -ms-transform: scale(1.25);
@@ -278,9 +278,44 @@ div[class^="artist"]:hover img {
     filter: brightness(100%);
 }
 
-div[class^="artist"] {
+.artist {
     width:100%;
     overflow: hidden;   
 }
 
 
+
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA ARTISTA
+**********************************************************************************************************/
+.sec-art-ppal{
+    height:85vh;
+    background-image: url("../images/bruno-mars-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sec-art-ppal h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+    padding-left: 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sec-art-sec{
+    background-color: black;
+    padding: 20px;
+}
+
+.sec-art-sec p{
+    color:white;
+    text-align: justify;
+}
