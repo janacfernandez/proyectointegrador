@@ -21,7 +21,18 @@
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Conocenos</a></li>
+                    <li><a href="#art-sec">Artistas</a></li>
+                    <li><a href="#canc-sec">Canciones</a></li>
+                    <li><a href="#">Albumes</a></li>
+                    <li><a href="#">Géneros</a></li>
+                    <li><a href="#">Mi playlist</a></li>
+                    <li><a href="about-us.html">Conocenos</a></li>
+                    <li>
+                    <form>
+                        <input type="text" name="search" placeholder="Buscar">
+                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"/></button>
+                    </form>
+                    </li>
                 </ul>
             </nav>  
         </header>
@@ -34,62 +45,64 @@
                 <h1 lang="en">Wow music</h1>
                 <h2>Tus canciones favoritas en todo momento y lugar</h2>
                 <div class="but">
-                <a href="#" class="but-ppal">Comenzar ahora</a>
-                <a href="#" class="but-sec">Saber más</a>
+                <a href="/#art-sec" class="but-ppal">Comenzar ahora</a>
+                <a href="/#sec" class="but-sec">Saber más</a>
                 </div>
             </section>
-            <section class="sec-sec">
+            <section class="sec-sec" id="sec">
                 <h2>Explora la mejor música</h2>
                 <h3>Disfrutá de los mejores exitos del mundo musical</h3>
-                <div class="circles">
-                    <div class="icon-1">
+                <section class="circles">
+                    <article class="icon-1">
                         <img src="https://img.icons8.com/material/80/ffffff/sound-cloud-.png" alt="Icono nube musical">
                         <h4 lang="en">Top songs</h4>
                         <p>Las canciones más escuchadas</p>
-                    </div>
-                    <div class="icon-2">
+                    </article>
+                    <article class="icon-2">
                         <img src="https://img.icons8.com/material/80/ffffff/dj.png" alt="Icono DJ"/>
                         <h4 lang="en">Top artists</h4>
                         <p>Los mejores artistas de clase mundial de todos los tiempos</p>  
-                    </div>
-                    <div class="icon-3">
+                    </article>
+                    <article class="icon-3">
                         <img src="https://img.icons8.com/material/80/ffffff/80s-music.png" alt="Icono album"/>
                         <h4 lang="en">Top albums</h4>
                         <p>Los albumes que han hecho historia</p>
-                    </div>
-                    <div class="icon-4">
+                    </article>
+                    <article class="icon-4">
                         <img src="https://img.icons8.com/material/80/ffffff/photos-folder--v1.png" alt="Icono de carpeta musical"/>
                         <h4 lang="en">Playlist personalizadas</h4>
                         <p>Armá la tuya con las canciones que más te gustan</p>
-                    </div>
-                </div>
+                    </article>
+                </section>
             </section>
-            <section class="artists">
+            <section class="artists" id="art-sec">
                 <h2>Nuestros artistas</h2>
-                <div class="artist-1">
-                    <img src="images/bob_marley.jpg" alt="Bob Marley">
+                <ul>
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/bob_marley.jpg" alt="Bob Marley"></a>
                     <h3>Bob Marley</h3>
                 </div>
-                <div class="artist-2">
-                    <img src="images/bruno_mars.jpg" alt="Bruno Mars">
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/bruno_mars.jpg" alt="Bruno Mars"></a>
                     <h3>Bruno Mars</h3>
-                </div>
-                <div class="artist-3">
-                    <img src="images/frank_sinatra.jpg" alt="Frank Sinatra">
+                </li>
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/frank_sinatra.jpg" alt="Frank Sinatra"></a>
                     <h3>Frank Sinatra</h3>
-                </div>
-                <div class="artist-4">
-                    <img src="images/freddie_mercury.png" alt="Freddie Mercury">
+                </li>
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/freddie_mercury.png" alt="Freddie Mercury"></a>
                     <h3>Freddie Mercury</h3>
-                </div>
-                <div class="artist-5">
-                    <img src="images/michael_jackson.jpg" alt="Michael Jackson">
+                </li>
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/michael_jackson.jpg" alt="Michael Jackson"></a>
                     <h3>Michael Jackson</h3>
-                </div>
-                <div class="artist-6">
-                    <img src="images/the-weekend.jpg" alt="The weekend">
+                </li>
+                <li class="artist">
+                    <a href="detail-artist.html"><img src="images/the-weekend.jpg" alt="The weekend"></a>
                     <h3>The weekend</h3>
-                </div>
+                </li>
+                </ul>
             </section>
 
             <!--inicio sección canciones-->
@@ -129,7 +142,7 @@
                 </li>
             </ul>
 
-    </section>
+            </section>
         </main>
     <!--------------------------------------Fin Principal-------------------------------------->
         <footer>

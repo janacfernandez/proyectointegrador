@@ -27,6 +27,7 @@ header{
 header nav{
     width: 100%;
     padding: 5px;
+    border-top:2px solid rgb(186, 4, 4);
 }
 
 
@@ -34,18 +35,36 @@ header nav{
 header nav ul{ 
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    margin:auto;
+}
+
+header nav ul li{
+    width: 45%;  
+
 }
 
 header nav a{
     font-family: 'Heebo', sans-serif;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    padding: 20px;
+    margin: 20px;
+}
+
+
+header nav ul form input {
+    width: 60%;
+    margin-left: 20px;
+}
+
+header nav ul form img{
+    margin:0px;
+    padding: 0px;
 }
 
 header nav a:hover{
-    color: rgb(186, 4, 4)
+    color: rgb(186, 4, 4);
 }
 
 header img{
@@ -57,7 +76,8 @@ header img{
 .sec-ppal{
     background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
       ), url("../images/pexels-sebastian-ervi-1763075.jpg");
-    height: 85vh;
+   /* height: 85vh; RESPONSIVE*/
+    height:80vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -203,7 +223,7 @@ header img{
 }
 
 /*Utilizaremos este selector avanzado para decir que queremos que le aplique las siguientes reglas de estilo a todas las imagenes que esten en un div cuya class empiece exactamente con la cadena "icon"*/
-div[class^="icon"] img{
+article[class^="icon"] img{
     background-color: rgb(186, 4, 4);
     max-width: 100px;
     width: 20%;
@@ -213,7 +233,7 @@ div[class^="icon"] img{
     margin: 15px 0px;
 } 
 
-div[class^="icon"]{
+article[class^="icon"]{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,14 +263,15 @@ div[class^="icon"]{
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    color:white;
+    color: white;
     letter-spacing: 3px;
-    padding-bottom:10%;
+    padding-bottom: 10%;
 }
 
 .artists h3{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
     color: white;
     font-weight: 300;
     text-transform: uppercase;
@@ -258,19 +279,19 @@ div[class^="icon"]{
 }
 
 /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
-div[class^="artist"] img{
+.artist img{
     filter: brightness(60%);
     -webkit-transition: all .9s ease; /* Utilizaremos esto para safari y para chrome */
     -moz-transition: all .9s ease; /* Utilizaremos esto para Firefox */
     -o-transition: all .9s ease; /* Utilizaremos esto para I. Explorer 9 */
     -ms-transition: all .9s ease; /* Utilizaremos esto para Opera */
     transition: all .9s ease; /*Este es genérico para maximizar compatibilidad*/
-    width: 100%;
+    width:100%;
     border-radius: 5%;
 }
 
 /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
-div[class^="artist"]:hover img {
+.artist:hover img {
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
     -ms-transform: scale(1.25);
@@ -279,13 +300,12 @@ div[class^="artist"]:hover img {
     filter: brightness(100%);
 }
 
-div[class^="artist"] {
+.artist {
     width:100%;
     overflow: hidden;   
 }
 
-/*Comenzamos a darle estilo a la sección de canciones*/
-
+/*Comenzamos a darle estilo a la sección de artistas*/
 .canciones-index  {
     background-image: url("../images/background-canciones.jpg");
    /* background-size: cover;
@@ -342,18 +362,53 @@ div[class^="artist"] {
 }
 
 .canciones-index figure img {
-
     width: 100%;
     height: 100%;
     /* imagen redonda */
     border-radius: 50%;
-    overflow: hidden;
     border: solid rgb(186, 4, 4);
     margin-bottom: 10px;
     margin-top: 10px;
-    
+}
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA ARTISTA
+**********************************************************************************************************/
+.sec-art-ppal{
+    height:82vh;
+    background-image: url("../images/bruno-mars-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    align-items: flex-end;
 }
 
+.sec-art-ppal h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    width: 100%;
+    padding: 10px 0px 10px 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sec-art-sec{
+    background-color: black;
+}
+
+.sec-art-sec p{
+    background-color: rgba(255, 255, 255, 0.767);
+    color:black;
+    margin:0px;
+    padding:20px;
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+<<<<<<< HEAD
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ABOUT US
 **********************************************************************************************************/
@@ -389,4 +444,20 @@ div[class^="artist"] {
 .map{
     width:100%;
     padding:20px;
+=======
+.sec-art-sec h2{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 20px 0px;
+
+}
+
+.sec-art-sec ol li{
+    color:white;
+    font-family: sans-serif;
+    list-style: decimal;
+    margin-left: 30px;
+    padding: 10px 0px;
+>>>>>>> 820f6fe0a0a66043f778724449804ff663839d13
 }
