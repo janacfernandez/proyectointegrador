@@ -27,6 +27,7 @@ header{
 header nav{
     width: 100%;
     padding: 5px;
+    border-top:2px solid rgb(186, 4, 4);
 }
 
 body {
@@ -39,18 +40,36 @@ body {
 header nav ul{ 
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    margin:auto;
+}
+
+header nav ul li{
+    width: 45%;  
+
 }
 
 header nav a{
     font-family: 'Heebo', sans-serif;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    padding: 20px;
+    margin: 20px;
+}
+
+
+header nav ul form input {
+    width: 60%;
+    margin-left: 20px;
+}
+
+header nav ul form img{
+    margin:0px;
+    padding: 0px;
 }
 
 header nav a:hover{
-    color: rgb(186, 4, 4)
+    color: rgb(186, 4, 4);
 }
 
 header img{
@@ -62,7 +81,8 @@ header img{
 .sec-ppal{
     background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
       ), url("../images/pexels-sebastian-ervi-1763075.jpg");
-    height: 85vh;
+   /* height: 85vh; RESPONSIVE*/
+    height:80vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -256,6 +276,7 @@ article[class^="icon"]{
 .artists h3{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
     color: white;
     font-weight: 300;
     text-transform: uppercase;
@@ -270,7 +291,7 @@ article[class^="icon"]{
     -o-transition: all .9s ease; /* Utilizaremos esto para I. Explorer 9 */
     -ms-transition: all .9s ease; /* Utilizaremos esto para Opera */
     transition: all .9s ease; /*Este es genérico para maximizar compatibilidad*/
-    width: 100%;
+    width:100%;
     border-radius: 5%;
 }
 
@@ -289,8 +310,7 @@ article[class^="icon"]{
     overflow: hidden;   
 }
 
-/*Comenzamos a darle estilo a la sección de canciones*/
-
+/*Comenzamos a darle estilo a la sección de artistas*/
 .canciones-index  {
     background-image: url("../images/background-canciones.jpg");
    /* background-size: cover;
@@ -342,24 +362,19 @@ article[class^="icon"]{
 }
 
 .canciones-index figure img {
-
     width: 100%;
     height: 100%;
     /* imagen redonda */
     border-radius: 50%;
-    overflow: hidden;
     border: solid rgb(186, 4, 4);
     margin-bottom: 10px;
     margin-top: 10px;
-    
 }
-
-
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ARTISTA
 **********************************************************************************************************/
 .sec-art-ppal{
-    height:85vh;
+    height:82vh;
     background-image: url("../images/bruno-mars-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -374,18 +389,37 @@ article[class^="icon"]{
     text-transform: uppercase;
     color: white;
     letter-spacing: 3px;
-    margin: 0px 0px 20px 0px;
+    margin-bottom: 60px;
     width: 100%;
-    padding-left: 10%;
+    padding: 10px 0px 10px 10%;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .sec-art-sec{
     background-color: black;
-    padding: 20px;
 }
 
 .sec-art-sec p{
-    color:white;
+    background-color: rgba(255, 255, 255, 0.767);
+    color:black;
+    margin:0px;
+    padding:20px;
+    font-family: sans-serif;
     text-align: justify;
+}
+
+.sec-art-sec h2{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 20px 0px;
+
+}
+
+.sec-art-sec ol li{
+    color:white;
+    font-family: sans-serif;
+    list-style: decimal;
+    margin-left: 30px;
+    padding: 10px 0px;
 }
