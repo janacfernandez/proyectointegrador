@@ -29,6 +29,12 @@ header nav{
     padding: 5px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
 /*Utilizaremos flexbox para lograr un menú horizontal*/
 header nav ul{ 
     width: 100%;
@@ -283,6 +289,70 @@ article[class^="icon"]{
     overflow: hidden;   
 }
 
+/*Comenzamos a darle estilo a la sección de canciones*/
+
+.canciones-index  {
+    background-image: url("../images/background-canciones.jpg");
+   /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; PARA RESPONSIVE */
+ }
+
+ .canciones-index article {
+     padding: 20px;
+ }
+
+  .canciones-index h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color:rgb(186, 4, 4);
+    letter-spacing: 3px;
+    padding-bottom:10%;
+ }
+
+.canciones-index ul li {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.canciones-index ul li h4 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.canciones-index ul li a {
+    color:rgb(186, 4, 4);
+    text-decoration: none;
+    margin: auto;
+    font-size: 20px; 
+}
+
+.canciones-index figure {
+   margin: auto;
+}
+
+.canciones-index figure img {
+
+    width: 100%;
+    height: 100%;
+    /* imagen redonda */
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid rgb(186, 4, 4);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
 
 
  /********************************************************************************************************
