@@ -29,11 +29,6 @@ header nav{
     padding: 5px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-
-}
 
 /*Utilizaremos flexbox para lograr un menú horizontal*/
 header nav ul{ 
@@ -298,7 +293,7 @@ div[class^="artist"] {
     background-position: center; PARA RESPONSIVE */
  }
 
- .canciones-index article {
+ .canciones-index  {
      padding: 20px;
  }
 
@@ -311,6 +306,7 @@ div[class^="artist"] {
     color:rgb(186, 4, 4);
     letter-spacing: 3px;
     padding-bottom:10%;
+    padding-top: 10%;
  }
 
 .canciones-index ul li {
@@ -335,6 +331,10 @@ div[class^="artist"] {
     text-decoration: none;
     margin: auto;
     font-size: 20px; 
+}
+
+.canciones-index ul li a:hover{
+    color: white
 }
 
 .canciones-index figure {
