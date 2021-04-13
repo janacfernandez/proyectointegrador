@@ -408,7 +408,21 @@ article[class^="icon"]{
     text-align: justify;
 }
 
-<<<<<<< HEAD
+.sec-art-sec h2{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 20px 0px;
+
+}
+
+.sec-art-sec ol li{
+    color:white;
+    font-family: sans-serif;
+    list-style: decimal;
+    margin-left: 30px;
+    padding: 10px 0px;
+}
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ABOUT US
 **********************************************************************************************************/
@@ -444,20 +458,4 @@ article[class^="icon"]{
 .map{
     width:100%;
     padding:20px;
-=======
-.sec-art-sec h2{
-    color:white;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    margin: 20px 0px;
-
-}
-
-.sec-art-sec ol li{
-    color:white;
-    font-family: sans-serif;
-    list-style: decimal;
-    margin-left: 30px;
-    padding: 10px 0px;
->>>>>>> 820f6fe0a0a66043f778724449804ff663839d13
 }
