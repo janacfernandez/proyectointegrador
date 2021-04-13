@@ -1,9 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <!--Indicamos el conjunto de caracters a utilizar-->
+    <meta charset="utf-8">
+    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+    <link rel="stylesheet" href="css/main-style.css" >
+    <!--A continuación linkearemos todas las fuentes utilizadas-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+<body>
+
+    </head>
+    <!----------------------------------Comienzo del encabezado---------------------------------->
+    <header>
+        <img src="images/logo.png" alt="Logo wow music">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#art-sec">Artistas</a></li>
+                <li><a href="#canc-sec">Canciones</a></li>
+                <li><a href="#">Albumes</a></li>
+                <li><a href="#">Géneros</a></li>
+                <li><a href="#">Mi playlist</a></li>
+                <li><a href="about-us.html">Conocenos</a></li>
+                <li>
+                    <form>
+                        <input type="text" name="search" placeholder="Buscar">
+                        <button type="submit" name="search-but"><img
+                                src="https://img.icons8.com/metro/15/search.png" /></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!------------------------------------Comienzo Principal------------------------------------>
+    <main>
+        <audio src=""></audio>
+        <section id="container">
+            <ul class="head">
+                <li> <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a></li>
+                <li> <a href="#" class="album"> Help!</a></li>
+                <li> <a href="#" class="opciones"> <i class="fas fa-ellipsis-v"></i> </a> </li>
+            </ul>
+
+            <section id="imagen">
+                <figure> <img src="images/imagendeportada.jpg" alt="imagendeportada"></figure>
+            </section>
+
+            <section id="cancion">
+                <div id="nombre">
+                    <a href="#"> Yesterday</a>
+                    <a href="#"> The Beatles</a>
+                </div>
+                <p class="favorito"> <a href="#"> <i class="far fa-heart"></i></i></a></p>
+            </section>
+
+            <section id="barra">
+                <div class="reproductor">
+                    <p class="rep"> 0:00 </p>
+                    <p class="duracion"> 0:00</p>
+                </div>
+            </section>
+
+            <section id="funciones">
+                <a href="#" class="min"> <i class="fas fa-random"></i>></a>
+                <a href="#" class="min"> <i class="fas fa-step-backward"></i></a>
+                <a href="#" class="max"> <i class="fas fa-play-circle"></i></a>
+                <a href="#" class="min"> <i class="fas fa-step-forward"></i></a>
+                <a href="#" class="min"> <i class="fas fa-sync-alt"></i></a>
+            </section>
+
+            <section id="dispositivos">
+                <a href="#"> <i class="fas fa-assistive-listening-systems"></i> </a>
+                <a href="#"> <i class="fas fa-indent"></i> </a>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
 </html>
