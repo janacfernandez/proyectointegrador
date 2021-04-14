@@ -424,7 +424,133 @@ article[class^="icon"]{
     padding: 10px 0px;
 }
 
+/********************************************************************************************************
+*                                               ESTILOS PÁGINA CANCIONES (detail-track)
+**********************************************************************************************************/
+#container {
+    background: linear-gradient( to top, black,rgb(186, 4, 4));
+}
 
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.head li { 
+    list-style: none;
+    margin-top: 20px;
+    font-family: sans-serif;
+
+}
+
+.head li a {
+    text-decoration: none;
+    color: white;
+}
+
+.album {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(31, 11, 11, 0.247);
+    font-family: sans-serif;
+    margin-bottom: 20px;
+
+}
+
+.exit .opciones {
+    font-size: 20px;
+}
+
+.main-canc figure img  {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    box-shadow: 2px 2px 10px #666;
+    margin-top: 10px;
+}
+
+.main-canc .cancion, .main-canc .funciones, .main-canc .barra, .main-canc .dispositivos {
+    display: flex;
+}
+
+.main-canc .cancion{  
+    width: 80%;
+    justify-content: space-between;
+    margin: 25px auto 0px auto;
+}
+.main-canc .cancion p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.main-canc .cancion a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+.main-canc .barra{
+    width:75%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto 10px auto; 
+    height: 3px;
+    background-color: #B1ADAD;
+    border-radius: 5px;
+  }
+
+  .barra p {
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: sans-serif;
+
+  }
+
+
+  .main-canc .funciones{
+    width:75%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+
+.main-canc .funciones .min {
+    text-decoration: none;
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.main-canc .funciones .max {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.main-canc .dispositivos {
+    width:90%;
+    justify-content: space-between;
+    margin: 20px auto 0px auto;
+    padding-bottom: 10px;
+}
+
+.main-canc .dispositivos a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ABOUT US
