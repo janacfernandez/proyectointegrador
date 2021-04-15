@@ -592,7 +592,9 @@ article[class^="icon"]{
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ALBUM
 **********************************************************************************************************/
-.albumzzz{width: 85%; background-color: rgb(186, 4, 4);justify-content: center; }
-.fotoalbumzzz{ justify-content: center; width: 86%; display: flex; ;margin: 4%;} 
+.albumzzz{width: 86%; background-color: rgb(186, 4, 4);justify-content: center;margin: 10%; }
+.fotoalbumzzz{ justify-content: center; width: 90%; display: flex; ;margin: 4%;text-align: center; } 
 .seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;} 
-.h2albumzzz {background-color: white;margin:4.2%;}
+.h2albumzzz {background-color: white;margin:4.2%;border: solid 4px black; text-align: center;}
+.seccionalbumes p{font-size:85%; margin: 10px;text-align: center; color: white;}
+
