@@ -588,3 +588,10 @@ article[class^="icon"]{
     width:100%;
     padding:20px;
 }
+
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA ALBUM
+**********************************************************************************************************/
+.albumzzz{width: 100%;margin: 10px;}
+.fotoalbumzzz{margin: 0px 20px 0px 20px; width: 80%;}
+.seccionalbumes{background-image: url(../images/background-canciones.jpg);}
