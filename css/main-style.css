@@ -599,9 +599,16 @@ article[class^="icon"]{
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ALBUM
 **********************************************************************************************************/
-.albumzzz{width: 86%; background-color: rgb(186, 4, 4);justify-content: center;margin: 10%; }
-.fotoalbumzzz{ justify-content: center; width: 90%; display: flex; ;margin: 4%;text-align: center; } 
-.seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;} 
-.h2albumzzz {background-color: white;margin:4.2%;border: solid 4px black; text-align: center;}
-.seccionalbumes p{font-size:85%; margin: 10px;text-align: center; color: white;}
-
+.albumzzz{width: 86%; background-color: rgb(186, 4, 4);justify-content: center;margin: 10%; font-family: 'Open Sans', sans-serif}
+.fotoalbumzzz{ justify-content: center; width: 90%; display: flex; ;margin: 4%;text-align: center; font-family: 'Open Sans', sans-serif} 
+.seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;font-family: 'Open Sans', sans-serif} 
+.h2albumzzz {background-color: white;margin:4.2%;border: solid 4px black; text-align: center;font-family: 'Open Sans', sans-serif}
+.seccionalbumes p{font-size:85%; margin: 10px;text-align: center; color: white;font-family: 'Open Sans', sans-serif}
+.seccionalbumes h3{font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(186, 4, 4);
+    
+}
