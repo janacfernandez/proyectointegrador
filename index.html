@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Indicamos el conjunto de caracters a utilizar-->
-        <meta charset="utf-8">
-        <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-        <link rel="stylesheet" href="css/main-style.css">
-        <!--A continuación linkearemos todas las fuentes utilizadas-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    </head>
-    <body>
+
+<head>
+    <!--Indicamos el conjunto de caracters a utilizar-->
+    <meta charset="utf-8">
+    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+    <link rel="stylesheet" href="css/main-style.css">
+    <!--A continuación linkearemos todas las fuentes utilizadas-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
     <!----------------------------------Comienzo del encabezado---------------------------------->
-        <header>
-            <img src="images/logo.png" alt="Logo wow music">
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#art-sec">Artistas</a></li>
-                    <li><a href="#canc-sec">Canciones</a></li>
-                    <li><a href="#">Albumes</a></li>
-                    <li><a href="#">Géneros</a></li>
-                    <li><a href="#">Mi playlist</a></li>
-                    <li><a href="about-us.html">Conocenos</a></li>
-                    <li>
+    <header>
+        <img src="images/logo.png" alt="Logo wow music">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#art-sec">Artistas</a></li>
+                <li><a href="#canc-sec">Canciones</a></li>
+                <li><a href="#">Albumes</a></li>
+                <li><a href="/genres.html">Géneros</a></li>
+                <li><a href="/playlist.html">Playlists</a></li>
+                <li><a href="/about-us.html">Conocenos</a></li>
+                <li>
                     <form>
                         <input type="text" name="search" placeholder="Buscar">
-                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"/></button>
+                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                alt="Busqueda" /></button>
                     </form>
-                    </li>
-                </ul>
-            </nav>  
-        </header>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <!------------------------------------Fin del encabezado------------------------------------>
 
     <!------------------------------------Comienzo Principal------------------------------------>
-        <main>
-            <section class="sec-ppal">
-                <!--Dijimos que el idioma de la web era español pero como el título está en ingles lo aclaramos con el atributo lang=""-->
+    <main>
+        <section class="sec-ppal">
+            <!--Dijimos que el idioma de la web era español pero como el título está en ingles lo aclaramos con el atributo lang=""-->
+            <hgroup>
                 <h1 lang="en">Wow music</h1>
                 <h2>Tus canciones favoritas en todo momento y lugar</h2>
-                <div class="but">
+            </hgroup>
+            <article class="but">
                 <a href="/#art-sec" class="but-ppal">Comenzar ahora</a>
                 <a href="/#sec" class="but-sec">Saber más</a>
-                </div>
-            </section>
-            <section class="sec-sec" id="sec">
+            </article>
+        </section>
+
+        <section class="sec-sec" id="sec">
+            <hgroup>
                 <h2>Explora la mejor música</h2>
                 <h3>Disfrutá de los mejores exitos del mundo musical</h3>
-                <section class="circles">
-                    <article class="icon-1">
-                        <img src="https://img.icons8.com/material/80/ffffff/sound-cloud-.png" alt="Icono nube musical">
-                        <h4 lang="en">Top songs</h4>
-                        <p>Las canciones más escuchadas</p>
-                    </article>
-                    <article class="icon-2">
-                        <img src="https://img.icons8.com/material/80/ffffff/dj.png" alt="Icono DJ"/>
-                        <h4 lang="en">Top artists</h4>
-                        <p>Los mejores artistas de clase mundial de todos los tiempos</p>  
-                    </article>
-                    <article class="icon-3">
-                        <img src="https://img.icons8.com/material/80/ffffff/80s-music.png" alt="Icono album"/>
-                        <h4 lang="en">Top albums</h4>
-                        <p>Los albumes que han hecho historia</p>
-                    </article>
-                    <article class="icon-4">
-                        <img src="https://img.icons8.com/material/80/ffffff/photos-folder--v1.png" alt="Icono de carpeta musical"/>
-                        <h4 lang="en">Playlist personalizadas</h4>
-                        <p>Armá la tuya con las canciones que más te gustan</p>
-                    </article>
-                </section>
+            </hgroup>
+            <section class="circles">
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/sound-cloud-.png" alt="Icono nube musical">
+                    <h4 lang="en">Top songs</h4>
+                    <p>Las canciones más escuchadas</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/dj.png" alt="Icono DJ" />
+                    <h4 lang="en">Top artists</h4>
+                    <p>Los mejores artistas de todos los tiempos</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/80s-music.png" alt="Icono album" />
+                    <h4 lang="en">Top albums</h4>
+                    <p>Los albumes que han hecho historia</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/photos-folder--v1.png" alt="Icono de carpeta musical" />
+                    <h4 lang="en">Tu playlist</h4>
+                    <p>Armala con tus canciones favoritas</p>
+                </article>
             </section>
-            <section class="artists" id="art-sec">
-                <h2>Nuestros artistas</h2>
-                <ul>
+        </section>
+        <!--inicio sección artistas-->
+        <section class="artists" id="art-sec">
+            <h2>Nuestros artistas</h2>
+            <ul>
                 <li class="artist">
                     <a href="detail-artist.html"><img src="images/bob_marley.jpg" alt="Bob Marley"></a>
                     <h3>Bob Marley</h3>
-                </div>
+                </li>
                 <li class="artist">
                     <a href="detail-artist.html"><img src="images/bruno_mars.jpg" alt="Bruno Mars"></a>
                     <h3>Bruno Mars</h3>
@@ -102,49 +111,53 @@
                     <a href="detail-artist.html"><img src="images/the-weekend.jpg" alt="The weekend"></a>
                     <h3>The weekend</h3>
                 </li>
-                </ul>
-            </section>
+            </ul>
+        </section>
+        <!--final sección artistas-->
 
-            <!--inicio sección canciones-->
-    <section class="canciones-index" id="canc-sec"> 
-            <h2> Nuestras canciones </h2>
+        <!--inicio sección canciones-->
+        <section class="songs" id="canc-sec">
+            <h2>Nuestras canciones</h2>
             <ul>
                 <li>
-                    <figure> <img src="images/imagine.jpg" alt="cancion1"></figure>
+                    <img src="images/imagine.jpg" alt="cancion1">
                     <h4 class="canciones"> Imagine</h4>
-                    <a href=""> JOHN LENNON </a>
+                    <a href="/detail-artist.html"> JOHN LENNON </a>
                 </li>
                 <li>
-                    <figure> <img src="images/Bohemianrhapsody.jpg" alt="cancion2"></figure>
+                    <img src="images/Bohemianrhapsody.jpg" alt="cancion2">
                     <h4 class="canciones"> Bohemian Rhapsody</h4>
-                    <a href=""> QUEEN </a>
+                    <a href="/detail-artist.html"> QUEEN </a>
                 </li>
                 <li>
-                    <figure> <img src="images/yesterday.jpg" alt="cancion3"></figure>
+                    <img src="images/yesterday.jpg" alt="cancion3">
                     <h4 class="canciones">Yesterday</h4>
-                    <a href=""> THE BEATLES</a>
+                    <a href="/detail-artist.html"> THE BEATLES</a>
                 </li>
                 <li>
-                    <figure> <img src="images/slts.jpg" alt="cancion3"></figure>
+                    <img src="images/slts.jpg" alt="cancion3">
                     <h4 class="canciones">Smells like teen Spirit</h4>
-                    <a href=""> NIRVANA </a>
+                    <a href="/detail-artist.html"> NIRVANA </a>
                 </li>
                 <li>
-                    <figure> <img src="images/loseyourself.jpg" alt="cancion4"></figure>
+                    <img src="images/loseyourself.jpg" alt="cancion4">
                     <h4 class="canciones"> Lose yourself</h4>
-                    <a href=""> EMINEM </a>
+                    <a href="/detail-artist.html"> EMINEM </a>
                 </li>
                 <li>
                     <figure> <img src="images/syt.jpg" alt="cancion3"></figure>
                     <h4 class="canciones">Save your tears</h4>
-                    <a href=""> THE WEEKEND </a>
+                    <a href="/detail-artist.html"> THE WEEKEND </a>
                 </li>
             </ul>
+        </section>
+        <!--Final sección canciones-->
 
-            </section>
-        </main>
+    </main>
     <!--------------------------------------Fin Principal-------------------------------------->
-        <footer>
-        </footer>
-    </body>
+    
+    <footer>
+    </footer>
+</body>
+
 </html>
