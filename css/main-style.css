@@ -284,44 +284,47 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .songs h2 {
-    font-size: 25px;
+    font-size: 2em;
     color: rgb(186, 4, 4);
     letter-spacing: 3px;
-    padding: 10% 0%;
+    padding-bottom: 10%;
+    font-family: sans-serif;
  }
 
  .songs ul li {
-    text-align: center;
-    margin-bottom: 60px;
-}
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(44, 42, 42);
+   margin-bottom: 10px;
+ }
 
-.songs ul li h4 {
+
+ .songs ul li div h4 {
     color: white;
-    margin-bottom: 10px 0px 20px 0px;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 5px;
+    font-size: 1.2em;
+    margin: auto;
+    text-align: left;
 }
 
-.songs ul li a {
+.songs ul li div a {
     color:rgb(186, 4, 4);
     margin: auto;
     font-size: 20px; 
+    margin-bottom: 10px;
 }
 
-.songs ul li a:hover{
+.songs ul li div a:hover{
     color: white
 }
 
-
-.songs img {
-    width: 100%;
-    border-radius: 50%;
+ .songs img {
+    width: 30%;
+    height: 30%;
     border: solid rgb(186, 4, 4);
-    margin: 10px auto;
-
+    margin: 10px 10px;
+    border-radius: 50%;
 }
-
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ARTISTA
 **********************************************************************************************************/
@@ -488,6 +491,73 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 }
 
 /********************************************************************************************************
+*                                               ESTILOS PÁGINA PLAYLIST
+**********************************************************************************************************/
+.sec-play-ppal {
+    background-color:rgb(255, 255, 255) ;
+}
+
+
+.sec-play-ppal .head .mi-play {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(133, 5, 5);
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.sec-play-ppal img {
+    width: 100%;
+}
+
+.sec-play-sec {
+    background-color: black;
+}
+.sec-play-sec h2 {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul.playlist .play-can{
+    background-color: #494949;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+ul.playlist .play-can img {
+    display: block;
+    margin: 10px;
+    width: 80px;
+}
+
+ul.playlist .play-can h4 {
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+ul.playlist .play-can a.artista {
+    color: white;
+    background-color: rgba(186, 4, 4, 0.7);
+
+}
+
+ul.playlist  a:hover, .play-can a:active {
+    background-color: rgb(255, 255, 255);
+    color: rgba(186, 4, 4, 0.8);
+}
+
+ul.playlist .play-can p.favorito i {
+    color: rgb(133, 5, 5);
+    margin-left: 70%;
+}
+
+/********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
 **********************************************************************************************************/
 .genres{
@@ -566,7 +636,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ALBUM
 **********************************************************************************************************/
-<<<<<<< HEAD
 .albumzzz{width: 85%; background-color: rgb(186, 4, 4);justify-content: center; }
 .fotoalbumzzz{ justify-content: center; width: 86%; display: flex; ;margin: 4%;} 
 .seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;} 
@@ -656,9 +725,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
         flex-wrap: nowrap;
     }
 
-   
-    
-
 
     /*Sección secundaria*/
     .icon{
@@ -689,7 +755,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
     .genres .sec-art-ppal{
         width: calc(33% - 5px);
     }
-=======
 .albumzzz{width: 86%; background-color: rgb(186, 4, 4);justify-content: center;margin: 10%; font-family: 'Open Sans', sans-serif}
 .fotoalbumzzz{ justify-content: center; width: 90%; display: flex; ;margin: 4%;text-align: center; font-family: 'Open Sans', sans-serif} 
 .seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;font-family: 'Open Sans', sans-serif} 
@@ -702,5 +767,4 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
     text-transform: uppercase;
     color: rgb(186, 4, 4);
     
->>>>>>> 4b6bb73c24c1ff7385ab236b477b67247a148885
 }
