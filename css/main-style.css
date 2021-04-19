@@ -625,9 +625,13 @@ ul.playlist .play-can p.favorito i {
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ABOUT US
 **********************************************************************************************************/
+
+
 .bod-about{
     background-color: rgb(80, 80, 80);
 }
+
+.main-about{height: 600px;}
 
 .main-about h1, .main-about h2 {
     color: white;
@@ -636,11 +640,11 @@ ul.playlist .play-can p.favorito i {
 }
 
 .main-about h1{
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .main-about h2 {
-    font-size: 15px;
+    font-size: 25px;background-color:rgba(186, 4, 4, 0.7);
 }
 
 .main-about p{
@@ -650,18 +654,150 @@ ul.playlist .play-can p.favorito i {
 
 .map{
     width: 100%;
-    padding: 20px;
+    padding: 20px;height: 100%;
+   
 }
 
- /********************************************************************************************************
-*                                               ESTILOS PÁGINA ALBUM
+/********************************************************************************************************
+*                                               ESTILOS PÁGINA ALBUMES (detail)
 **********************************************************************************************************/
-.albumzzz{width: 85%; background-color: rgb(186, 4, 4);justify-content: center; }
-.fotoalbumzzz{ justify-content: center; width: 86%; display: flex; ;margin: 4%;} 
-.seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;} 
-.h2albumzzz {background-color: white;margin:4.2%;}
+
+.seccionalbumess {
+    background-image: url(../images/background-canciones.jpg);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif
+}
+.albumzzzz {
+    width: 86%;
+    background-color: rgb(186, 4, 4);
+    justify-content: center;
+    margin: 10%;
+    font-family: 'Open Sans', sans-serif
+}
+
+.h2albumzzzz {
+    background-color: white;
+    margin: 4.2%;
+    border: solid 4px black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif
+}
+
+.pop {
+    background-color: #2b2b2b;
+}
+
+.navtrack {
+    font-family: 'Open Sans', sans-serif;
+    border: solid 5px rgb(186, 4, 4);
+    text-align: justify;
+    border-radius: 10%;
+    background-color: #2b2b2b;
+    color: white;
+    font-size: 100%;
+}
+
+.olalbumzzz {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5%; 
+}
+
+.navtrack h3 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5% ;
+     font-size: 100%;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+.albumzzzz p{font-size: 100%;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif}
+
+    .fotoalbumzzzz {
+    justify-content: center;
+    width: 90%;
+    display: flex;
+    ;
+    margin: 3%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif
+}
 
 
+
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA SECCION ALBUM
+**********************************************************************************************************/
+
+
+.albumzzz {
+    width: 86%;
+    background-color: rgb(186, 4, 4);
+    justify-content: center;
+    margin: 10%;
+    font-family: 'Open Sans', sans-serif
+}
+
+.fotoalbumzzz {
+    justify-content: center;
+    width: 90%;
+    display: flex;
+    margin: 4%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif
+}
+
+.seccionalbumes {
+    background-image: url(../images/background-canciones.jpg);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif
+}
+
+.h2albumzzz {
+    background-color: white;
+    margin: 2.2%;
+    border: solid 4px black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif
+}
+
+.seccionalbumes p {
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+
+}
+
+.seccionalbumes h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(186, 4, 4);
+
+
+}
+
+.palbumes {
+    height: 50px;
+}
+
+.h2albumzzz h2 {
+    font-size: 30px;
+}
 
 footer.contenedor {
     background-color: black;
@@ -708,15 +844,15 @@ footer p {
 
 @media (min-width: 700px) {
     /*Header y sección principal*/
-    header{
+    header {
         flex-direction: row;
     }
 
-    header >img{
+    header>img {
         margin: 10px;
     }
 
-    header nav{
+    header nav {
         border-top: none;
     }
 
@@ -726,8 +862,8 @@ footer p {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-  
-    .icon{
+
+    .icon {
         width: calc(50% - 5px);
     }
 
@@ -739,18 +875,18 @@ footer p {
         flex-wrap: wrap;
     }
 
-    .artists ul li{
+    .artists ul li {
         width: calc(50% - 5px)
     }
 
-    .artists ul li a{
+    .artists ul li a {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 80%
     }
 
-    .artists ul li img{
+    .artists ul li img {
         height: 100%;
         object-fit: cover;
     }
@@ -775,13 +911,13 @@ footer p {
 
 
     /*Pagina géneros*/
-    .genres{
+    .genres {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .genres .sec-art-ppal{
+    .genres .sec-art-ppal {
         width: calc(50% - 5px);
     }
 
@@ -853,47 +989,62 @@ footer .integrantes ul{
 footer .integrantes ul li {
  
 }
+    /*seccion albumes*/
+    .seccionalbumes h3 {
+        text-align: center;
+        display: block;
+        width: 4000px;
+        margin: 15px;
+        margin: 10%;
+    }
+
+    .albumzzz {
+        width: 40%;
+        justify-content: normal;
+        margin: 3%;
+    }
+    }
 
 @media (min-width: 1100px) {
      /*Header y sección principal*/
      header{
          display: flex;
          justify-content: space-between;
-     }
+         }
 
-     header nav {
-        justify-content: space-around;
-         width: 90%;
-     }
+         header nav {
+             justify-content: space-around;
+             width: 90%;
+         }
 
-     header nav ul{ 
-        width: 100%;
-        flex-wrap: nowrap;
-    }
-
-
-    /*Sección secundaria*/
-    .icon{
-        width: calc(25% - 5px);
-    }
+         header nav ul {
+             width: 100%;
+             flex-wrap: nowrap;
+         }
 
 
-    /*Sección artistas*/
-    .artists h2{
-        padding-bottom: 40px;
-    }
+         /*Sección secundaria*/
+         .icon {
+             width: calc(25% - 5px);
+         }
 
-    .artists ul li{
-        align-items: center;
-        justify-content: baseline;
-        width: calc(33% - 5px);
 
-    }
+         /*Sección artistas*/
+         .artists h2 {
+             padding-bottom: 40px;
+         }
 
-    .artists ul li img{  
-        height: 30vh;
-        object-fit: cover;
-    }
+         .artists ul li {
+             align-items: center;
+             justify-content: baseline;
+             width: calc(33% - 5px);
+
+         }
+
+         .artists ul li img {
+             height: 30vh;
+             object-fit: cover;
+         }
 
 /*Sección Canciones */
 
@@ -927,3 +1078,28 @@ footer .integrantes ul li {
 /*Pagina playlist*/
 
 
+         /*Pagina géneros*/
+         .genres .sec-art-ppal {
+             width: calc(33% - 5px);
+         }
+
+         /*seccion albumes*/
+
+         .seccionalbumes h3 {
+             text-align: center;
+             display: block;
+             width: 4000px;
+             margin: 15px;
+             margin: 10%;
+         }
+
+         .albumzzz {
+             width: 20%;
+             justify-content: normal;
+             margin: 3%;
+         }
+
+         .albumzzz p {
+             font-size: 22px;
+         }
+         }
