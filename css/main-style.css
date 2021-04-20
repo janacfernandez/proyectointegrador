@@ -183,7 +183,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .sec-sec h3,
  .circles h4,
  .artists h2,
- .artists h3,
+ .artists h4,
  .songs h2,
  .songs ul h4,
  .main-about h1,
@@ -260,7 +260,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      padding-bottom: 10%;
  }
 
- .artists h3 {
+ .artists h4 {
      font-size: 1.2em;
      color: white;
      margin: 10px 0px 40px 0px;
@@ -311,20 +311,22 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      margin-bottom: 10px;
  }
 
- .songs ul li div h4 {
-     color: white;
-     font-size: 1.2em;
-     margin: auto;
-     text-align: left;
- }
+
 
  .songs ul li div a {
+     display: block;
      color: rgb(186, 4, 4);
      margin: auto;
      font-size: 20px;
      margin-bottom: 10px;
  }
 
+ .songs ul li div h4 a {
+     color: white;
+     font-size: 1.2em;
+     margin: 0px;
+     text-align: left;
+ }
  .songs ul li div a:hover {
      color: white
  }
@@ -336,6 +338,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      margin: 10px 10px;
      border-radius: 50%;
  }
+
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ARTISTA
