@@ -1090,7 +1090,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          justify-content: space-between;
      }
 
-     .song-track>section{
+     .song-track>article{
          width:100%;
          display: flex;
          flex-direction: column;
