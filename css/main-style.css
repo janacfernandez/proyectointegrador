@@ -271,14 +271,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
  .artist img {
      filter: brightness(60%);
-     -webkit-transition: all .9s ease;
-     /* Utilizaremos esto para safari y para chrome */
-     -moz-transition: all .9s ease;
-     /* Utilizaremos esto para Firefox */
-     -o-transition: all .9s ease;
-     /* Utilizaremos esto para I. Explorer 9 */
-     -ms-transition: all .9s ease;
-     /* Utilizaremos esto para Opera */
      transition: all .9s ease;
      /*Este es genérico para maximizar compatibilidad*/
      max-width: 500px;
@@ -288,10 +280,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
  .artist:hover img {
-     -webkit-transform: scale(1.25);
-     -moz-transform: scale(1.25);
-     -ms-transform: scale(1.25);
-     -o-transform: scale(1.25);
      transform: scale(1.25);
      filter: brightness(100%);
  }
@@ -1095,8 +1083,23 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          justify-content: space-between;
          flex-wrap: wrap;
      }
+     
+     .song-track{
+         display: flex;
+         width: 100%;
+         justify-content: space-between;
+     }
 
-     .main-canc .barra {}
+     .song-track>section{
+         width:100%;
+         display: flex;
+         flex-direction: column;
+         justify-items: space-between;
+     }
+
+     .song-track img{
+         margin: 0% 5%;
+     }
 
      .main-canc .funciones .min {
          color: white;
