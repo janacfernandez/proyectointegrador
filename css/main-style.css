@@ -2,1104 +2,1228 @@
 *                                               ESTILOS INDEX
 **********************************************************************************************************/
 
-/*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
+ /*Utilizando el selector universal y la propiedad box-sizing, establecemos que el ancho de caja se tome de borde a borde considerando content, paddings y borders*/
+ * {
+     box-sizing: border-box;
+     margin: 0px;
+     padding: 0px;
+ }
 
-/*Reseteamos valores a 0 y retiramos estilos predeterminados para trabajarlos posteriormente a nuestra voluntad*/
-ul, li, a{
-    list-style: none;
-    text-decoration: none;
-}
+ /*Reseteamos valores a 0 y retiramos estilos predeterminados para trabajarlos posteriormente a nuestra voluntad*/
+ ul,
+ li,
+ a {
+     list-style: none;
+     text-decoration: none;
+ }
 
-/*Utilizaremos flexbox para lograr el layout deseado de nuestro header en la versión mobile*/
-header{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5px;
-}
+ /*Utilizaremos flexbox para lograr el layout deseado de nuestro header en la versión mobile*/
+ header {
+     background-color: black;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 5px;
+ }
 
-header nav{
-    padding: 5px;
-    border-top: 2px solid rgb(186, 4, 4);
-}
+ header nav {
+     padding: 5px;
+     border-top: 2px solid rgb(186, 4, 4);
+ }
 
-/*Utilizaremos flexbox para lograr un menú horizontal*/
-header nav ul{ 
-    width: 100%;
-    display: flex;
-    justify-content:flex-end;
-    flex-wrap: wrap;
-}
+ /*Utilizaremos flexbox para lograr un menú horizontal*/
+ header nav ul {
+     width: 100%;
+     display: flex;
+     justify-content: flex-end;
+     flex-wrap: wrap;
+ }
 
-header nav ul li{
-    width: 45%;
-}
+ header nav ul li {
+     width: 45%;
+ }
 
-header nav a{
-    font-family: 'Heebo', sans-serif;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    margin: 20px;
-}
+ header nav a {
+     font-family: 'Heebo', sans-serif;
+     text-transform: uppercase;
+     color: rgb(255, 255, 255);
+     margin: 20px;
+ }
 
-header nav ul form input {  
-    width: 60%;
-    margin-left: 20px;
-    background-color: rgba(240, 49, 49, 0.781);
-}
+ header nav ul form input {
+     width: 60%;
+     margin-left: 20px;
+     background-color: rgba(240, 49, 49, 0.781);
+ }
 
-header nav ul form input:hover{
-    background-color: white;
-}
+ header nav ul form input:hover {
+     background-color: white;
+ }
 
-header nav ul form input::placeholder{
-    padding: 10px;
-    color:white;
-}
+ header nav ul form input::placeholder {
+     padding: 10px;
+     color: white;
+ }
 
-header nav ul form img{
-    margin:0px;
-}
+ header nav ul form img {
+     margin: 0px;
+ }
 
-header nav a:hover{
-    color: rgb(186, 4, 4);
-}
+ header nav a:hover {
+     color: rgb(186, 4, 4);
+ }
 
-header img{
-    max-width: 100px;
-    margin: 7px 0px;
-    animation-duration: 3s;
-    animation-name: logo;
-    animation-iteration-count: infinite;
-}
+ header img {
+     max-width: 100px;
+     margin: 7px 0px;
+     animation-duration: 3s;
+     animation-name: logo;
+     animation-iteration-count: infinite;
+ }
 
-@keyframes logo{
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotateY(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotateY(360deg);
-        }
-}
+ @keyframes logo {
+     from {
+         -webkit-transform: rotate(0deg);
+         transform: rotateY(0deg);
+     }
 
-/*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevamente usamos flexbox para poder ubicar títulos y botones según lo deseado*/
-.sec-ppal{
-    background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)
-      ), url("../images/pexels-sebastian-ervi-1763075.jpg");
-   /* height: 85vh; RESPONSIVE*/
-    height: 80vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+     to {
+         -webkit-transform: rotate(360deg);
+         transform: rotateY(360deg);
+     }
+ }
 
-/*Le damos estilo al título principal y al secundario*/
-.sec-ppal h1, .sec-ppal h2 {
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    font-family: 'Heebo', sans-serif;
-}
+ /*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevamente usamos flexbox para poder ubicar títulos y botones según lo deseado*/
+ .sec-ppal {
+     background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)), url("../images/pexels-sebastian-ervi-1763075.jpg");
+     /* height: 85vh; RESPONSIVE*/
+     height: 80vh;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
 
-.sec-ppal h1{
-    font-size: 3em;
-    text-shadow: 5px 5px 7px black;
-}
+ /*Le damos estilo al título principal y al secundario*/
+ .sec-ppal h1,
+ .sec-ppal h2 {
+     text-align: center;
+     text-transform: uppercase;
+     color: white;
+     font-family: 'Heebo', sans-serif;
+ }
 
-.sec-ppal h2{
-    font-size: 1em;
-    text-shadow: 1px 1px 2px black;
-    letter-spacing: 3px;
-    margin: 12px;
-}
+ .sec-ppal h1 {
+     font-size: 3em;
+     text-shadow: 5px 5px 7px black;
+ }
 
-/*Con flexbox diseñamos la disposición de los botones*/
-.sec-ppal .but{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-}
+ .sec-ppal h2 {
+     font-size: 1em;
+     text-shadow: 1px 1px 2px black;
+     letter-spacing: 3px;
+     margin: 12px;
+ }
 
-/*Le damos estilo al botón principal y al botón secundario*/
-.sec-ppal .but-ppal, .sec-ppal .but-sec{
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    width: 60%;
-    text-align: center;
-    font-size: 1em;
-    color: white;
-    border-radius: 30px;
-}
-.sec-ppal .but-ppal{
-    background-color: rgba(186, 4, 4, 0.8);
-    padding: 17px;
-    margin: 20px 0px;
-}
+ /*Con flexbox diseñamos la disposición de los botones*/
+ .sec-ppal .but {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
 
-.sec-ppal .but-sec{
-    border: solid 1px white;
-    padding: 15px;
-}
+ /*Le damos estilo al botón principal y al botón secundario*/
+ .sec-ppal .but-ppal,
+ .sec-ppal .but-sec {
+     font-family: 'Open Sans', sans-serif;
+     text-transform: uppercase;
+     width: 60%;
+     text-align: center;
+     font-size: 1em;
+     color: white;
+     border-radius: 30px;
+ }
 
-/*La pseudo-clase :hover nos permite determinar el estilo de un link cuando el usuario se posiciona sobre el mismo con el ratón, en este caso cambia a un fondo blanco con una tipografía bold*/
-.sec-ppal .but-ppal:hover, .sec-ppal .but-sec:hover{
-    color: black;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.7);  
-}
+ .sec-ppal .but-ppal {
+     background-color: rgba(186, 4, 4, 0.8);
+     padding: 17px;
+     margin: 20px 0px;
+ }
 
-.sec-ppal .but-ppal:hover{
-box-shadow: inset 0 0 0 2px rgb(186, 4, 4);
-}
+ .sec-ppal .but-sec {
+     border: solid 1px white;
+     padding: 15px;
+ }
 
-/*---Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma---
+ /*La pseudo-clase :hover nos permite determinar el estilo de un link cuando el usuario se posiciona sobre el mismo con el ratón, en este caso cambia a un fondo blanco con una tipografía bold*/
+ .sec-ppal .but-ppal:hover,
+ .sec-ppal .but-sec:hover {
+     color: black;
+     font-weight: bold;
+     background-color: rgba(255, 255, 255, 0.7);
+ }
+
+ .sec-ppal .but-ppal:hover {
+     box-shadow: inset 0 0 0 2px rgb(186, 4, 4);
+ }
+
+ /*---Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma---
 
 Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
-.sec-sec{
-    padding: 40px 35px;
-    background-image: url("../images/background.jpg");
-}
-
-/*A continuación le daremos estilos generales a todos los títulos h2, h3 y h4 quec omparten caraterísticas para optimizar el código*/
-.sec-sec h2, .sec-sec h3, .circles h4, .artists h2, .artists h3, .songs h2, .songs ul h4, .main-about h1, .main-about h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.sec-sec h2{ 
-    font-size: 2em;
-    color: #676770;
-}
-
-.sec-sec h3{
-    color: #8e8e9c;
-    font-size: 1em;
-    margin-bottom: 50px;
-}
-
-.circles h4{
-    font-size: 1.5em;
-    color: #676770;
-    margin: 10px;
-    letter-spacing: 5px;
-}
-
-.icon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 2px #f7dcdc;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.icon img{
-    background-color: rgb(186, 4, 4);
-    max-width: 100px;
-    width: 20%;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 8px red;
-    margin: 15px 0px;
-} 
-
-.circles p{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    margin: 10px;
-    color: #676770;
-}
-
-
-/*Comenzamos a darle estilo a la sección de artistas, algunas características generales de los títulos las hemos descripto más arriba para otimizar el código*/
-.artists{
-    padding: 40px;
-    background-color: #2b2b2b;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.artists h2{
-    font-size: 2em;
-    color: white;
-    letter-spacing: 3px;
-    padding-bottom: 10%;
-}
-
-.artists h3{
-    font-size: 1.2em;
-    color: white;
-    margin: 10px 0px 40px 0px;
-}
-
-
-
-/*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
-.artist img{
-    filter: brightness(60%);
-    -webkit-transition: all .9s ease; /* Utilizaremos esto para safari y para chrome */
-    -moz-transition: all .9s ease; /* Utilizaremos esto para Firefox */
-    -o-transition: all .9s ease; /* Utilizaremos esto para I. Explorer 9 */
-    -ms-transition: all .9s ease; /* Utilizaremos esto para Opera */
-    transition: all .9s ease; /*Este es genérico para maximizar compatibilidad*/
-    max-width: 500px;
-    width: 100%;
-    border-radius: 5%;
-}
-
-/*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
-.artist:hover img {
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -o-transform: scale(1.25);
-    transform: scale(1.25);
-    filter: brightness(100%);
-}
-
-.artist {
-    overflow: hidden;   
-}
-
-/*Comenzamos a darle estilo a la sección de canciones*/
-.songs {
-    background-image: url("../images/background-canciones.jpg");
-    padding: 40px;
+ .sec-sec {
+     padding: 40px 35px;
+     background-image: url("../images/background.jpg");
  }
 
- .songs h2 {
-    font-size: 2em;
-    color: rgb(186, 4, 4);
-    letter-spacing: 3px;
-    padding-bottom: 10%;
-    font-family: sans-serif;
+ /*A continuación le daremos estilos generales a todos los títulos h2, h3 y h4 quec omparten caraterísticas para optimizar el código*/
+ .sec-sec h2,
+ .sec-sec h3,
+ .circles h4,
+ .artists h2,
+ .artists h3,
+ .songs h2,
+ .songs ul h4,
+ .main-about h1,
+ .main-about h2,
+ .albums h2,
+ .alb-info h2,
+ .alb-info h3,
+ .tracklist h3 {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+     text-align: center;
+     text-transform: uppercase;
  }
+
+ .sec-sec h2 {
+     font-size: 2em;
+     color: #676770;
+ }
+
+ .sec-sec h3 {
+     color: #8e8e9c;
+     font-size: 1em;
+     margin-bottom: 50px;
+ }
+
+ .circles h4 {
+     font-size: 1.5em;
+     color: #676770;
+     margin: 10px;
+     letter-spacing: 5px;
+ }
+
+ .icon {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border: solid 2px #f7dcdc;
+     margin-bottom: 20px;
+     border-radius: 10px;
+ }
+
+ .icon img {
+     background-color: rgb(186, 4, 4);
+     max-width: 100px;
+     width: 20%;
+     padding: 10px;
+     border-radius: 50%;
+     box-shadow: 0px 0px 8px red;
+     margin: 15px 0px;
+ }
+
+ .circles p {
+     text-align: center;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 1.2em;
+     margin: 10px;
+     color: #676770;
+ }
+
+
+ /*Comenzamos a darle estilo a la sección de artistas, algunas características generales de los títulos las hemos descripto más arriba para otimizar el código*/
+ .artists {
+     padding: 40px;
+     background-color: #2b2b2b;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .artists h2 {
+     font-size: 2em;
+     color: white;
+     letter-spacing: 3px;
+     padding-bottom: 10%;
+ }
+
+ .artists h3 {
+     font-size: 1.2em;
+     color: white;
+     margin: 10px 0px 40px 0px;
+ }
+
+
+
+ /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
+ .artist img {
+     filter: brightness(60%);
+     -webkit-transition: all .9s ease;
+     /* Utilizaremos esto para safari y para chrome */
+     -moz-transition: all .9s ease;
+     /* Utilizaremos esto para Firefox */
+     -o-transition: all .9s ease;
+     /* Utilizaremos esto para I. Explorer 9 */
+     -ms-transition: all .9s ease;
+     /* Utilizaremos esto para Opera */
+     transition: all .9s ease;
+     /*Este es genérico para maximizar compatibilidad*/
+     max-width: 500px;
+     width: 100%;
+     border-radius: 5%;
+ }
+
+ /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
+ .artist:hover img {
+     -webkit-transform: scale(1.25);
+     -moz-transform: scale(1.25);
+     -ms-transform: scale(1.25);
+     -o-transform: scale(1.25);
+     transform: scale(1.25);
+     filter: brightness(100%);
+ }
+
+ .artist {
+     overflow: hidden;
+ }
+
+ /*Comenzamos a darle estilo a la sección de canciones*/
+ .songs {
+     background-image: url("../images/background-canciones.jpg");
+     padding: 40px;
+ }
+
+ .songs h2,
+ .albums h2 {
+     font-size: 2em;
+     color: rgb(186, 4, 4);
+     letter-spacing: 3px;
+     padding-bottom: 7%;
+     font-family: sans-serif;
+ }
+
  .songs ul li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: rgb(44, 42, 42);
-   margin-bottom: 10px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     background-color: rgb(44, 42, 42);
+     margin-bottom: 10px;
  }
-
 
  .songs ul li div h4 {
-    color: white;
-    font-size: 1.2em;
-    margin: auto;
-    text-align: left;
-}
+     color: white;
+     font-size: 1.2em;
+     margin: auto;
+     text-align: left;
+ }
 
-.songs ul li div a {
-    color:rgb(186, 4, 4);
-    margin: auto;
-    font-size: 20px; 
-    margin-bottom: 10px;
-}
+ .songs ul li div a {
+     color: rgb(186, 4, 4);
+     margin: auto;
+     font-size: 20px;
+     margin-bottom: 10px;
+ }
 
-.songs ul li div a:hover{
-    color: white
-}
+ .songs ul li div a:hover {
+     color: white
+ }
 
  .songs img {
-    width: 30%;
-    height: 30%;
-    border: solid rgb(186, 4, 4);
-    margin: 10px 10px;
-    border-radius: 50%;
-}
+     width: 30%;
+     height: 30%;
+     border: solid rgb(186, 4, 4);
+     margin: 10px 10px;
+     border-radius: 50%;
+ }
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ARTISTA
 **********************************************************************************************************/
-.sec-art-ppal{
-    height:82vh;
-    background-image: url("../images/bruno-mars-mobile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    display: flex;
-    align-items: flex-end;
-}
+ .sec-art-ppal {
+     height: 82vh;
+     background-image: url("../images/bruno-mars-mobile.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position-x: center;
+     display: flex;
+     align-items: flex-end;
+ }
 
-.sec-art-ppal h1, .sec-art-ppal h2{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 3px;
-    margin-bottom: 60px;
-    width: 100%;
-    padding: 10px 0px 10px 10%;
-    background-color: rgba(0, 0, 0, 0.8);
-}
+ .sec-art-ppal h1,
+ .sec-art-ppal h2 {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 40px;
+     text-transform: uppercase;
+     color: white;
+     letter-spacing: 3px;
+     margin-bottom: 60px;
+     width: 100%;
+     padding: 10px 0px 10px 10%;
+     background-color: rgba(0, 0, 0, 0.8);
+ }
 
-.sec-art-sec{
-    background-color: black;
-}
+ .sec-art-sec {
+     background-color: black;
+ }
 
-.sec-art-sec p{
-    background-color: rgba(255, 255, 255, 0.767);
-    color:black;
-    margin:0px;
-    padding:20px;
-    font-family: sans-serif;
-    text-align: justify;
-}
+ .sec-art-sec p {
+     background-color: rgba(255, 255, 255, 0.767);
+     color: black;
+     margin: 0px;
+     padding: 20px;
+     font-family: sans-serif;
+     text-align: justify;
+ }
 
-.sec-art-sec h2{
-    color:white;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    margin: 20px 0px;
+ .sec-art-sec h2 {
+     color: white;
+     font-family: 'Open Sans', sans-serif;
+     text-align: center;
+     margin: 20px 0px;
 
-}
+ }
 
-.sec-art-sec ol li{
-    color:white;
-    font-family: sans-serif;
-    list-style: decimal;
-    margin-left: 30px;
-    padding: 10px 0px;
-}
+ .sec-art-sec .top-songs {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
 
-/********************************************************************************************************
+ .sec-art-sec ol li {
+     color: white;
+     font-family: sans-serif;
+     list-style: decimal;
+     margin-left: 30px;
+     padding: 10px 0px;
+     text-transform: uppercase;
+ }
+
+ /********************************************************************************************************
 *                                               ESTILOS PÁGINA CANCIONES (detail-track)
 **********************************************************************************************************/
-.sec-canc-ppal {
-    background: linear-gradient( to top, black,rgb(186, 4, 4));
-}
+ .sec-canc-ppal {
+     background: linear-gradient(to top, black, rgb(186, 4, 4));
+ }
 
-.head {
-    display: flex;
-    justify-content: space-between;
-    width: 65%;
-    padding: 15px 30px; 
-}
+ .head {
+     display: flex;
+     justify-content: space-between;
+     width: 65%;
+     padding: 15px 30px;
+ }
 
-.head li { 
-    margin-top: 20px;
-    font-family: sans-serif;
-}
+ .head li {
+     margin-top: 20px;
+     font-family: sans-serif;
+ }
 
-.head li a {
-    color: white;
-}
+ .head li a {
+     color: white;
+ }
 
-.album {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: sans-serif;
-}
+ .album {
+     font-size: 15px;
+     font-weight: bold;
+     text-transform: uppercase;
+     font-family: sans-serif;
+ }
 
-.main-canc img  {
-    margin: 10px auto;
-    width: 80%;
-    max-width: 350px;
-    box-shadow: 2px 2px 10px #666;
-}
+ .main-canc img {
+     margin: 10px auto;
+     width: 80%;
+     max-width: 350px;
+     box-shadow: 2px 2px 10px #666;
+ }
 
-.main-canc .cancion, .main-canc .funciones, .main-canc .barra, .main-canc .dispositivos, .main-canc img  {
-    display: flex;
-}
+ .main-canc .cancion,
+ .main-canc .funciones,
+ .main-canc .barra,
+ .main-canc .dispositivos,
+ .main-canc img {
+     display: flex;
+ }
 
-.main-canc .cancion p, .main-canc .cancion a, .barra p {
-    color: white;
-    font-family: sans-serif;
-}
+ .main-canc .cancion p,
+ .main-canc .cancion a,
+ .barra p {
+     color: white;
+     font-family: sans-serif;
+ }
 
-.main-canc .cancion{  
-    width: 80%;
-    max-width: 350px;
-    justify-content: space-between;
-    margin: 25px auto 0px auto;
-}
+ .main-canc .cancion {
+     width: 80%;
+     max-width: 350px;
+     justify-content: space-between;
+     margin: 25px auto 0px auto;
+ }
 
-.main-canc .cancion p {
-    font-weight: bold;
-    font-size: 25px;
-}
+ .main-canc .cancion p {
+     font-weight: bold;
+     font-size: 25px;
+ }
 
-.main-canc .barra{
-    width: 75%;
-    max-width: 350px;
-    justify-content: space-between;
-    margin: 15px auto 10px auto; 
-    height: 3px;
-    background-color: #B1ADAD;
-    border-radius: 5px;
-  }
+ .main-canc .barra {
+     width: 75%;
+     max-width: 350px;
+     justify-content: space-between;
+     margin: 15px auto 10px auto;
+     height: 3px;
+     background-color: #B1ADAD;
+     border-radius: 5px;
+ }
 
-.barra p {
-    margin: 5px 0px;
-    font-size: 15px;
-    font-weight: bold;
-}
+ .barra p {
+     margin: 5px 0px;
+     font-size: 15px;
+     font-weight: bold;
+ }
 
-.main-canc .funciones{
-    width:75%;
-    max-width:350px;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0px auto;
-}
+ .main-canc .funciones {
+     width: 75%;
+     max-width: 350px;
+     justify-content: space-around;
+     align-items: center;
+     margin: 0px auto;
+ }
 
-.main-canc .funciones .min {
-    color: white;
-    font-size: 20px;
-}
+ .main-canc .funciones .min {
+     color: white;
+     font-size: 20px;
+ }
 
-.main-canc .funciones .max {
-    color: white;
-    font-size: 50px;
-}
+ .main-canc .funciones .max {
+     color: white;
+     font-size: 50px;
+ }
 
-.main-canc .dispositivos {
-    width: 90%;
-    justify-content: flex-end;
-    margin-top: 20px;
-    padding-bottom: 10px;
-    align-items: center;
-}
+ .main-canc .dispositivos {
+     width: 90%;
+     justify-content: flex-end;
+     margin-top: 20px;
+     padding-bottom: 10px;
+     align-items: center;
+ }
 
-.main-canc .dispositivos a {
-    color: white;
-    font-size: 20px;
-}
+ .main-canc .dispositivos a {
+     color: white;
+     font-size: 20px;
+ }
 
-.main-canc .barra-sec {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+ .main-canc .barra-sec {
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+ }
 
-.main-canc .barra-sec h2 {
-    color: white;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-size: 1em;
-    margin-top: 40px;
-}
+ .main-canc .barra-sec h2 {
+     color: white;
+     text-transform: uppercase;
+     font-family: sans-serif;
+     font-size: 1em;
+     margin-top: 40px;
+ }
 
-.main-canc .barra-sec audio {
-  width: 60%;
-  margin-top: 5px;
+ .main-canc .barra-sec audio {
+     width: 60%;
+     margin-top: 5px;
 
-}
+ }
 
-.main-canc .dispositivos a.playlist {
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-right: 15px;
-}
+ .main-canc .dispositivos a.playlist {
+     text-transform: uppercase;
+     font-size: 15px;
+     margin-right: 15px;
+ }
 
 
-/********************************************************************************************************
+ /********************************************************************************************************
 *                                               ESTILOS PÁGINA PLAYLIST
 **********************************************************************************************************/
-.sec-play-ppal {
-    background-color:rgb(255, 255, 255) ;
-}
-.sec-play-ppal img {
-    width: 90%;
-    margin: auto;
-}
+ .sec-play-ppal {
+     background-color: rgb(255, 255, 255);
+ }
 
-.sec-play-ppal .head .mi-play {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: rgb(133, 5, 5);
-    letter-spacing: 2px;
-    margin-bottom: 60px;
-    width: 100%;
-    font-weight: bold;
-}
-.sec-play-sec h2 {
-    display: block;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    justify-content: center;
-    font-size: 15px;
-    background-color: black;
-}
+ .sec-play-ppal img {
+     width: 90%;
+     margin: auto;
+ }
 
-ul.playlist .play-can{
-    background-color: #494949;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+ .sec-play-ppal .head .mi-play {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 20px;
+     text-transform: uppercase;
+     color: rgb(133, 5, 5);
+     letter-spacing: 2px;
+     margin-bottom: 60px;
+     width: 100%;
+     font-weight: bold;
+ }
 
-ul.playlist .play-can img {
-    display: block;
-    margin: 10px;
-    width: 80px;
-}
+ .sec-play-sec h2 {
+     display: block;
+     color: white;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+     justify-content: center;
+     font-size: 15px;
+     background-color: black;
+ }
 
-ul.playlist .play-can h4 {
-    text-transform: uppercase;
-    margin-right: 10px;
-}
-ul.playlist .play-can a.artista {
-    color: white;
-    background-color: rgba(186, 4, 4, 0.7);
+ ul.playlist .play-can {
+     background-color: #494949;
+     margin-bottom: 5px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+ }
 
-}
+ ul.playlist .play-can img {
+     display: block;
+     margin: 10px;
+     width: 80px;
+ }
 
-ul.playlist  a:hover, .play-can a:active {
-    background-color: rgb(255, 255, 255);
-    color: rgba(186, 4, 4, 0.8);
-}
+ ul.playlist .play-can h4 {
+     text-transform: uppercase;
+     margin-right: 10px;
+ }
 
-ul.playlist .play-can p.favorito i {
-    color: rgb(133, 5, 5);
-    margin-left: 70%;
-}
+ ul.playlist .play-can a.artista {
+     color: white;
+     background-color: rgba(186, 4, 4, 0.7);
 
-/********************************************************************************************************
+ }
+
+ ul.playlist a:hover,
+ .play-can a:active {
+     background-color: rgb(255, 255, 255);
+     color: rgba(186, 4, 4, 0.8);
+ }
+
+ ul.playlist .play-can p.favorito i {
+     color: rgb(133, 5, 5);
+     margin-left: 70%;
+ }
+
+ /********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
 **********************************************************************************************************/
-.genres{
-    background-color:rgb(133, 5, 5);
-    padding: 10px;
-}
-.genres .sec-art-ppal{
-    height: 40vh;
-    margin-bottom: 10px;
-    filter: grayscale(75%);
-}
+ .genres {
+     background-color: rgb(133, 5, 5);
+     padding: 10px;
+ }
 
-.genres .sec-art-ppal:hover{
-    filter:none;
-}
+ .genres a {
+     color: white;
+ }
 
-#pop{
-    background-image: url("/images/pop.jpg");
-}
+ .genres .sec-art-ppal {
+     height: 40vh;
+     margin-bottom: 10px;
+     filter: grayscale(75%);
+ }
 
-#jazz{
-    background-image: url("/images/jazz.jpg");
-}
+ .genres .sec-art-ppal:hover {
+     filter: none;
+ }
 
-#rock {
-    background-image: url("/images/rock.jpg");
-}
+ #pop {
+     background-image: url("/images/pop.jpg");
+ }
 
-#reggae {
-    background-image: url("/images/reggea.jpg");
-}
+ #jazz {
+     background-image: url("/images/jazz.jpg");
+ }
 
-#rap{
-    background-image: url("/images/rap.jpg");
-}
+ #rock {
+     background-image: url("/images/rock.jpg");
+ }
 
-#ryb{
-    background-image: url("/images/ryb.jpg");
-}
+ #reggae {
+     background-image: url("/images/reggea.jpg");
+ }
 
-#pop h2, #jazz h2, #rock h2, #reggae h2, #rap h2, #ryb h2 {
-    margin-bottom: 30px;
-}
+ #rap {
+     background-image: url("/images/rap.jpg");
+ }
+
+ #ryb {
+     background-image: url("/images/ryb.jpg");
+ }
+
+ #pop h2,
+ #jazz h2,
+ #rock h2,
+ #reggae h2,
+ #rap h2,
+ #ryb h2 {
+     margin-bottom: 30px;
+ }
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ABOUT US
 **********************************************************************************************************/
 
 
-.bod-about{
-    background-color: rgb(80, 80, 80);
-}
+ .bod-about {
+     background-color: rgb(80, 80, 80);
+ }
 
-.main-about{height: 600px;}
+ .main-about {
+     height: 80vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
 
-.main-about h1, .main-about h2 {
-    color: white;
-    margin-top: 20px;
-    letter-spacing: 3px;
-}
+ .main-about hgroup {
+     width: 100%;
+     color: white;
+     margin-top: 20px;
+     letter-spacing: 3px;
+ }
 
-.main-about h1{
-    font-size: 35px;
-}
+ .main-about h1 {
+     font-size: 2em;
+ }
 
-.main-about h2 {
-    font-size: 25px;background-color:rgba(186, 4, 4, 0.7);
-}
+ .main-about h2 {
+     font-size: 1.5em;
+     background-color: rgba(186, 4, 4, 0.7);
+ }
 
-.main-about p{
-    color: white;
-    font-family: sans-serif;  
-}
+ .main-about p {
+     color: white;
+     font-family: sans-serif;
+ }
 
-.map{
-    width: 100%;
-    padding: 20px;height: 100%;
-   
-}
+ .map {
+     width: 100%;
+     height: 100%;
+     max-width: 800px;
+     padding: 20px;
+ }
 
-/********************************************************************************************************
+ .buttons {
+     margin: 40px;
+ }
+
+ .buttons .but-ppal {
+     background-color: rgb(186, 4, 4);
+     color: white;
+     border-radius: 10%;
+     text-transform: uppercase;
+     padding: 10px 15px;
+     margin-right: 20px;
+     font-family: sans-serif;
+ }
+
+ .buttons .but-sec {
+     color: white;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     padding: 7px 15px;
+     border-radius: 10%;
+     border: solid 2px rgb(186, 4, 4);
+
+ }
+
+ /********************************************************************************************************
 *                                               ESTILOS PÁGINA ALBUMES (detail)
 **********************************************************************************************************/
+ .bod-alb {
+     background-image: url("../images/background-canciones.jpg");
+ }
 
-.seccionalbumess {
-    background-image: url(../images/background-canciones.jpg);
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'Open Sans', sans-serif
-}
-.albumzzzz {
-    width: 86%;
-    background-color: rgb(186, 4, 4);
-    justify-content: center;
-    margin: 10%;
-    font-family: 'Open Sans', sans-serif
-}
+ .main-alb,
+ .desk-alb {
+     background-color: rgb(186, 4, 4);
+     width: 80%;
+     padding: 10px;
+     margin: 15px auto;
+     max-width: 800px;
+ }
 
-.h2albumzzzz {
-    background-color: white;
-    margin: 4.2%;
-    border: solid 4px black;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif
-}
+ .alb-info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+ }
 
-.pop {
-    background-color: #2b2b2b;
-}
+ .alb-info img {
+     width: 80%;
+ }
 
-.navtrack {
-    font-family: 'Open Sans', sans-serif;
-    border: solid 5px rgb(186, 4, 4);
-    text-align: justify;
-    border-radius: 10%;
-    background-color: #2b2b2b;
-    color: white;
-    font-size: 100%;
-}
+ .alb-info h2 {
+     background-color: white;
+     font-size: 1.5em;
+     font-weight: bold;
+     width: 80%;
+     margin: 10px 0px;
+     box-shadow: 1px 1px 1px black;
+ }
 
-.olalbumzzz {
-    font-family: 'Open Sans', sans-serif;
-    margin: 5%; 
-}
+ .alb-info h3 {
+     color: white;
+     font-weight: bold;
+     font-size: 1em;
+     margin-top: 10px;
+ }
 
-.navtrack h3 {
-    font-family: 'Open Sans', sans-serif;
-    margin: 5% ;
-     font-size: 100%;
-    margin: 10px;
-    text-align: center;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    height: 100%;
-}
+ .alb-info p {
+     color: white;
+     background-color: rgb(80, 80, 80);
+     width: 80%;
+     padding: 5px 0px;
+     margin-top: 5px;
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 0.85em;
+     font-family: sans-serif;
+ }
 
-.albumzzzz p{font-size: 100%;
-    margin: 10px;
-    text-align: center;
-    color: white;
-    font-family: 'Open Sans', sans-serif}
+ .alb-info a {
+     color: white;
+ }
 
-    .fotoalbumzzzz {
-    justify-content: center;
-    width: 90%;
-    display: flex;
-    ;
-    margin: 3%;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif
-}
+ .tracklist {
+     background-color: rgb(80, 80, 80);
+     width: 80%;
+     padding: 10px;
+     margin: 10px auto;
+ }
 
+ .tracklist h3 {
+     color: white;
+ }
+
+ .tracklist li {
+     color: white;
+     margin: 5px 10px;
+     font-family: sans-serif;
+     font-size: 1em;
+ }
+
+ .desk-alb img {
+     width: 80%;
+ }
+
+ .desk-alb {
+     display: none;
+ }
 
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA SECCION ALBUM
 **********************************************************************************************************/
+ .albums {
+     background-color: #2b2b2b;
+     padding: 40px;
+ }
+
+ .albums li h4,
+ .albums li p {
+     text-align: center;
+     text-transform: uppercase;
+ }
+
+ .albums h2 {
+     color: white;
+ }
+
+ .albums h4 {
+     width: 90%;
+     font-size: 1em;
+     background-color: white;
+     padding: 7px 0px;
+     margin: 10px 0px;
+     box-shadow: 2px 2px 2px black;
+     font-family: 'Open Sans', sans-serif;
+     letter-spacing: 3px;
+ }
+
+ .albums ul {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .albums li {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: rgb(186, 4, 4);
+     margin-bottom: 15px;
+     width: 90%;
+ }
+
+ .albums a {
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .albums li img {
+     width: 70%;
+     margin-bottom: 10px;
+     filter: sepia(70%)
+ }
+
+ .albums li img:hover {
+     filter: sepia(0%)
+ }
+
+ .albums p {
+     color: white;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: bold;
+     margin-bottom: 10px;
+
+ }
+
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA SECCION DETALLE GENERO
+**********************************************************************************************************/
+ .gen-art {
+     background-color: white;
+ }
+
+ .gen-art h4 {
+     color: white;
+ }
+
+ .detail-gen {
+     color: white;
+     font-family: sans-serif;
+     margin-bottom: 30px;
 
 
-.albumzzz {
-    width: 86%;
-    background-color: rgb(186, 4, 4);
-    justify-content: center;
-    margin: 10%;
-    font-family: 'Open Sans', sans-serif
-}
+ }
 
-.fotoalbumzzz {
-    justify-content: center;
-    width: 90%;
-    display: flex;
-    margin: 4%;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif
-}
+ /********************************************************************************************************
+*                                               ESTILOS FOOTER
+**********************************************************************************************************/
+ footer.contenedor {
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     padding-top: 5px;
+ }
 
-.seccionalbumes {
-    background-image: url(../images/background-canciones.jpg);
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'Open Sans', sans-serif
-}
+ footer img {
+     /* separa logo de textos */
+     margin-right: 10px;
+     max-width: 100px;
+     margin: 10px;
+ }
 
-.h2albumzzz {
-    background-color: white;
-    margin: 2.2%;
-    border: solid 4px black;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif
-}
+ /* textos en columnas */
+ footer .integrantes ul {
+     /* separados entre ellos */
+     display: flex;
+     flex-direction: row;
+     margin: 5px;
+ }
 
-.seccionalbumes p {
-    font-size: 28px;
-    text-align: center;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    height: 100%;
+ /* caben 3 columnas de párrafos */
+ footer .integrantes li a {
+     color: white;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     padding: 5px;
+     font-size: 0.8em;
+ }
 
-}
+ footer ul li a:hover {
+     color: rgb(186, 4, 4);
+ }
 
-.seccionalbumes h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(186, 4, 4);
+ footer p {
+     color: rgb(80, 80, 80);
+     margin: 10px 10px;
 
+ }
 
-}
-
-.palbumes {
-    height: 50px;
-}
-
-.h2albumzzz h2 {
-    font-size: 30px;
-}
-
-footer.contenedor {
-    background-color: black;
-    display: flex;
-    padding-top: 5px;
-}
-
-footer img {
-    /* separa logo de textos */
-    margin-right: 10px;
-    max-width: 100px;
-    margin: 10px;
-}
-
-/* textos en columnas */
-footer .integrantes ul{
-    /* separados entre ellos */
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
-}
-
-/* caben 3 columnas de párrafos */
-footer .integrantes  li a {
-    color: white;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    padding: 5px;
-    font-size: 0.8em;
-}
-
-footer ul li a:hover{
-    color: rgb(186, 4, 4);
-}
-footer p {
-    color:rgb(80, 80, 80);
-    margin: 10px 10px;
-
-}
  /********************************************************************************************************
 *                                              MEDIA QUERIES
 **********************************************************************************************************/
 
-@media (min-width: 700px) {
-    /*Header y sección principal*/
-    header {
-        flex-direction: row;
-    }
+ @media (min-width: 700px) {
 
-    header>img {
-        margin: 10px;
-    }
-
-    header nav {
-        border-top: none;
-    }
-
-    /*Sección secundaria*/
-    .circles {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .icon {
-        width: calc(50% - 5px);
-    }
-
-    /*Sección artistas*/
-    .artists ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .artists ul li {
-        width: calc(50% - 5px)
-    }
-
-    .artists ul li a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 80%
-    }
-
-    .artists ul li img {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /*Sección Canciones */
-    
-    .songs ul  {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-    }
-
-    .songs ul li {
-       width: calc(50% - 5px)
-    }
-
-    .songs img {
-       width: 40%;
-       height: auto;
-    }
-
-
-
-    /*Pagina géneros*/
-    .genres {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .genres .sec-art-ppal {
-        width: calc(50% - 5px);
-    }
-
-/*Pagina playlist*/
-
-.sec-play-ppal {
-    display: flex;
-    flex-direction: row;
-    width: (40%-5px);
-}
-
-.sec-play-ppal .art-head-play {
-    display: flex;
-    flex-direction: column;
-}
-.sec-play-ppal .art-head-play img {
-    width: 30%;
-    margin:0;
-}
-
-ul.playlist li {
-    width: calc(60%-5px);
-}
-ul.playlist .play-can {
-    justify-content: space-around;
-}
-
-
-ul.playlist .play-can h4 {
-    margin-left: 50px;
-}
-ul.playlist .play-can p.favorito i {
-    color: rgb(177, 0, 0);
-
-}
-
-/*pagina detail-track */
-.head {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 30px; 
-}
-
-.sec-canc-ppal {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-   .main-canc .barra {
-
-   }
-.main-canc .funciones .min {
-    color: white;
-    font-size: 30px;
-}
-
-.main-canc .funciones .max {
-    color: white;
-    font-size: 70px;
-}
-
-footer .integrantes ul{
-    /* separados entre ellos */
-    justify-content: space-between;
-}
-
-footer .integrantes ul li {
- 
-}
-    /*seccion albumes*/
-    .seccionalbumes h3 {
-        text-align: center;
-        display: block;
-        width: 4000px;
-        margin: 15px;
-        margin: 10%;
-    }
-
-    .albumzzz {
-        width: 40%;
-        justify-content: normal;
-        margin: 3%;
-    }
-    }
-
-@media (min-width: 1100px) {
      /*Header y sección principal*/
-     header{
+     header {
+         flex-direction: row;
+     }
+
+     header>img {
+         margin: 10px;
+     }
+
+     header nav {
+         border-top: none;
+     }
+
+     /*Sección secundaria*/
+     .circles {
          display: flex;
          justify-content: space-between;
-         }
+         flex-wrap: wrap;
+     }
 
-         header nav {
-             justify-content: space-around;
-             width: 90%;
-         }
+     .icon {
+         width: calc(50% - 5px);
+     }
 
-         header nav ul {
-             width: 100%;
-             flex-wrap: nowrap;
-         }
+     /*Sección artistas*/
+     .artists ul {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         flex-wrap: wrap;
+     }
 
+     .artists ul li {
+         width: calc(50% - 5px)
+     }
 
-         /*Sección secundaria*/
-         .icon {
-             width: calc(25% - 5px);
-         }
+     .artists ul li a {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 80%
+     }
 
+     .artists ul li img {
+         height: 100%;
+         object-fit: cover;
+     }
 
-         /*Sección artistas*/
-         .artists h2 {
-             padding-bottom: 40px;
-         }
+     /*Sección Canciones */
 
-         .artists ul li {
-             align-items: center;
-             justify-content: baseline;
-             width: calc(33% - 5px);
+     .songs ul {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+     }
 
-         }
+     .songs ul li {
+         width: calc(50% - 5px)
+     }
 
-         .artists ul li img {
-             height: 30vh;
-             object-fit: cover;
-         }
-
-/*Sección Canciones */
-
-.songs h2 {
-    padding: 20px;
-}
-.songs ul li {
-    align-items: center;
-    width: calc(33% - 5px);
-    padding: 20px;
-}
-
-    /*Pagina géneros*/
-    .genres .sec-art-ppal{
-        width: calc(33% - 5px);
-    }
-.albumzzz{width: 86%; background-color: rgb(186, 4, 4);justify-content: center;margin: 10%; font-family: 'Open Sans', sans-serif}
-.fotoalbumzzz{ justify-content: center; width: 90%; display: flex; ;margin: 4%;text-align: center; font-family: 'Open Sans', sans-serif} 
-.seccionalbumes{background-image: url(../images/background-canciones.jpg);justify-content: center;display: flex;flex-wrap: wrap;font-family: 'Open Sans', sans-serif} 
-.h2albumzzz {background-color: white;margin:4.2%;border: solid 4px black; text-align: center;font-family: 'Open Sans', sans-serif}
-.seccionalbumes p{font-size:85%; margin: 10px;text-align: center; color: white;font-family: 'Open Sans', sans-serif}
-.seccionalbumes h3{font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(186, 4, 4);
-    
-}
-
-/*Pagina playlist*/
+     .songs img {
+         width: 40%;
+         height: auto;
+     }
 
 
-         /*Pagina géneros*/
-         .genres .sec-art-ppal {
-             width: calc(33% - 5px);
-         }
 
-         /*seccion albumes*/
+     /*Pagina géneros*/
+     .genres {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+     }
 
-         .seccionalbumes h3 {
-             text-align: center;
-             display: block;
-             width: 4000px;
-             margin: 15px;
-             margin: 10%;
-         }
+     .genres .sec-art-ppal {
+         width: calc(50% - 5px);
+     }
 
-         .albumzzz {
-             width: 20%;
-             justify-content: normal;
-             margin: 3%;
-         }
+     /*Pagina playlist*/
 
-         .albumzzz p {
-             font-size: 22px;
-         }
-         }
+     .sec-play-ppal {
+         display: flex;
+         flex-direction: row;
+         width: (40%-5px);
+     }
+
+     .sec-play-ppal .art-head-play {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .sec-play-ppal .art-head-play img {
+         width: 30%;
+         margin: 0;
+     }
+
+     ul.playlist li {
+         width: calc(60%-5px);
+     }
+
+     ul.playlist .play-can {
+         justify-content: space-around;
+     }
+
+
+     ul.playlist .play-can h4 {
+         margin-left: 50px;
+     }
+
+     ul.playlist .play-can p.favorito i {
+         color: rgb(177, 0, 0);
+
+     }
+
+     /*pagina detail-track */
+     .head {
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+         padding: 15px 30px;
+     }
+
+     .sec-canc-ppal {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         flex-wrap: wrap;
+     }
+
+     .main-canc .barra {}
+
+     .main-canc .funciones .min {
+         color: white;
+         font-size: 30px;
+     }
+
+     .main-canc .funciones .max {
+         color: white;
+         font-size: 70px;
+     }
+
+     /*sección de detalle albums*/
+
+     .main-alb {
+         display: flex;
+     }
+
+     .main-alb article {
+         width: calc(50% - 5px);
+     }
+
+     .desk-alb {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     footer .integrantes ul {
+         /* separados entre ellos */
+         justify-content: space-between;
+     }
+
+     footer .integrantes ul li {}
+
+     /*seccion albumes*/
+     .albums ul {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+     }
+
+     .albums li {
+         width: calc(50% - 5px)
+     }
+
+ }
+
+ @media (min-width: 1100px) {
+
+     /*Header y sección principal*/
+     header {
+         display: flex;
+         justify-content: space-between;
+     }
+
+     header nav {
+         justify-content: space-around;
+         width: 90%;
+     }
+
+     header nav ul {
+         width: 100%;
+         flex-wrap: nowrap;
+     }
+
+
+     /*Sección secundaria*/
+     .icon {
+         width: calc(25% - 5px);
+     }
+
+
+     /*Sección artistas*/
+     .artists h2 {
+         padding-bottom: 40px;
+     }
+
+     .artists ul li {
+         align-items: center;
+         justify-content: baseline;
+         width: calc(33% - 5px);
+
+     }
+
+     .artists ul li img {
+         height: 30vh;
+         object-fit: cover;
+     }
+
+     /*Sección Canciones */
+     .songs h2,
+     .albums h2 {
+         padding: 20px;
+     }
+
+     .songs ul li {
+         align-items: center;
+         width: calc(33% - 5px);
+         padding: 20px;
+     }
+
+     /*Pagina géneros*/
+     .genres .sec-art-ppal {
+         width: calc(33% - 5px);
+     }
+
+     /*Pagina géneros*/
+     .genres .sec-art-ppal {
+         width: calc(33% - 5px);
+     }
+
+     /*Páginas albums*/
+     .albums li {
+         width: calc(33% - 5px)
+     }
+
+     /*Páginas albums*/
+     .sec-art-ppal {
+         background-image: url("/images/bruno2.jpg");
+     }
+
+     .sec-art-sec {
+         display: flex;
+     }
+
+     .sec-art-sec article {
+         width: calc(50% - 5px);
+     }
+
+ }
