@@ -79,16 +79,17 @@
      animation-duration: 3s;
      animation-name: logo;
      animation-iteration-count: infinite;
+
  }
 
  @keyframes logo {
      from {
-         -webkit-transform: rotate(0deg);
          transform: rotateY(0deg);
      }
-
+     50%{
+         transform: rotateY(180deg)
+     }
      to {
-         -webkit-transform: rotate(360deg);
          transform: rotateY(360deg);
      }
  }
@@ -272,7 +273,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .artist img {
      filter: brightness(60%);
      transition: all .9s ease;
-     /*Este es genérico para maximizar compatibilidad*/
      max-width: 500px;
      width: 100%;
      border-radius: 5%;
@@ -371,12 +371,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .sec-art-sec p {
-     background-color: rgba(255, 255, 255, 0.767);
-     color: black;
+     background-color: black;
+     color: white;
      margin: 0px;
      padding: 20px;
      font-family: sans-serif;
-     text-align: justify;
  }
 
  .sec-art-sec h2 {
@@ -620,7 +619,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .genres a {
-     color: white;
+     display: block;
  }
 
  .genres .sec-art-ppal {
@@ -1032,7 +1031,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          justify-content: space-between;
      }
 
-     .genres .sec-art-ppal {
+     .genres a {
          width: calc(50% - 5px);
      }
 
@@ -1205,9 +1204,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      }
 
      /*Pagina géneros*/
-     .genres .sec-art-ppal {
-         width: calc(33% - 5px);
+     .genres a {
+        width: calc(33% - 5px);
      }
+
+
 
      /*Pagina géneros*/
      .genres .sec-art-ppal {
@@ -1232,4 +1233,4 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          width: calc(50% - 5px);
      }
 
- }
+}
