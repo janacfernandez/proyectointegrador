@@ -405,7 +405,9 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      flex-direction: column;
      align-items: center;
  }
-
+ .sec-art-sec ol{
+     margin-bottom: 15px;
+ }
  .sec-art-sec ol li {
      color: white;
      font-family: sans-serif;
@@ -457,6 +459,10 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
        width: 100%;
        padding: 20px;
   }
+
+  .detail-track img{
+    max-width: 350px;
+}
     .funciones,
     .barra, .data,
     .dispositivos, .but-fun {
@@ -485,6 +491,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
 .but-fun {
      flex-direction: row;
+     margin: 15px;
  }
 
  .but-fun p {
@@ -817,6 +824,7 @@ ul.playlist .play-can p.favorito i {
      margin-top: 10px;
  }
 
+
  .alb-info p {
      color: white;
      background-color: rgb(80, 80, 80);
@@ -833,6 +841,11 @@ ul.playlist .play-can p.favorito i {
      color: white;
  }
 
+ .alb-info a:hover{
+     color: rgb(186, 4, 4);
+     font-weight: bold;
+ }
+
  .tracklist {
      background-color: rgb(80, 80, 80);
      width: 80%;
@@ -842,6 +855,7 @@ ul.playlist .play-can p.favorito i {
 
  .tracklist h3 {
      color: white;
+     font-weight: bold;
  }
 
  .tracklist li {
@@ -850,7 +864,6 @@ ul.playlist .play-can p.favorito i {
      font-family: sans-serif;
      font-size: 1em;
  }
-
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA SECCION ALBUM
@@ -905,6 +918,7 @@ ul.playlist .play-can p.favorito i {
 
  .albums li img {
      width: 70%;
+     transition: all .6s ease;
      margin-bottom: 10px;
      filter: sepia(70%)
  }
@@ -931,6 +945,11 @@ ul.playlist .play-can p.favorito i {
  .gen-art h4 a{
      color: white;
  }
+
+ .gen-art h4 a:hover{
+    color: rgb(186, 4, 4);
+    font-weight: bold;
+}
 
  .detail-gen {
      color: white;
@@ -1057,27 +1076,28 @@ ul.playlist .play-can p.favorito i {
 
  }
 
- body {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     height: 100vh;
- }
-
- footer.contenedor {
-     margin-top: auto;
- }
-
- .main{
-     height: 100%;
- }
-
+ 
  /********************************************************************************************************
 *                                              MEDIA QUERIES
 **********************************************************************************************************/
 
  @media (min-width: 700px) {
 
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+   
+    footer.contenedor {
+        margin-top: auto;
+    }
+   
+    .main{
+        height: 100%;
+    }
+   
      /*Header y sección principal*/
      header {
          flex-direction: row;
@@ -1196,8 +1216,14 @@ ul.playlist .play-can p.favorito i {
      .play-ppal {
          justify-content: space-between;
          padding: 0%;
+         height: 60%;
          margin-left: 10px;
      }
+
+     .detail-track img{
+         max-width: 350px;
+     }
+
      .but-fun {
          justify-content: left;
      }
@@ -1318,16 +1344,26 @@ ul.playlist .play-can p.favorito i {
          width: calc(33% - 5px);
      }
 
-      /*pagina detail-track */
-    .play-ppal {
-        height: 100%;
-    }
-    
 
      /*pagina detail-track */
 
      article div {
          width: 100%;
+     }
+
+     .detail-track{
+         justify-content: space-between;
+     }
+     .detail-track div{
+         flex-grow: 0;
+
+     }
+     .play-ppal {
+         width: 50%;
+     }
+
+     .detail-track img{
+         max-width: 450px;
      }
 
 
