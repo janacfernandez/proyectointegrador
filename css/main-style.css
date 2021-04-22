@@ -342,7 +342,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .songs ul li div a:hover {
-     color: white;
+     color: rgb(250, 45, 45);
+    
  }
 
  .songs img {
