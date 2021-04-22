@@ -26,7 +26,9 @@
      padding-top: 5px;
  }
 
+ /*Al nav le daremos un ancho máximo para de esta forma si se visualiza en un dispositivo muy grande no se tenga que recorrer toda la pantalla para navegarlo*/
  header nav {
+     max-width: 1500px;
      padding: 5px;
      border-top: 2px solid rgb(186, 4, 4);
  }
@@ -36,6 +38,7 @@
      width: 100%;
      display: flex;
      justify-content: flex-end;
+     align-items: flex-end;
      flex-wrap: wrap;
  }
 
@@ -47,12 +50,18 @@
      font-family: 'Heebo', sans-serif;
      text-transform: uppercase;
      color: rgb(255, 255, 255);
-     margin: 20px;
+     margin: 0px 20px;
+ }
+
+ header nav ul form {
+     display: flex;
+     align-items: flex-end;
  }
 
  header nav ul form input {
      width: 60%;
-     margin-left: 20px;
+     height: 24px;
+     margin: 0px 10px;
      background-color: rgba(240, 49, 49, 0.781);
  }
 
@@ -66,6 +75,8 @@
  }
 
  header nav ul form img {
+     width: 15px;
+     height: 15px;
      margin: 0px;
  }
 
@@ -73,22 +84,23 @@
      color: rgb(186, 4, 4);
  }
 
- header img {
+ header>img {
      max-width: 100px;
      margin: 7px 0px;
-     animation-duration: 3s;
      animation-name: logo;
+     animation-duration: 3s;
      animation-iteration-count: infinite;
-
  }
 
  @keyframes logo {
      from {
          transform: rotateY(0deg);
      }
-     50%{
+
+     50% {
          transform: rotateY(180deg)
      }
+
      to {
          transform: rotateY(360deg);
      }
@@ -175,21 +187,18 @@
 
 Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
  .sec-sec {
-     padding: 40px 35px;
+     padding: 3% 5%;
      background-image: url("../images/background.jpg");
  }
 
- /*A continuación le daremos estilos generales a todos los títulos h2, h3 y h4 quec omparten caraterísticas para optimizar el código*/
+ /*A continuación le daremos estilos generales a todos los títulos h2, h3 y h4 que comparten caraterísticas para optimizar el código*/
  .sec-sec h2,
  .sec-sec h3,
  .circles h4,
- .artists h2,
  .artists h4,
- .songs h2,
  .songs ul h4,
  .main-about h1,
  .main-about h2,
- .albums h2,
  .alb-info h2,
  .alb-info h3,
  .tracklist h3 {
@@ -246,19 +255,30 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
 
  /*Comenzamos a darle estilo a la sección de artistas, algunas características generales de los títulos las hemos descripto más arriba para otimizar el código*/
- .artists {
-     padding: 40px;
-     background-color: #2b2b2b;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
- }
-
+ /*Damos estilos a los 3 h2 de las secciones index*/
+ .songs h2,
+ .albums h2,
  .artists h2 {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+     text-align: center;
+     text-transform: uppercase;
      font-size: 2em;
      color: white;
      letter-spacing: 3px;
-     padding-bottom: 10%;
+     padding-bottom: 15px;
+ }
+
+ /*Definimos para las secciones un área de trabajo con medidas relativas"*/
+ .artists,
+ .songs,
+ .albums {
+     padding: 3% 5%;
+     background-color: #2b2b2b;
+ }
+
+ .artists ul {
+     width: 100%;
  }
 
  .artists h4 {
@@ -273,7 +293,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .artist img {
      filter: brightness(60%);
      transition: all .9s ease;
-     max-width: 500px;
+     max-width: 600px;
      width: 100%;
      border-radius: 5%;
  }
@@ -294,56 +314,31 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      padding: 40px;
  }
 
- .songs h2,
- .albums h2 {
-     font-size: 2em;
-     color: rgb(186, 4, 4);
-     letter-spacing: 3px;
-     padding-bottom: 7%;
-     font-family: sans-serif;
- }
-
  .songs ul li {
      display: flex;
-     justify-content: flex-start;
      align-items: center;
      background-color: rgb(44, 42, 42);
      margin-bottom: 10px;
  }
 
- .songs ul li div h4 {
-     color: white;
-     font-size: 1.2em;
-     margin: auto;
-     text-align: left;
-     font-family: sans-serif;
- }
-
-
- .songs ul li div a {
-     display: block;
+ .songs ul li div a.cantante {
+     font-family: 'Open Sans', sans-serif;
      color: rgb(186, 4, 4);
-     margin: auto;
-     font-size: 0.8em;
-     margin-bottom: 10px;
-     font-family: sans-serif;
-     text-align: left;
+     font-weight: 600;
  }
 
  .songs ul li div h4 a {
+     display: block;
      color: white;
      font-size: 1.2em;
-     margin: 0px;
      text-align: left;
  }
+
  .songs ul li div a:hover {
-     color: white
+     color: white;
  }
 
  .songs img {
-     width: 30%;
-     height: 30%;
-     border: solid rgb(186, 4, 4);
      margin: 10px 10px;
      border-radius: 50%;
  }
@@ -481,6 +476,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .main-canc .but-fun p {
      margin-right: 5px;
  }
+
  .main-canc .barra {
      width: 75%;
      max-width: 350px;
@@ -557,6 +553,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
 
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA PLAYLIST
 **********************************************************************************************************/
@@ -624,13 +621,15 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  ul.playlist .play-can {
      display: flex;
  }
+
  ul.playlist .play-can .duracion {
-    color: rgb(175, 174, 174);
-    margin: 10px;
+     color: rgb(175, 174, 174);
+     margin: 10px;
 
 
-}
-ul.playlist .play-can p.favorito i {
+ }
+
+ ul.playlist .play-can p.favorito i {
      color: rgb(133, 5, 5);
      margin-left: 70%;
  }
@@ -765,8 +764,7 @@ ul.playlist .play-can p.favorito i {
      background-image: url("../images/background-canciones.jpg");
  }
 
- .main-alb,
- .desk-alb {
+ .main-alb {
      background-color: rgb(186, 4, 4);
      width: 80%;
      padding: 10px;
@@ -833,14 +831,6 @@ ul.playlist .play-can p.favorito i {
      margin: 5px 10px;
      font-family: sans-serif;
      font-size: 1em;
- }
-
- .desk-alb img {
-     width: 80%;
- }
-
- .desk-alb {
-     display: none;
  }
 
 
@@ -929,153 +919,152 @@ ul.playlist .play-can p.favorito i {
      font-family: sans-serif;
      margin-bottom: 30px;
 
-
  }
 
- 
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA SECCION DETALLE DE BUSQUEDA
 **********************************************************************************************************/
-main.ppcal-result {
-    margin: 10px;
-}
-main > section.sec-result {
-    padding-top: 5px;
-}
+ .ppcal-result {
+     margin-bottom: auto;
+ }
 
-.leyenda p {
-    background-color: rgba(207, 11, 11, 0.726);
-    padding: clamp(40px, 6vw, 90px);
-   /* display: flex;
+ main.ppcal-result {
+     margin: 10px;
+ }
+
+ main>section.sec-result {
+     padding-top: 5px;
+ }
+
+ .leyenda p {
+     background-color: rgba(207, 11, 11, 0.726);
+     padding: clamp(40px, 6vw, 90px);
+     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
-    border:rgb(243, 239, 22) dotted;
-    text-transform: uppercase;
-    margin-top: 5px;
-    font-family: sans-serif;
-    color: white;
-}
+     border: rgb(243, 239, 22) dotted;
+     text-transform: uppercase;
+     margin-top: 5px;
+     font-family: sans-serif;
+     color: white;
+ }
 
-h1.contenedor-result {
-    font-size: 15px;
-    padding: 20px 15px;
-    font-family: sans-serif;
-    color: rgb(133, 5, 5);
-    text-transform: uppercase;
-    text-decoration: underline;
-}
-section.secciones-result {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-/* cada resultado */
-section.secciones-result article {
-    width: 100%;
-    display: flex;
-    background-color: rgba(175, 163, 163, 0.637);
-    margin-bottom: 5px;
-    padding: 10px;
-}
-.secciones-result article figure {
-    margin-right: 20px;
-    width: 40px;
-    /* impide que se "achique" */
-    flex-shrink: 0;
-}
+ h1.contenedor-result {
+     font-size: 15px;
+     padding: 20px 15px;
+     font-family: sans-serif;
+     color: rgb(133, 5, 5);
+     text-transform: uppercase;
+     text-decoration: underline;
+ }
 
-.secciones-result article figure img {
+ section.secciones-result {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 100%;
+ }
+
+ /* cada resultado */
+ section.secciones-result article {
+     width: 100%;
+     display: flex;
+     background-color: rgba(175, 163, 163, 0.637);
+     margin-bottom: 5px;
+     padding: 10px;
+ }
+
+ .secciones-result article figure {
+     margin-right: 20px;
+     width: 40px;
+     /* impide que se "achique" */
+     flex-shrink: 0;
+ }
+
+ .secciones-result article figure img {
      display: block;
      height: 80px;
      object-fit: cover;
      border: solid 4px rgb(255, 244, 244);
      margin-right: 10px;
-}
+ }
 
-article .textos h3 p a {
-    margin-left: 10px;
-}
-article .textos h3 a {
-    font-size: 16px;
-    font-weight: 400;
-    color: rgb(133, 5, 5);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-}
+ article .textos h3 p a {
+     margin-left: 10px;
+ }
 
-article .textos h3 a:hover{
-    color: black;
-background-color: rgba(255, 255, 255, 0.555);
+ article .textos h3 a {
+     font-size: 16px;
+     font-weight: 400;
+     color: rgb(133, 5, 5);
+     text-transform: uppercase;
+     font-weight: bold;
+     font-family: sans-serif;
+ }
 
-}
+ article .textos h3 a:hover {
+     color: black;
+     background-color: rgba(255, 255, 255, 0.555);
 
-article .textos {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px;
-    margin-left: 10px;
-}
+ }
 
-article .textos p {
-    line-height: 14px;
-    color: rgb(87, 87, 87);
-    font-family: sans-serif;
-    font-size: 15px;
-}
+ article .textos {
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     padding: 0px 20px;
+     margin-left: 10px;
+ }
 
-/* último párrafo del artículo */
-article .textos p:last-child {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    margin-top: 5px;
-    margin-bottom: 0;
-    border-top: solid 1px rgba(0, 0, 0, 0.1);
-    padding-top: 5px;
-    /* no crece */
-    flex-grow: 0;
-}
-/* elementos "hijos" de "p" */
-article .textos p > * {
-    width: 30%;
-}
+ article .textos p {
+     line-height: 14px;
+     color: rgb(87, 87, 87);
+     font-family: sans-serif;
+     font-size: 15px;
+ }
 
-article .textos p a {
-    width: 15%;
-    line-height: 25px;
-    background-color: rgba(3, 3, 3, 0.85);
-    color: white;
-    padding: 3px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-}
+ /* último párrafo del artículo */
+ article .textos p:last-child {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-grow: 1;
+     margin-top: 5px;
+     margin-bottom: 0;
+     border-top: solid 1px rgba(0, 0, 0, 0.1);
+     padding-top: 5px;
+     /* no crece */
+     flex-grow: 0;
+ }
 
-article .textos p a:hover {
-    background-color: rgba(255, 246, 246, 0.993);
-    color: black;
-}
+ /* elementos "hijos" de "p" */
+ article .textos p>* {
+     width: 30%;
+ }
 
+ article .textos p a {
+     width: 15%;
+     line-height: 25px;
+     background-color: rgba(3, 3, 3, 0.85);
+     color: white;
+     padding: 3px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 15px;
+ }
 
-
-
-
-
-
-
-
-
+ article .textos p a:hover {
+     background-color: rgba(255, 246, 246, 0.993);
+     color: black;
+ }
 
 
 
  /********************************************************************************************************
 *                                               ESTILOS FOOTER
 **********************************************************************************************************/
- footer.contenedor {
+ footer {
      background-color: black;
      display: flex;
      justify-content: center;
@@ -1114,6 +1103,17 @@ article .textos p a:hover {
      color: rgb(80, 80, 80);
      margin: 10px 10px;
 
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 100vh;
+ }
+
+ footer {
+     margin-top: auto;
  }
 
  /********************************************************************************************************
@@ -1204,27 +1204,28 @@ article .textos p a:hover {
          display: flex;
          flex-direction: row;
          width: (40%-5px);
-    }
+     }
 
-    .sec-canc-ppal .art-head-play {
-        width: 30%;
-    }
+     .sec-canc-ppal .art-head-play {
+         width: 30%;
+     }
 
-    .sec-play-sec{
-        display: flex;
-        flex-direction: column;
-        justify-self: right;
-        width: calc(60%-5px);
-    }
-    .play-can {
-        width: 150%;
-    }
+     .sec-play-sec {
+         display: flex;
+         flex-direction: column;
+         justify-self: right;
+         width: calc(60%-5px);
+     }
+
+     .play-can {
+         width: 150%;
+     }
 
 
-    ul.playlist .play-can p.favorito i {
-        color: rgb(177, 0, 0);
+     ul.playlist .play-can p.favorito i {
+         color: rgb(177, 0, 0);
 
-    }
+     }
 
      /*pagina detail-track */
      .head {
@@ -1240,37 +1241,37 @@ article .textos p a:hover {
          justify-content: space-between;
          flex-wrap: wrap;
      }
-     
-     .song-track{
+
+     .song-track {
          display: flex;
          width: 100%;
          justify-content: space-between;
      }
 
-     .song-track>article{
-         width:100%;
+     .song-track>article {
+         width: 100%;
          display: flex;
          flex-direction: column;
          justify-items: space-between;
      }
 
-     .song-track img{
+     .song-track img {
          margin: 0% 5%;
      }
 
-     .song-track.funciones{
+     .song-track.funciones {
          margin-top: 20px;
-     }  
+     }
 
-      .barra-sec {
+     .barra-sec {
          width: 100%;
-      }
+     }
 
 
-      .dispositivos  {
-          padding: 0;
-      }
-    
+     .dispositivos {
+         padding: 0;
+     }
+
      /*sección de detalle albums*/
 
      .main-alb {
@@ -1281,12 +1282,6 @@ article .textos p a:hover {
          width: calc(50% - 5px);
      }
 
-     .desk-alb {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-     }
-
      footer .integrantes ul {
          /* separados entre ellos */
          justify-content: space-between;
@@ -1295,25 +1290,26 @@ article .textos p a:hover {
      /* Pagina search result */
 
      .leyenda p {
-        font-size: 15px;
-        padding: 30px;
-    }
-    
-     section.secciones-result  {
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: space-between;
-    
-    }
-    section.secciones-result article {
-       width: calc(50% - 2px);
-    }
-     
+         font-size: 15px;
+         padding: 30px;
+     }
+
+     section.secciones-result {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+     }
+
+     section.secciones-result article {
+         width: calc(50% - 2px);
+     }
+
 
      /*seccion albumes*/
      .albums ul {
-        flex-direction: row;         
-        flex-wrap: wrap;
+         flex-direction: row;
+         flex-wrap: wrap;
          justify-content: space-between;
      }
 
@@ -1321,10 +1317,10 @@ article .textos p a:hover {
          width: calc(50% - 5px)
      }
 
-    }
+ }
 
 
- @media (min-width: 1100px) {
+ @media (min-width: 1024px) {
 
      /*Header y sección principal*/
      header {
@@ -1380,19 +1376,16 @@ article .textos p a:hover {
 
      /*Pagina géneros*/
      .genres a {
-        width: calc(33% - 5px);
-     }
-
-      /*pagina detail-track */
-   
-      article div {
-          width: 100%;
-      }
-
-     /*Pagina géneros*/
-     .genres .sec-art-ppal {
          width: calc(33% - 5px);
      }
+
+
+     /*pagina detail-track */
+
+     article div {
+         width: 100%;
+     }
+
 
      /*Páginas albums*/
      .albums li {
@@ -1413,8 +1406,9 @@ article .textos p a:hover {
      }
 
      /* Pagina search-result*/
+
      section.secciones-result article {
-        width: calc(33% - 1.5px);
+         width: calc(33% - 1.5px);
      }
 
      .leyenda p {
