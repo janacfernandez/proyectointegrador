@@ -319,7 +319,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /*Comenzamos a darle estilo a la sección de canciones*/
  .songs {
      background-image: url("../images/background-canciones.jpg");
-     padding: 40px;
+
  }
 
  .songs ul li {
@@ -330,6 +330,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .songs ul li div a.cantante {
+     display: block;
      font-family: 'Open Sans', sans-serif;
      color: rgb(186, 4, 4);
      font-weight: 600;
@@ -347,6 +348,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .songs img {
+     width:50%;
      margin: 10px 10px;
      border-radius: 50%;
  }
@@ -422,13 +424,14 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      align-items: center;
      flex-direction: column;
      padding: 20px;
+     height: 100%;
     }
 
     .head {
         display: flex;
-        margin-bottom: 20px;
-        
+        margin-bottom: 20px;  
      }
+     
      .head a {
         color: white;
         margin-top: 20px;
@@ -531,7 +534,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
     text-align: center;
 }
 
-   .barra-sec h2 {
+.barra-sec h2 {
     color: white;
     text-transform: uppercase;
     font-family: sans-serif;
@@ -566,6 +569,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      font-weight: bold;
      font-size: 20px;
  }
+
 
 
  /********************************************************************************************************
@@ -650,8 +654,8 @@ ul.playlist .play-can p.favorito i {
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
-**********************************************************************************************************/
- .genres {
+**********************************************************************************************************/ 
+.genres {
      background-color: rgb(133, 5, 5);
      padding: 10px;
  }
@@ -924,7 +928,7 @@ ul.playlist .play-can p.favorito i {
      background-color: white;
  }
 
- .gen-art h4 {
+ .gen-art h4 a{
      color: white;
  }
 
@@ -933,6 +937,10 @@ ul.playlist .play-can p.favorito i {
      font-family: sans-serif;
      margin-bottom: 30px;
 
+ }
+
+ .mainnn{
+     height: 100%;
  }
 
 
@@ -1012,6 +1020,7 @@ ul.playlist .play-can p.favorito i {
      display: flex;
      justify-content: center;
      padding-top: 5px;
+
  }
 
  footer img {
@@ -1055,8 +1064,12 @@ ul.playlist .play-can p.favorito i {
      height: 100vh;
  }
 
- footer {
+ footer.contenedor {
      margin-top: auto;
+ }
+
+ .main{
+     height: 100%;
  }
 
  /********************************************************************************************************
@@ -1135,6 +1148,7 @@ ul.playlist .play-can p.favorito i {
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
+
      }
 
      .genres a {
@@ -1166,6 +1180,7 @@ ul.playlist .play-can p.favorito i {
 
      .detail-track {
          flex-direction: row;
+         
      }
      .head {
          justify-content: space-between;
