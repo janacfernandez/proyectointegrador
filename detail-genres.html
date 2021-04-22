@@ -1,106 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
 
-<head>
+        <!--Indicamos el conjunto de caracters -->
+        <meta charset="utf-8">
 
-    <!--Indicamos el conjunto de caracters -->
-    <meta charset="utf-8">
+        <!--Usamos la meta tag name="viewport" para lograr una página responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Usamos la meta tag name="viewport" para lograr una página responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Linkeo de fuentes-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-    <!--Linkeo con la hoja .css s-->
-    <link rel="stylesheet" href="css/main-style.css">
+        <!--Linkeo con la hoja .css -->
+        <link rel="stylesheet" href="css/main-style.css">
+    </head>
 
-    <!--Linkeo de fuentes-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-</head>
-
-<body>
-    <header>
-        <img src="images/logo.png" alt="Logo wow music">
-        <nav>
-            <ul>
-                <li><a href="/#">Inicio</a></li>
-                <li><a href="/#art-sec">Artistas</a></li>
-                <li><a href="/#canc-sec">Canciones</a></li>
-                <li><a href="/#alb-sec">Albumes</a></li>
-                <li><a href="genres.html">Géneros</a></li>
-                <li><a href="playlist.html">Playlists</a></li>
-                <li><a href="about-us.html">Conocenos</a></li>
-                <li>
-                    <form action="search-results.html">
-                        <input type="text" name="search" placeholder="Buscar" required>
-                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png" alt="Busqueda" /></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="songs" id="canc-sec">
-            <h2>El género POP</h2>
-            <p class="detail-gen">La música pop (del inglés pop music, contracción de popular music) no es un género de
-                música ya que se deriva de varios géneros, pero cumple el requisito de ser música popular, tuvo su
-                origen a finales de los años 1950 como una derivación del traditional pop, en combinación con otros
-                géneros musicales que estaban de moda en aquel momento.​ Los términos música pop y música popular se
-                usan a menudo de manera indistinta, aunque el segundo tiene un sentido más amplio al dar cabida a otros
-                géneros distintos del pop que se consideren populares.</p>
-            <ul>
-                <li class="gen-art">
-                    <img src="images/michael.jpg" alt="Michael Jackson">
-                    <h4 class="canciones"><a href="/detail-artist.html">Michael Jackson</a></h4>
-                </li>
-                <li class="gen-art">
-                    <img src="images/madona.jpg" alt="Madonna">
-                    <h4 class="canciones"><a href="/detail-artist.html">Madonna</a></h4>
-                </li>
-                <li class="gen-art">
-                    <img src="images/beyonce.png" alt="Beyonce">
-                    <h4 class="canciones"><a href="/detail-artist.html">Beyonce</a></h4>
-                </li>
-                <li class="gen-art">
-                    <img src="images/justin_bieber.jpg" alt="Justin Bieber">
-                    <h4><a href="/detail-artist.html">Justin Bieber</a></h4>
-                </li>
-                <li class="gen-art">
-                    <img src="images/taylor.jpg" alt="Taylor Swift">
-                    <h4 class="canciones"><a href="/detail-artist.html">Taylor Swift</a></h4>
-                </li>
-                <li class="gen-art">
-                    <img src="images/katy.jpg" alt="Katy Perry">
-                    <h4 class="canciones"><a href="/detail-artist.html">Katy Perry</a></h4>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="contenedor">
+    <body>
+        <header>
+            <img src="images/logo.png" alt="Logo wow music">
+            <nav>
+                <ul>
+                    <li><a href="/#">Inicio</a></li>
+                    <li><a href="/#art-sec">Artistas</a></li>
+                    <li><a href="/#canc-sec">Canciones</a></li>
+                    <li><a href="/#alb-sec">Albumes</a></li>
+                    <li><a href="genres.html">Géneros</a></li>
+                    <li><a href="playlist.html">Playlists</a></li>
+                    <li><a href="about-us.html">Conocenos</a></li>
+                    <li>
+                        <form action="search-results.html">
+                            <input type="text" name="search" placeholder="Buscar" required>
+                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                    alt="Busqueda" /></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="songs" id="canc-sec">
+                <h2>El género POP</h2>
+                <p class="detail-gen">La música pop (del inglés pop music, contracción de popular music) no es un género de
+                    música ya que se deriva de varios géneros, pero cumple el requisito de ser música popular, tuvo su
+                    origen a finales de los años 1950 como una derivación del traditional pop, en combinación con otros
+                    géneros musicales que estaban de moda en aquel momento.​ Los términos música pop y música popular se
+                    usan a menudo de manera indistinta, aunque el segundo tiene un sentido más amplio al dar cabida a otros
+                    géneros distintos del pop que se consideren populares.</p>
+                <ul>
+                    <li class="gen-art">
+                        <img src="images/michael.jpg" alt="Michael Jackson">
+                        <h4 class="canciones"><a href="/detail-artist.html">Michael Jackson</a></h4>
+                    </li>
+                    <li class="gen-art">
+                        <img src="images/madona.jpg" alt="Madonna">
+                        <h4 class="canciones"><a href="/detail-artist.html">Madonna</a></h4>
+                    </li>
+                    <li class="gen-art">
+                        <img src="images/beyonce.png" alt="Beyonce">
+                        <h4 class="canciones"><a href="/detail-artist.html">Beyonce</a></h4>
+                    </li>
+                    <li class="gen-art">
+                        <img src="images/justin_bieber.jpg" alt="Justin Bieber">
+                        <h4><a href="/detail-artist.html">Justin Bieber</a></h4>
+                    </li>
+                    <li class="gen-art">
+                        <img src="images/taylor.jpg" alt="Taylor Swift">
+                        <h4 class="canciones"><a href="/detail-artist.html">Taylor Swift</a></h4>
+                    </li>
+                    <li class="gen-art">
+                        <img src="images/katy.jpg" alt="Katy Perry">
+                        <h4 class="canciones"><a href="/detail-artist.html">Katy Perry</a></h4>
+                    </li>
+                </ul>
+            </section>
+        </main>
         <!-- INICIO contenedor elementos de pie -->
-
-
-        <img src="images/logo.png" alt="Logo"></a>
-
-        <div class="integrantes">
-            <ul>
-                <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
-                <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
-                <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
-            </ul>
-            <p>Copyright 2021- wowmusic </p>
-        </div>
-
-
-
-        <!-- FIN contenedor elementos de pie -->
-
-    </footer>
-</body>
-
-
-
+        <footer class="contenedor">
+            <img src="images/logo.png" alt="Logo"></a>
+            <div class="integrantes">
+                <ul>
+                    <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
+                    <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
+                    <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
+                </ul>
+                <p>Copyright 2021- wowmusic </p>
+            </div>
+        </footer>
+        <!-- FIN footer -->
+    </body>
 </html>

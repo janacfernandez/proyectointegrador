@@ -1,105 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <!--Indicamos el conjunto de caracters a utilizar-->
+        <meta charset="utf-8">
+        <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--A continuación linkearemos todas las fuentes utilizadas-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+        <link rel="stylesheet" href="css/main-style.css">
+    </head>
 
-<head>
-    <!--Indicamos el conjunto de caracters a utilizar-->
-    <meta charset="utf-8">
-    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-    <link rel="stylesheet" href="css/main-style.css">
-    <!--A continuación linkearemos todas las fuentes utilizadas-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-</head>
+    <body class="bod-track">
+        <!----------------------------------Comienzo del encabezado---------------------------------->
+        <header>
+            <img src="images/logo.png" alt="Logo wow music">
+            <nav>
+                <ul>
+                    <li><a href="/#">Inicio</a></li>
+                    <li><a href="/#art-sec">Artistas</a></li>
+                    <li><a href="/#canc-sec">Canciones</a></li>
+                    <li><a href="/#alb-sec">Albumes</a></li>
+                    <li><a href="genres.html">Géneros</a></li>
+                    <li><a href="playlist.html">Playlists</a></li>
+                    <li><a href="about-us.html">Conocenos</a></li>
+                    <li>
+                        <form action="search-results.html">
+                            <input type="text" name="search" placeholder="Buscar" required>
+                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                    alt="Busqueda" /></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!------------------------------------Comienzo Principal------------------------------------>
+        <main class="detail-track">
+            <div class="head">
+                <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
+                <a href="detail-album.html" class="album"> Help!</a>
+            </div>
+            <img class="i-port" src="images/imagendeportada.jpg" alt="imagendeportada">
+            <section class="play-ppal">
+                <div class="data">
+                    <p> Yesterday </p>
+                    <a href="detail-artist.html"> The Beatles</a>
+                </div>
+                <div class="but-fun">
+                    <p class="like"><a href="#"><i class="far fa-thumbs-up"></i></a></p>
+                    <p class="favorito"> <a href="#"><i class="far fa-heart"></i></i></a></p>
+                </div>
+                <div class="barra">
+                    <p class="rep">0:00</p>
+                    <p class="duracion">0:00</p>
+                </div>
+                <div class="funciones">
+                    <a href="#" class="min"> <i class="fas fa-random"></i></a>
+                    <a href="#" class="min"> <i class="fas fa-step-backward"></i></a>
+                    <a href="#" class="max"> <i class="fas fa-play-circle"></i></a>
+                    <a href="#" class="min"> <i class="fas fa-step-forward"></i></a>
+                    <a href="#" class="min"> <i class="fas fa-sync-alt"></i></a>
+                </div>
+                <div class="barra-sec">
+                    <h2>Player secundario </h2>
+                    <audio src="audio/y2mate.com - Yesterday Remastered 2009_v720P.mp4" controls loop></audio>
+                </div>
+                <div class="dispositivos">
+                    <a href="playlist.html" class="playlist">Mi Playlist</a>
+                    <a href="playlist.html"><i class="fas fa-indent"></i> </a>
+                </div>
+        </main>
 
-<body class="bod-track">
-    <!----------------------------------Comienzo del encabezado---------------------------------->
-    <header>
-        <img src="images/logo.png" alt="Logo wow music">
-        <nav>
-            <ul>
-                <li><a href="/#">Inicio</a></li>
-                <li><a href="/#art-sec">Artistas</a></li>
-                <li><a href="/#canc-sec">Canciones</a></li>
-                <li><a href="/#alb-sec">Albumes</a></li>
-                <li><a href="genres.html">Géneros</a></li>
-                <li><a href="playlist.html">Playlists</a></li>
-                <li><a href="about-us.html">Conocenos</a></li>
-                <li>
-                    <form action="search-results.html">
-                        <input type="text" name="search" placeholder="Buscar" required>
-                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png" alt="Busqueda" /></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!------------------------------------Comienzo Principal------------------------------------>
-    <main class="detail-track">
-        <div class="head">
-            <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
-            <a href="detail-album.html" class="album"> Help!</a>
-        </div>
-        <img class="i-port" src="images/imagendeportada.jpg" alt="imagendeportada">
-        <section class="play-ppal">
-        <div class="data">
-            <p> Yesterday </p>
-            <a href="detail-artist.html"> The Beatles</a>
-        </div>
-        <div class="but-fun">
-            <p class="like"><a href="#"><i class="far fa-thumbs-up"></i></a></p>
-            <p class="favorito"> <a href="#"><i class="far fa-heart"></i></i></a></p>
-
-        </div>
-        <div class="barra">
-            <p class="rep">0:00</p>
-            <p class="duracion">0:00</p>
-        </div>
-
-        <div class="funciones">
-            <a href="#" class="min"> <i class="fas fa-random"></i></a>
-            <a href="#" class="min"> <i class="fas fa-step-backward"></i></a>
-            <a href="#" class="max"> <i class="fas fa-play-circle"></i></a>
-            <a href="#" class="min"> <i class="fas fa-step-forward"></i></a>
-            <a href="#" class="min"> <i class="fas fa-sync-alt"></i></a>
-        </div>
-        <div class="barra-sec">
-            <h2>Player secundario </h2>
-            <audio src="audio/y2mate.com - Yesterday Remastered 2009_v720P.mp4" controls loop></audio>
-        </div>
-        <div class="dispositivos">
-            <a href="playlist.html" class="playlist">Mi Playlist</a>
-            <a href="playlist.html"><i class="fas fa-indent"></i> </a>
-        </div>
-    </main>
-
-
-    <footer class="contenedor">
-        <!-- INICIO contenedor elementos de pie -->
-
-
-        <img src="images/logo.png" alt="Logo"></a>
-
-        <div class="integrantes">
-            <ul>
-                <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
-                <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
-                <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
-            </ul>
-            <p>Copyright 2021- wowmusic </p>
-        </div>
-
-
-
-        <!-- FIN contenedor elementos de pie -->
-
-    </footer>
-</body>
-
+        <!-- INICIO footer-->
+        <footer class="contenedor">
+            <img src="images/logo.png" alt="Logo"></a>
+            <div class="integrantes">
+                <ul>
+                    <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
+                    <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
+                    <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
+                </ul>
+                <p>Copyright 2021- wowmusic </p>
+            </div>
+        </footer>
+        <!-- FIN footer -->
+    </body>
 </html>
