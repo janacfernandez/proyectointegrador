@@ -118,7 +118,6 @@
  /*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevamente usamos flexbox para poder ubicar títulos y botones según lo deseado*/
  .sec-ppal {
      background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)), url("../images/pexels-sebastian-ervi-1763075.jpg");
-     /* height: 85vh; RESPONSIVE*/
      height: 80vh;
      background-size: cover;
      background-repeat: no-repeat;
@@ -286,9 +285,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      background-color: #2b2b2b;
  }
 
- .artists ul {
-     width: 100%;
- }
 
  .artists h4 {
      font-size: 1.2em;
@@ -318,7 +314,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /*Comenzamos a darle estilo a la sección de canciones*/
  .songs {
      background-image: url("../images/background-canciones.jpg");
-
  }
 
  .songs ul {
@@ -424,6 +419,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      text-transform: uppercase;
  }
 
+ .sec-art-sec ol li a {
+     color: white;
+ }
+ 
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA CANCIONES (detail-track)
 **********************************************************************************************************/
@@ -454,6 +454,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  .i-port {
      width: 90%;
+     height: 80%;
      box-shadow: 2px 2px 10px #666;
      margin: 20px;
      margin-bottom: 0;
@@ -463,6 +464,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      display: flex;
      flex-direction: column;
      width: 100%;
+     height: 80%;
      padding: 20px;
  }
 
@@ -503,11 +505,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  .but-fun {
      flex-direction: row;
-     margin: 15px;
+     margin-top: 15px;
  }
 
  .but-fun p {
-     margin-right: 5px;
+     margin-right: 15px;
  }
 
  .but-fun a:hover {
@@ -569,7 +571,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .dispositivos {
-     margin-top: 20px;
+     margin-bottom: 100px;
      align-items: center;
      justify-content: flex-end;
  }
@@ -687,6 +689,10 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  ul.playlist .play-can .favorito i {
      color: rgb(206, 12, 12);
 
+ }
+
+ .canciones a{
+     color:white;
  }
 
  /********************************************************************************************************
@@ -992,7 +998,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      height: 100%;
  }
 
-
+ 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA SECCION DETALLE DE BUSQUEDA
 **********************************************************************************************************/
@@ -1177,21 +1183,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 **********************************************************************************************************/
 
  @media (min-width: 700px) {
-
-     body {
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         height: 100vh;
-     }
-
-     footer.contenedor {
-         margin-top: auto;
-     }
-
-     .main {
-         height: 100%;
-     }
 
      /*Header y sección principal*/
      header {
@@ -1417,12 +1408,28 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      .albums li {
          width: calc(50% - 5px)
      }
+    
+    /*Haremos flex los bodys para que el ancho del mismo no dependa del contenido y se vea bien en cualquier monitor*/
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+    .main {
+        height: 100%;
+    }
 
  }
 
-
  @media (min-width: 1024px) {
 
+   
      /*Header y sección principal*/
      header {
          display: flex;
@@ -1532,7 +1539,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      }
 
      .detail-track img {
-         max-width: 450px;
+         max-width: 400px;
+     }
+
+     .detail-track .barra-sec {
+         margin-top: 20px;
      }
 
 
