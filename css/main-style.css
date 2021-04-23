@@ -285,7 +285,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      background-color: #2b2b2b;
  }
 
-
  .artists h4 {
      font-size: 1.2em;
      color: white;
@@ -302,7 +301,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
- .artist:hover img {
+ .artist img:hover{
      transform: scale(1.25);
      filter: brightness(100%);
  }
