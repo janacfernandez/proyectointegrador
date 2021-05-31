@@ -5,22 +5,30 @@
         <meta charset="utf-8">
         <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-        <link rel="stylesheet" href="css/main-style.css">
         <!--A continuación linkearemos todas las fuentes utilizadas-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+        <link rel="stylesheet" href="css/main-style.css">
+        <script src="js/genres.js"></script>
     </head>
 
     <body>
         <header>
-            <img src="images/logo.png" alt="Logo wow music">
-            <nav>
+            <div class="contenedor">
+                <img src="images/logo.png" alt="Logo wow music">
+            
+                <button id="butMenu" title="Menu">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div> 
+            <nav id="menu">
                 <ul>
-                    <li><a href="/#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="/#art-sec">Artistas</a></li>
                     <li><a href="/#canc-sec">Canciones</a></li>
                     <li><a href="/#alb-sec">Albumes</a></li>
@@ -30,7 +38,8 @@
                     <li>
                         <form action="search-results.html">
                             <input type="text" name="search" placeholder="Buscar" required>
-                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png" alt="Busqueda" /></button>
+                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                    alt="Busqueda" /></button>
                         </form>
                     </li>
                 </ul>

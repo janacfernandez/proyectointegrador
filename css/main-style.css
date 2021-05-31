@@ -328,6 +328,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  .artist a{
      overflow: hidden;
+     border-radius: 7%;
  }
  
  .artist img {
@@ -335,7 +336,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      transition: all .9s ease;
      max-width: 400px;
      width: 100%;
-     border-radius: 5%;
+
  }
 
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/

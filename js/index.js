@@ -1,45 +1,28 @@
 window.addEventListener("load", function () {
+    /*Definiremos las variables con las cuales trabajremos en el menú*/
     const button = document.querySelector("header button");
-    // ícono del boton
     const icon = document.querySelector("header button span");
-    // menu propiamente dicho
     const menuNav = document.querySelector("header nav ul");
-    // cada vínculo
     const items = document.querySelectorAll("header nav a");
 
     button.addEventListener('click', paraMenu);
     
-    items.forEach( a => {
-      // cuando se cliquea en un vínculo
-      a.addEventListener('click', paraMenu);
-      // se ejecuta la función "paraMenu"
-    });
-
-
-    /*
-    las acciones para el menu
-    */
+    items.forEach( a => a.addEventListener('click', paraMenu));
 
     function paraMenu(e) {
         e.preventDefault();
         menuNav.classList.toggle("visible");
-        // si se ve icono menu
         if ( icon.innerText == "menu" ) {
             icon.innerText = "close";
         }
         else {
             icon.innerText = "menu";
         }
-
-        // si quien es cliqueado es un vínculo
         if ( this.hasAttribute("href") ) {
-            // guarda la ruta del vínculo
-            let adondeVoy = this.getAttribute("href");
-            window.location = adondeVoy;
+            let destino = this.getAttribute("href");
+            window.location = destino;
         }
     }
-
-
 
     let list = document.querySelector(".artists ul");
     
