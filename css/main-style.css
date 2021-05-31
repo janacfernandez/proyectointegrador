@@ -35,11 +35,17 @@
      padding-top: 5px;
  }
 
+ header .contenedor{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
  /*Al nav le daremos un ancho máximo para de esta forma si se visualiza en un dispositivo muy grande no se tenga que recorrer toda la pantalla para navegarlo*/
  header nav {
      max-width: 1500px;
      padding: 5px;
-     border-top: 2px solid rgb(186, 4, 4);
  }
 
  /*Utilizaremos flexbox para lograr un menú horizontal*/
@@ -49,7 +55,15 @@
      justify-content: flex-end;
      align-items: flex-end;
      flex-wrap: wrap;
+     height: 0;
+     overflow: hidden;
  }
+
+ .visible {
+    height: auto;
+    transition: all .6s ease;
+    margin-top: 1em;
+}
 
  header nav ul li {
      width: 45%;
@@ -93,7 +107,21 @@
      color: rgb(186, 4, 4);
  }
 
- header>img {
+ #butMenu {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+ }
+
+ #butMenu:hover{
+    color: red;
+ }
+
+ .material-icons{
+     font-size: 2.5em;
+ }
+
+ header .contenedor img {
      max-width: 100px;
      margin: 7px 0px;
      animation-name: logo;
@@ -292,10 +320,20 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
+ .artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .artist a{
+     overflow: hidden;
+ }
+ 
  .artist img {
      filter: brightness(60%);
      transition: all .9s ease;
-     max-width: 600px;
+     max-width: 400px;
      width: 100%;
      border-radius: 5%;
  }
@@ -304,10 +342,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .artist img:hover{
      transform: scale(1.25);
      filter: brightness(100%);
- }
-
- .artist {
-     overflow: hidden;
  }
 
  /*Comenzamos a darle estilo a la sección de canciones*/
@@ -1188,12 +1222,22 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          flex-direction: row;
      }
 
-     header>img {
+     header .contenedor img {
          margin: 10px;
      }
 
      header nav {
          border-top: none;
+     }
+
+     #butMenu{
+         display: none;
+     }
+
+     header nav ul{
+        height: auto;
+        overflow: auto;
+
      }
 
      /*Sección secundaria*/
@@ -1445,6 +1489,9 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          flex-wrap: nowrap;
      }
 
+     header .contenedor{
+         width: auto;
+     }
 
      /*Sección secundaria*/
      .icon {
@@ -1460,7 +1507,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      .artists ul li {
          align-items: center;
          justify-content: baseline;
-         width: calc(33% - 5px);
+         width: calc(17% - 15px);
+
 
      }
 
