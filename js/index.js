@@ -37,8 +37,9 @@ window.addEventListener("load", function () {
                 let artist = datos.data[i].name;
                 let imagen = datos.data[i].picture_big;
                 console.log(artist);
+                let art = datos.data[i].id;
                 list.innerHTML += `<li class="artist">
-                <a href="detail-artist.html"><img src="${imagen}" alt="${artist}"></a>
+                <a href="detail-artist.html?id=${art}"><img src="${imagen}" alt="${artist}"></a>
                 <h4>${artist}</h4>
                 </li>`;
             }

@@ -24,4 +24,31 @@ window.addEventListener("load", function () {
         }
     }
 
-})
+    let list = document.querySelector(".genres")
+    
+    for (let i=2; i < 8; i++){
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${i}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let nombreGenero = datos.name;
+                let imagenGenero = datos.picture_medium;
+                console.log(nombreGenero);
+                console.log(imagenGenero)
+                list.innerHTML += `<a href="detail-genres.html">
+                    <li class="sec-art-ppal" id="${nombreGenero}">
+                        <h2>${nombreGenero}</h2>
+                    </li>
+                </a>`;
+                let seccion = document.querySelector(".genres a li")
+                seccion.style.backgroundImage += `url('${imagenGenero}')`;
+            })
+
+            .catch(function (error) {
+                console.log(error)
+            })
+        }
+
+    })
