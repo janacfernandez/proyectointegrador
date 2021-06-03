@@ -25,30 +25,40 @@ window.addEventListener("load", function () {
     }
 
     let list = document.querySelector(".genres")
+    let genI = 132
+    let genIi = 116
+    let genIii = 122
+    let genIv = 152
+    let genV = 106
+    let genVi = 144
     
-    for (let i=2; i < 8; i++){
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${i}`)
+    function genero (genre){
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${genre}`)
             .then(function (response) {
                 return response.json();
             })
             .then(function (datos) {
                 console.log(datos);
                 let nombreGenero = datos.name;
-                let imagenGenero = datos.picture_medium;
-                console.log(nombreGenero);
-                console.log(imagenGenero)
-                list.innerHTML += `<a href="detail-genres.html">
-                    <li class="sec-art-ppal" id="${nombreGenero}">
+                let imagenGenero = datos.picture;
+                let gen = datos.id
+                console.log(gen);
+                list.innerHTML += `<a href="detail-genres.html?id=${gen}">
+                    <li class="sec-art-ppal" id="${genre}">
                         <h2>${nombreGenero}</h2>
                     </li>
                 </a>`;
-                let seccion = document.querySelector(".genres a li")
+                let seccion = document.querySelector(`.genres li`)
+                console.log(seccion)
                 seccion.style.backgroundImage += `url('${imagenGenero}')`;
             })
 
-            .catch(function (error) {
-                console.log(error)
-            })
         }
 
+        genero(genI)
+        genero(genIi)
+        genero(genIii)
+        genero(genIv)
+        genero(genV)
+        genero(genVi)
     })

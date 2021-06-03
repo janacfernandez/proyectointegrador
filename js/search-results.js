@@ -24,4 +24,53 @@ window.addEventListener("load", function () {
         }
     }
 
+    let string = location.search;
+    let stringObject = new URLSearchParams(string)
+    let busqueda = stringObject.get('search')
+    console.log(busqueda)
+
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
+            /*let resultados = datos.data
+            for (i=0; i<resultados.length; i++){
+            }*/
+        })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
+            /*let resultados = datos.data
+            for (i=0; i<resultados.length; i++){
+            }*/
+        })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${busqueda}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
+            /*let resultados = datos.data
+            for (i=0; i<resultados.length; i++){
+            }*/
+        })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+
 })
