@@ -80,8 +80,37 @@ window.addEventListener("load", function () {
             console.log("El error fue:" + error);
         })
 
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let albumes = datos.data
 
+let listA= document.querySelector(".albums .liAlbum")
 
+            for (let i = 0; i < 6; i++) {
+                let album = albumes[i].title
+                let imagen = albumes[i].cover_medium;
+                let artista= albumes[i].artist.name
+              
+                listA.innerHTML += `<li>
+                <h4>${album}</h4>
+                <a href="detail-album.html"><img src="${imagen}" alt="${album}"></a>
+                <a href="detail-artist.html">
+                    <p>${artista}</p>
+                </a>
+            </li>`;
+            }
+
+        })
+        .catch(function (error) {
+            console.log("error: "+error)
+        })
 
 
 })
+
+
+
