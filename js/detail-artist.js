@@ -76,8 +76,9 @@ window.addEventListener("load", function () {
         for (let i=0; i < 5; i++){
             let album = albums[i].title
             let imagenAlbum = albums[i].cover_small
+            let albumId = albums[i].id
             console.log(album)
-            albumlist.innerHTML += `<li><a href="detail-album.html">${album}</a><img src='${imagenAlbum}'></li>`
+            albumlist.innerHTML += `<li><a href="detail-album.html?id=${albumId}">${album}</a><img src='${imagenAlbum}'></li>`
         }
     })
 

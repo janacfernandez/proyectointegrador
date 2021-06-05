@@ -56,11 +56,12 @@ window.addEventListener("load", function () {
         console.log(artistaGen)
             for(i = 0; i < 6; i++ ){
             let artistaGen = artistas[i].name;
+            let artistaid = artistas[i].id
             let fotoArt = artistas[i].picture_medium;
             console.log(artistaGen)
             artlist.innerHTML += `<li class="gen-art">
             <img src='${fotoArt}' alt='${artistaGen}'>
-            <h4 class="canciones"><a href="detail-artist.html?id=">${artistaGen}</a></h4>
+            <h4 class="canciones"><a href="detail-artist.html?id=${artistaid}">${artistaGen}</a></h4>
             </li> `;
             }
         })

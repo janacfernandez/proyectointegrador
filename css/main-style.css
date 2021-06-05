@@ -222,7 +222,7 @@
  /*---Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma---
 
 Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
- .sec-sec {
+.sec-sec {
      padding: 3% 5%;
      background-image: url("../images/background.jpg");
  }
@@ -397,6 +397,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      background-repeat: no-repeat;
      background-size: cover;
      background-position-x: center;
+     background-position-y: -100px;
      display: flex;
      align-items: flex-end;
  }
@@ -744,7 +745,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      filter: none;
  }
 
- #pop {
+ /*#pop {
      background-image: url("/images/pop.jpg");
  }
 
