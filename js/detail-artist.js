@@ -27,6 +27,7 @@ window.addEventListener("load", function () {
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);  
     let artist = queryStringObj.get('id');
+    console.log(artist)
     let nombre = document.querySelector(".sec-art-ppal h1")
     let foto = document.querySelector(".sec-art-ppal")
     
@@ -77,8 +78,9 @@ window.addEventListener("load", function () {
         for (let i=0; i < 5; i++){
             let album = albums[i].title
             let imagenAlbum = albums[i].cover_small
+            let albumId = albums[i].id
             console.log(album)
-            albumlist.innerHTML += `<li><a href="detail-album.html">${album}</a><img src='${imagenAlbum}'></li>`
+            albumlist.innerHTML += `<li><a href="detail-album.html?id=${albumId}">${album}</a><img src='${imagenAlbum}'></li>`
         }
     })
 

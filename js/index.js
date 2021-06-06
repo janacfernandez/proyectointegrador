@@ -34,10 +34,10 @@ window.addEventListener("load", function () {
             console.log(datos);
             let artistas = datos.data
             for (let i = 0; i < 6; i++) {
-                let artist = datos.data[i].name;
-                let imagen = datos.data[i].picture_big;
+                let artist = artistas[i].name;
+                let imagen = artistas[i].picture_big;
                 console.log(artist);
-                let art = datos.data[i].id;
+                let art = artistas[i].id;
                 list.innerHTML += `<li class="artist">
                 <a href="detail-artist.html?id=${art}"><img src="${imagen}" alt="${artist}"></a>
                 <h4>${artist}</h4>
@@ -65,12 +65,13 @@ window.addEventListener("load", function () {
                 let title = canciones[i].title;
                 let url = canciones[i].artist.picture;
                 let cantante = canciones[i].artist.name;
+                let cantId = canciones[i].artist.id;
                 listaC.innerHTML += `
             <li> 
             <img src="${url}" alt="${title}">
             <div>
-                <h4 class="canciones"><a href="detail-track.html?id=${canc}"> ${title}</a></h4>
-                <a href="detail-artist.html?id=${canc}" class="cantante"> ${cantante}</a>
+                <h4 class="canciones"><a href="detail-track.html"> ${title}</a></h4>
+                <a href="detail-artist.html?id=${cantId}" class="cantante"> ${cantante}</a>
                 </div>
             </li>
             `
@@ -79,17 +80,6 @@ window.addEventListener("load", function () {
         .catch(function (error) {
             console.log("El error fue:" + error);
         })
-
-/*
-                    <li>
-                        <h4>Iluminate</h4>
-                        <a href="detail-album.html"><img src="images/Iluminate.jpeg" alt="Iluminate"></a>
-                        <a href="detail-artist.html">
-                            <p>Shawn Mendes (2016)</p>
-                        </a>
-                    </li>
-
-*/
 
         fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums')
         .then(function (response) {
@@ -119,7 +109,4 @@ window.addEventListener("load", function () {
         })
         .catch(function (error) {
             console.log("error: "+error)
-        })
-
-
-})
+        }) })
