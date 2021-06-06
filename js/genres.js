@@ -25,40 +25,25 @@ window.addEventListener("load", function () {
     }
 
     let list = document.querySelector(".genres")
-    let genI = 132
-    let genIi = 116
-    let genIii = 122
-    let genIv = 152
-    let genV = 106
-    let genVi = 144
+    let generos = [132, 116, 122, 152, 106, 144]
     
-    function genero (genre){
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${genre}`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (datos) {
-                console.log(datos);
-                let nombreGenero = datos.name;
-                let imagenGenero = datos.picture;
-                let gen = datos.id
-                console.log(gen);
-                list.innerHTML += `<a href="detail-genres.html?id=${gen}">
-                    <li class="sec-art-ppal" id="${genre}">
-                        <h2>${nombreGenero}</h2>
-                    </li>
-                </a>`;
-                let seccion = document.querySelector(`.genres li`)
-                console.log(seccion)
-                seccion.style.backgroundImage += `url('${imagenGenero}')`;
-            })
-
-        }
-
-        genero(genI)
-        genero(genIi)
-        genero(genIii)
-        genero(genIv)
-        genero(genV)
-        genero(genVi)
+    for(let i=0; i <generos.length; i++){
+        let genre = generos[i];
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${genre}`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (datos) {
+                    let nombreGenero = datos.name;
+                    let imagenGenero = datos.picture_medium;
+                    list.innerHTML += `<a href="detail-genres.html?id=${genre}">
+                        <li style="background-image: url('${imagenGenero}')" class="sec-art-ppal">
+                            <h2>${nombreGenero}</h2>
+                        </li>
+                    </a>`;
+                   /* let seccion = document.querySelector(`.genres a`)
+                    console.log(seccion)
+                    seccion.style.backgroundImage += `url('${imagenGenero}')`;*/
+                })
+            }
     })

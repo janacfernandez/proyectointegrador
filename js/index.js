@@ -65,12 +65,13 @@ window.addEventListener("load", function () {
                 let title = canciones[i].title;
                 let url = canciones[i].artist.picture;
                 let cantante = canciones[i].artist.name;
+                let cantId = canciones[i].artist.id;
                 listaC.innerHTML += `
             <li> 
             <img src="${url}" alt="${title}">
             <div>
                 <h4 class="canciones"><a href="detail-track.html"> ${title}</a></h4>
-                <a href="detail-artist.html" class="cantante"> ${cantante}</a>
+                <a href="detail-artist.html?id=${cantId}" class="cantante"> ${cantante}</a>
                 </div>
             </li>
             `
