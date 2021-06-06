@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
             let listaC = document.querySelector(".songs ul");
 
             for (let i = 0; i < 6; i++) {
-                let cancion = canciones[i];
+                let canc = datos.data[i].id;
                 let title = canciones[i].title;
                 let url = canciones[i].artist.picture;
                 let cantante = canciones[i].artist.name;
@@ -69,8 +69,8 @@ window.addEventListener("load", function () {
             <li> 
             <img src="${url}" alt="${title}">
             <div>
-                <h4 class="canciones"><a href="detail-track.html"> ${title}</a></h4>
-                <a href="detail-artist.html" class="cantante"> ${cantante}</a>
+                <h4 class="canciones"><a href="detail-track.html?id=${canc}"> ${title}</a></h4>
+                <a href="detail-artist.html?id=${canc}" class="cantante"> ${cantante}</a>
                 </div>
             </li>
             `
@@ -99,17 +99,18 @@ window.addEventListener("load", function () {
             console.log(datos);
             let albumes = datos.data
 
-let listA= document.querySelector(".albums .liAlbum")
+            let listA= document.querySelector(".albums .liAlbum")
 
             for (let i = 0; i < 6; i++) {
                 let album = albumes[i].title
                 let imagen = albumes[i].cover_medium;
-                let artista= albumes[i].artist.name
-              
+                let artista= albumes[i].artist.name;
+                let albumId = albumes[i].id;
+
                 listA.innerHTML += `<li>
                 <h4>${album}</h4>
-                <a href="detail-album.html"><img src="${imagen}" alt="${album}"></a>
-                <a href="detail-artist.html">
+                <a href="detail-album.html?id=${albumId}"><img src="${imagen}" alt="${album}"></a>
+                <a href="detail-artist.html?id=${albumId}">
                     <p>${artista}</p>
                 </a>
             </li>`;

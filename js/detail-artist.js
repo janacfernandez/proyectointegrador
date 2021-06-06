@@ -49,6 +49,7 @@ window.addEventListener("load", function () {
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artist}/top`)
     .then(function (response) {
+        console.log(response)
         return response.json();
     })
     .then(function (datos) {
@@ -85,5 +86,4 @@ window.addEventListener("load", function () {
         console.log(error);
     })
 
-    
 })
