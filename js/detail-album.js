@@ -22,6 +22,35 @@ window.addEventListener("load", function () {
             let destino = this.getAttribute("href");
             window.location = destino;
         }
+
     }
 
+
+
+
+        let queryString = location.search;
+        let queryStringObj = new URLSearchParams(queryString);  
+        let idAlbum = queryStringObj.get('id');
+        let cambioJava = document.querySelector("main")
+    
+        console.log(album);
+        
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums/${idAlbum}`)
+        .then(function (response) {
+            return response.json();
+
+        })
+        .then(function (datos) {
+            
+       
+
+            .catch(function (error) {
+                console.log(error);
+            })
+        })
+
+        
+
+
+//onload    
 })

@@ -27,6 +27,7 @@ window.addEventListener("load", function () {
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);  
     let artist = queryStringObj.get('id');
+    console.log(artist)
     let nombre = document.querySelector(".sec-art-ppal h1")
     let foto = document.querySelector(".sec-art-ppal")
     

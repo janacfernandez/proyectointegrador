@@ -94,23 +94,16 @@ let listA= document.querySelector(".albums .liAlbum")
                 let album = albumes[i].title
                 let imagen = albumes[i].cover_medium;
                 let artista= albumes[i].artist.name
-              
-                listA.innerHTML += `<li>
+              let alb = albumes[i].id;
+
+                listA.innerHTML += `<li class="albumes">
                 <h4>${album}</h4>
-                <a href="detail-album.html"><img src="${imagen}" alt="${album}"></a>
-                <a href="detail-artist.html">
-                    <p>${artista}</p>
-                </a>
+                <a href="detail-album.html?id=${alb}"><img src="${imagen}" alt="${album}"></a>
+                <h4>${artista}</h4>
             </li>`;
             }
 
         })
         .catch(function (error) {
             console.log("error: "+error)
-        })
-
-
-})
-
-
-
+        }) })
