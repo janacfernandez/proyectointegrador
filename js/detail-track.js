@@ -37,20 +37,22 @@ window.addEventListener("load", function () {
         .then(function (datos) {
             let tracks = datos.album.title;
             let nombreArt2 = datos.artist.name;
+            let artId = datos.artist.id;
             let cancion = datos.title;
             let imgCan = datos.album.cover_big;
+            let albumId = datos.album.id;
             let link = datos.preview;
             let dur = datos.duration;
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
-        <a href="detail-album.html" class="album">${tracks}</a>
+        <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
     </div>
     <img class="i-port" src="${imgCan}" alt="imagendeportada">
     <section class="play-ppal">
         <div class="data">
             <p> ${cancion} </p>
-            <a href="detail-artist.html"> ${nombreArt2}</a>
+            <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a>
         </div>
         <div class="but-fun">
             <p class="like"><a href="#"><i class="far fa-thumbs-up"></i></a></p>
