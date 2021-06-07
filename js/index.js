@@ -95,11 +95,11 @@ let listA= document.querySelector(".albums .liAlbum")
                 let album = albumes[i].title
                 let imagen = albumes[i].cover_medium;
                 let artista= albumes[i].artist.name
-              
+                let artId = albumes[i].artist.id 
                 listA.innerHTML += `<li>
                 <h4>${album}</h4>
                 <a href="detail-album.html"><img src="${imagen}" alt="${album}"></a>
-                <a href="detail-artist.html">
+                <a href="detail-artist.html?id=${artId}">
                     <p>${artista}</p>
                 </a>
             </li>`;
