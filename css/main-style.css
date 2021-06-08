@@ -922,7 +922,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      font-weight: bold;
  }
 
- .tracklist li {
+ .tracklist li{
+     margin-bottom: 10px;
+ }
+ 
+ .tracklist li a {
      color: white;
      margin: 5px 10px;
      font-family: sans-serif;

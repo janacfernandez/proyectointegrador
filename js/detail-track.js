@@ -40,8 +40,10 @@ window.addEventListener("load", function () {
         .then(function (datos) {
             let tracks = datos.album.title;
             let nombreArt2 = datos.artist.name;
+            let artId = datos.artist.id;
             let cancion = datos.title;
             let imgCan = datos.album.cover_big;
+            let albumId = datos.album.id;
             let link = datos.preview;
             let dur = datos.duration;
 
