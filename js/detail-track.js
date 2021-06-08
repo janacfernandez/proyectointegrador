@@ -116,7 +116,7 @@ window.addEventListener("load", function () {
             localStorage.setItem("favoritos", canFavStorage);
 
             //revisamos
-            console.log(localStorage)
+            console.log(localStorage);
 
          ///fin///
         }
