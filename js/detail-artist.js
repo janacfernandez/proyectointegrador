@@ -57,10 +57,11 @@ window.addEventListener("load", function () {
         let tracks = datos.data
         for (let i=0; i < tracks.length; i++){
             let track = tracks[i].title
+            let trackId = tracks[i].id
             let duration = tracks[i].duration
             let preview = tracks[i].preview
             console.log(track)
-            tracklist.innerHTML += `<li><a href="detail-track.html">${track}</a><audio src='${preview}' preload="none" controls></audio></li>`
+            tracklist.innerHTML += `<li><a href="detail-track.html?id=${trackId}">${track}</a><audio src='${preview}' preload="none" controls></audio></li>`
         }
     })
 

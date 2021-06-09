@@ -19,12 +19,12 @@
 
  /*para que el body se vea de todo el alto del dispositivo independientemente del contenido que tenga */
 
- /*body { 
+/* body { 
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    height: 100vh;
     justify-content: space-between; 
-} */
+}*/
 
 .lds-dual-ring {
     display: inline-block;
@@ -78,11 +78,14 @@
      flex-direction: column;
      align-items: center;
      padding-top: 5px;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     z-index: 100;
+ }
+
+ .head-index{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
  }
 
  header .contenedor{
@@ -776,7 +779,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
 **********************************************************************************************************/
- .genres {
+.genres {
      background-color: rgb(133, 5, 5);
      padding: 10px;
  }
@@ -1222,6 +1225,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      display: flex;
      justify-content: center;
      padding-top: 5px;
+     
 
  }
 
