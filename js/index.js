@@ -1,4 +1,8 @@
 window.addEventListener("load", function () {
+    let sec = document.querySelector("#desapear");
+    sec.classList.toggle("loaderSegundo")
+
+
     /*Definiremos las variables con las cuales trabajremos en el menú*/
     const button = document.querySelector("header button");
     const icon = document.querySelector("header button span");
@@ -109,4 +113,5 @@ window.addEventListener("load", function () {
         })
         .catch(function (error) {
             console.log("error: "+error)
-        }) })
+        }) 
+    })
