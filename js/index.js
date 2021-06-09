@@ -74,7 +74,7 @@ window.addEventListener("load", function () {
             <li> 
             <img src="${url}" alt="${title}">
             <div>
-                <h4 class="canciones"><a href="detail-track.html"> ${title}</a></h4>
+                <h4 class="canciones"><a href="detail-track.html?id=${canc}"> ${title}</a></h4>
                 <a href="detail-artist.html?id=${cantId}" class="cantante"> ${cantante}</a>
                 </div>
             </li>

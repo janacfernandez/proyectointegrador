@@ -27,7 +27,10 @@ window.addEventListener("load", function () {
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
     let canc = queryStringObjt.get("id");
-    let trackPlay = document.querySelector(".detail-track");
+    let trackPlay = document.querySelector(".detail-track .head");
+    let trackDetail = document.querySelector(".detail-track .play-ppal .data");
+    let barraSec = document.querySelector(".detail-track .play-ppal .barra-sec ");
+    let imgPort = document.querySelector(".detail-track .img");
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${canc}`)
         .then(function (response) {
@@ -46,37 +49,15 @@ window.addEventListener("load", function () {
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
-        <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
-    </div>
-    <img class="i-port" src="${imgCan}" alt="imagendeportada">
-    <section class="play-ppal">
-        <div class="data">
-            <p> ${cancion} </p>
-            <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a>
-        </div>
-        <div class="but-fun">
-            <p class="like"><a href="#"><i class="far fa-thumbs-up"></i></a></p>
-            <p class="favorito"> <a href="#" class="fav" ><i class="far fa-heart"></i></i></a></p>
-        </div>
-        <div class="barra">
-            <p class="rep">0:00</p>
-            <p class="duracion">0:00</p>
-        </div>
-        <div class="funciones">
-            <a href="#" class="min"> <i class="fas fa-random"></i></a>
-            <a href="#" class="min"> <i class="fas fa-step-backward"></i></a>
-            <a href="#" class="max"> <i class="fas fa-play-circle"></i></a>
-            <a href="#" class="min"> <i class="fas fa-step-forward"></i></a>
-            <a href="#" class="min"> <i class="fas fa-sync-alt"></i></a>
-        </div>
-        <div class="barra-sec">
-            <h2>Player secundario </h2>
-            <audio src="${link}" controls loop></audio>
-        </div>
-        <div class="dispositivos">
-            <a href="playlist.html" class="playlist">Mi Playlist</a>
-            <a href="playlist.html"><i class="fas fa-indent"></i> </a>
-        </div>`
+        <a href="detail-album.html" class="album">${tracks}</a>
+    </div> `
+            imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`
+
+
+            trackDetail.innerHTML += `<p> ${cancion} </p>
+         <a href="detail-artist.html"> ${nombreArt2}</a> `
+
+            barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `
 
         })
 
@@ -84,49 +65,69 @@ window.addEventListener("load", function () {
             console.log(error);
         })
 
+
+    // declaro un array vacio, para almacenar las canciones
     let canFav = [];
 
+    //recupero datos del storage
     let recuperoStorage = localStorage.getItem("favorito");
-
+    console.log(recuperoStorage);
+    // utilizo un condicional para saber si hay algo guardado en "favoritos"
     if (recuperoStorage != null) {
+        //transformamos la informacion recibida como string en array para que la podamos trabajar
         canFav = JSON.parse(recuperoStorage);
-    }
-    if (canFav.includes(canc)) {
-        document.querySelector(".but-fun .fav").innerHTML = ` quitar de favoritos <i class="material-icons"> favorite </i>`
 
+        // si el id de la cancion actual esta en la lista
+        if (canFav.includes(canc)) {
+            document.querySelector(".but-fun .fav").innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`
+        }
     }
+    //agregar-sacar cancion actual de playlist
 
+    //link "agregar a playlist"
     let fav = document.querySelector(".but-fun .fav");
 
+    //al clickear en el link
     fav.addEventListener("click", function (e) {
+        //evitamos el comportamiento por default
         e.preventDefault();
 
+        //si la cancion se encuentra en la lista
         if (canFav.includes(canc)) {
+            //lo localizamos en el array
             let sacarId = canFav.indexOf(canc);
+            // lo sacamos de allí
             canFav.splice(sacarId, 1);
 
-            document.querySelector(".but-fun .fav").innerHTML = `Agregar a Favoritos <i class= "material-icons"> favorite-border </i>`
+            // si ya lo sacamos, cambiamos el texto del link
+            document.querySelector(".but-fun .fav").innerHTML = ` <i class="far fa-heart"></i> Agregar a Playlist`
 
+            //chequeamos 
             console.log(canFav);
-        } else {
+        } else { //si no esta en la lista
 
+            //se agrega la cancion actual
             canFav.push(canc);
 
-            document.querySelector(".but-fun .fav").innerHTML = `Quitar de Favoritos <i class= "material-icons"> favorite </i>`
+            // si ya fue agregrado, cambiamos el texto del link
+            document.querySelector(".but-fun .fav").innerHTML = ` <i class="fas fa-heart"></i> Quitar de Playlist`
 
+            // guardamos el array actualizado como string
             let canFavStorage = JSON.stringify(canFav);
+            console.log(canFavStorage);
 
+            // guardamos el string en el LocalStorage
+            localStorage.setItem("favorito", canFavStorage);
 
-            localStorage.setItem("favoritos", canFavStorage);
+            //revisamos
+            console.log(localStorage);
 
-            console.log(localStorage)
-
-
+            ///fin///
         }
-
-
-
     })
+
+
+    
 
 
 
