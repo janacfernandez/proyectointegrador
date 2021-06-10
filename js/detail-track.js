@@ -49,13 +49,13 @@ window.addEventListener("load", function () {
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
-        <a href="detail-album.html" class="album">${tracks}</a>
+        <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
     </div> `
             imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`
 
 
             trackDetail.innerHTML += `<p> ${cancion} </p>
-         <a href="detail-artist.html"> ${nombreArt2}</a> `
+         <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a> `
 
             barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `
 

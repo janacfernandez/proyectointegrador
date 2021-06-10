@@ -41,7 +41,7 @@ window.addEventListener("load", function () {
                             <h2>${nombreGenero}</h2>
                         </li>
                     </a>`;
-                   /* let seccion = document.querySelector(`.genres a`)
+                   /* let seccion = document.querySelector(`.genres li`)
                     console.log(seccion)
                     seccion.style.backgroundImage += `url('${imagenGenero}')`;*/
                 })
