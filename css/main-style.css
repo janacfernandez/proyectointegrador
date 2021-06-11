@@ -1416,8 +1416,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          margin: 10px;
      }
 
-
-
      /*pagina detail-track */
 
 
@@ -1433,7 +1431,6 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
      .i-port {
          display: block;
-         width: 40%;
          margin: 10px;
      }
 
