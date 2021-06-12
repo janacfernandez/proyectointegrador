@@ -48,12 +48,14 @@ window.addEventListener("load", function () {
             let artista = datos.artist.name
             let artistaId = datos.artist.id
             let foto = datos.cover_medium
+            let fecha=datos.release_date
+            let año=fecha.substring(0,4)
             let tracklist = datos.tracks.data
             let genero = datos.genres.data[0].name
             let generoId = datos.genres.data[0].id
             //let tracklist = basico.tracks.data.title
             cambioJava.innerHTML += 
-            `<h2>${titulo}</h2>
+            `<h2>${titulo}</h2><h2>${año}</h2>
             <img src="${foto}" alt="Iluminate">
             <a href="detail-artist.html?id=${artistaId}"><h3>${artista}</h3></a>
             <p>Genero: <a href="detail-genres.html?id=${generoId}">${genero}</a></p>`;
