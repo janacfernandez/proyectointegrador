@@ -3,31 +3,6 @@ window.addEventListener("load", function () {
     sec.classList.toggle("loaderSegundo")
 
 
-    /*Definiremos las variables con las cuales trabajremos en el menú*/
-    const button = document.querySelector("header button");
-    const icon = document.querySelector("header button span");
-    const menuNav = document.querySelector("header nav ul");
-    const items = document.querySelectorAll("header nav a");
-
-    button.addEventListener('click', paraMenu);
-    
-    items.forEach( a => a.addEventListener('click', paraMenu));
-
-    function paraMenu(e) {
-        e.preventDefault();
-        menuNav.classList.toggle("visible");
-        if ( icon.innerText == "menu" ) {
-            icon.innerText = "close";
-        }
-        else {
-            icon.innerText = "menu";
-        }
-        if ( this.hasAttribute("href") ) {
-            let destino = this.getAttribute("href");
-            window.location = destino;
-        }
-    }
-
     let list = document.querySelector(".artists ul");
     
     fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists')
@@ -67,7 +42,7 @@ window.addEventListener("load", function () {
             for (let i = 0; i < 6; i++) {
                 let canc = datos.data[i].id;
                 let title = canciones[i].title;
-                let url = canciones[i].artist.picture;
+                let url = canciones[i].artist.picture_big;
                 let cantante = canciones[i].artist.name;
                 let cantId = canciones[i].artist.id;
                 listaC.innerHTML += `
