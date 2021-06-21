@@ -182,5 +182,5 @@ window.addEventListener("load", function () {
         albumEspecifico.classList.add("inact")
     })
 
-
+    })
 })

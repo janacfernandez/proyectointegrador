@@ -102,4 +102,29 @@ window.addEventListener("load", function () {
         .catch(function (error) {
             console.log("error: "+error)
         }) 
+
+        let listaP = document.querySelector(".playInd ul");
+    
+    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/playlists')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let playlist = datos.data
+            for (let i = 0; i < 6; i++) {
+                let nombre = playlist[i].title;
+                let imagen = playlist[i].picture_big;
+                let canPlay = playlist[i].id;
+
+                listaP.innerHTML += `<li class="playSec">
+                <a href="detail-playlist.html?id=${canPlay}"><img src="${imagen}" alt="${nombre}"></a>
+                <h4>${nombre}</h4>
+                </li>`;
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
     })
