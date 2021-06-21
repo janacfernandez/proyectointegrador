@@ -1,11 +1,5 @@
 window.addEventListener("load", function () {
 
-    console.log(window);
-
-    console.log(window.location);
-
-    console.log(window.location.search);
-
     let string = location.search;
     let stringObject = new URLSearchParams(string);
     let busqueda = stringObject.get("q");
@@ -21,91 +15,172 @@ window.addEventListener("load", function () {
     })
     .then(function (datos) {
         console.log(datos);
+
+    let artTodo = document.querySelector(".todo")
+
+    let listSongs = document.querySelector(".listSongs")
+    let listAlbums = document.querySelector(".listAlbums")
+    let songsArticle = document.querySelector(".songsArticle")
+    let albumsArticle = document.querySelector(".albumsArticle")
+    let titulo = document.querySelector("h1")
+    let songResults = document.querySelector(".songResults")
+    let albumResults = document.querySelector(".albumResults")
+    let artistResults = document.querySelector(".artistResults")
+    let cancionEspecifico = document.querySelector(".cancionEspecifico")
+    let albumEspecifico = document.querySelector(".albumEspecifico")
+    let artArt = document.querySelector(".artistas");
+    let artAlb = document.querySelector(".albumes")
+    let artCanc = document.querySelector(".canciones")
+
+    let artistas = document.querySelector("#artistas");
+    let canciones = document.querySelector("#canciones");
+    let albumes = document.querySelector("#albumes");
+
+
+
+
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
             let resultados = datos.data;
-            
-            for (let i = 0; i < resultados.length; i++){
-                let title = resultados[i].title;
-                let imgA = resultados[i].artist.picture;
-                let infoAr = resultados[i].artist.id;
-                let info = resultados[i].id;
-                let artista = resultados[i].artist.name;
-
-               secResult.innerHTML += ` <article>
-                <figure><img src="${imgA}" alt="${title}"></figure>
-                <div class="textos">
-                    <h3> <a href="detail-artist.html?id=${infoAr}" title="ver ${artista}"> ${artista}</a></h3>
-                    <p>  </p>
-                    <p><a href="detail-artist.html?id=${infoAr}" title="ver ${artista}"><i class="fas fa-arrow-right"></i></a>
-                    </p>
-                </div>
-            </article> ` }
-            })
-            .catch(function (error) {
-                console.log("el error es " + error);
-            })
+            console.log(resultados)
 
 
-           fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}&limit=3`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (datos) {
-                console.log(datos);
-                    let resultados = datos.data
-                    for ( let i = 0; i < resultados.length; i++){
-                        let artista = resultados[i].artist.name;
-                        let imgA = resultados[i].cover;
-                        let info = resultados[i].id; 
-                        console.log(info);
-                        let album = resultados[i].title;
-                        console.log(album);
-                        let infoA = resultados[i].artist.id
+            if (!resultados.length) {
+                artistResults.innerHTML = `<h2>No hay resultados para el artista buscado</h2>`
+                songResults.innerHTML = `<h2>No hay resultados para la canción buscada</h2>`
+                cancionEspecifico.innerHTML = `<h2>No hay resultados para la canción buscada</h2>`
 
-                    secResult.innerHTML += ` <article>
-                    <figure><img src="${imgA}" alt="${album}"></figure>
-                    <div class="textos">
-                        <h3> <a href="detail-album.html?id=${info}" title="ver ${album}"> ${album}</a></h3>
-                        <p> Album de ${artista} </p>
-                        <p><a href="detail-album.html?id=${info}" title="ver ${album}"><i class="fas fa-arrow-right"></i></a>
-                        </p>
-                    </div>
-                </article> `
-                    }
 
-                })
-            .catch(function (error) {
-                console.log(error);
-            }) 
-        
+            } else {
+                let imgA = resultados[0].artist.picture_medium;
+                let infoAr = resultados[0].artist.id;
+                let artista = resultados[0].artist.name;
+                titulo.innerText += " " + artista;
 
-            fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=${busqueda}&limit=5`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (datos) {
-                console.log(datos);
-                    let resultados = datos.data
-                    for ( let i = 0; i < resultados.length; i++){
-                        let track = resultados[i].title_short;
-                        let imgA = resultados[i].album.cover;
-                        let info = resultados[i].id; 
+                artTodo.innerHTML += `<li>
+                            <figure><img src="${imgA}" alt="${artista}"></figure>
+                            <div class="textos">
+                                <h3> <a href="detail-artist.html?id=${infoAr}" title="ver ${artista}"> ${artista}</a></h3>
+                                <p><a href="detail-artist.html?id=${infoAr}" title="ver ${artista}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            </li>
+                            `
 
-                       secResult.innerHTML += ` <article>
-                        <figure><img src="${imgA}" alt="${track}"></figure>
-                        <div class="textos">
-                            <h3> <a href="detail-track.html?id=${info}" title="ver ${track}"> ${track}</a></h3>
-                            <p>  </p>
-                            <p><a href="detail-track.html?id=${info}" title="ver ${track}"><i class="fas fa-arrow-right"></i></a>
-                            </p>
-                        </div>
-                    </article> `
-                    }
-                })
-            .catch(function (error) {
-                console.log(error);
-            }) 
-    
-       
+                for (let i = 0; i < 4; i++) {
+                    let cancion = resultados[i].title
+                    let cancionId = resultados[i].id
+                    let albumFoto = resultados[i].album.cover_medium
+                    listSongs.innerHTML += `<li>
+                            <figure><img src="${albumFoto}" alt="${cancion}"></figure>
+                            <div class="textos">
+                                <h3> <a href="detail-track.html?id=${cancionId}" title="ver ${cancion}"> ${cancion}</a></h3>
+                                <p><a href="detail-track.html?id=${cancionId}" title="ver ${cancion}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            </li>
+                            `
+
+                }
+
+                for (let i = 0; i < 8; i++) {
+                    let cancion = resultados[i].title
+                    let cancionId = resultados[i].id
+                    let albumFoto = resultados[i].album.cover_medium
+                    let albumId = resultados[i].album.id
+                    let album = resultados[i].album.title
+                    songsArticle.innerHTML += `<li>
+                            <figure><img src="${albumFoto}" alt="${cancion}"></figure>
+                            <div class="textos">
+                                <h3> <a href="detail-track.html?id=${cancionId}" title="ver ${cancion}"> ${cancion}</a></h3>
+                                <p><a href="detail-track.html?id=${cancionId}" title="ver ${cancion}"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            </li>
+                            `
+
+                }
+            }
+        })
+        .catch(function (e) {
+            console.log(e)
+        })
+
+
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            let resultados = datos.data
+            console.log(datos.data)
+
+            if (!resultados.length) {
+                albumResults.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
+                albumEspecifico.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
+
+
+            } else {
+
+                for (let i = 0; i < 4; i++) {
+                    let albumFoto = resultados[i].cover_medium
+                    let albumId = resultados[i].id
+                    let album = resultados[i].title
+
+
+                    listAlbums.innerHTML += `<li>
+            <figure><img src="${albumFoto}" alt="${album}"></figure>
+            <div class="textos">
+                <h3> <a href="detail-album.html?id=${albumId}" title="ver ${album}"> ${album}</a></h3>
+                <p><a href="detail-album.html?id=${albumId}" title="ver ${album}"><i class="fas fa-arrow-right"></i></a>
+            </div>
+            </li>`
+                }
+
+                for (let i = 0; i < 8; i++) {
+                    let albumFoto = resultados[i].cover_medium
+                    let albumId = resultados[i].id
+                    let album = resultados[i].title
+                    albumsArticle.innerHTML += `<li>
+            <figure><img src="${albumFoto}" alt="${album}"></figure>
+            <div class="textos">
+                <h3> <a href="detail-album.html?id=${albumId}" title="ver ${album}"> ${album}</a></h3>
+                <p><a href="detail-album.html?id=${albumId}" title="ver ${album}"><i class="fas fa-arrow-right"></i></a>
+            </div>
+            </li>`
+                }
+            }
+        })
+        .catch(function (e) {
+            console.log(e);
+        })
+
+    artistas.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log(artistas);
+        artistResults.classList.remove("inact")
+        songResults.classList.add("inact");
+        albumResults.classList.add("inact");
+        cancionEspecifico.classList.add("inact")
+        albumEspecifico.classList.add("inact")
+    })
+    albumes.addEventListener("click", function (e) {
+        e.preventDefault();
+        songResults.classList.add("inact");
+        albumResults.classList.add("inact")
+        artistResults.classList.add("inact")
+        cancionEspecifico.classList.add("inact")
+        albumEspecifico.classList.remove("inact")
+    })
+    canciones.addEventListener("click", function (e) {
+        e.preventDefault();
+        songResults.classList.add("inact");
+        albumResults.classList.add("inact")
+        artistResults.classList.add("inact")
+        cancionEspecifico.classList.remove("inact")
+        albumEspecifico.classList.add("inact")
+    })
 
 
 })

@@ -62,14 +62,13 @@
     top: 0;
     left: 0;
     z-index: 100000;
-    clip-path: circle(150% at 100% 0);
-    transition: clip-path 0.8s ease-in-out;
+    clip-path: circle(150% at 0% 100%);
+    transition: clip-path 2.5s ease-in-out;
 }
 
 .loaderSegundo{
-    clip-path: circle(0% at 100% 100%);
+    clip-path: circle(0% at 0% 0%);
 }
-
     
  /*Utilizaremos flexbox para lograr el layout deseado de nuestro header en la versión mobile*/
  header {
@@ -78,9 +77,10 @@
      flex-direction: column;
      align-items: center;
      padding-top: 5px;
+     transition: all 0.2s;
  }
 
- .head-index{
+ .fixed{
     position: fixed;
     top: 0;
     left: 0;
@@ -1088,7 +1088,37 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 *                                               ESTILOS PÁGINA SECCION DETALLE DE BUSQUEDA
 **********************************************************************************************************/
 
- main.ppcal-result {
+.cont{
+    margin-top: 20px;
+}
+
+.busq{
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin: auto;
+}
+
+.busq li a{
+    text-decoration: none;
+    color: grey;
+    font-family: sans-serif;
+    font-size:1em;
+}
+
+.busq li a:hover{
+    border-bottom: 2px solid red;
+
+}
+
+
+
+
+.act{
+    display: block;
+}
+
+main.ppcal-result {
      margin: 10px;
  }
 
@@ -1119,29 +1149,25 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  section.secciones-result {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
      width: 100%;
  }
 
- /* cada resultado */
- section.secciones-result article {
-     width: 100%;
+
+ section.secciones-result article ul li  {
      display: flex;
      background-color: rgba(175, 163, 163, 0.637);
-     margin-bottom: 5px;
+     margin: 5px;
      padding: 10px;
  }
 
- .secciones-result article figure {
+ .secciones-result ul figure {
      margin-right: 20px;
      width: 40px;
      /* impide que se "achique" */
      flex-shrink: 0;
  }
 
- .secciones-result article figure img {
+ .secciones-result ul figure img {
      display: block;
      height: 80px;
      object-fit: cover;
@@ -1149,11 +1175,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      margin-right: 10px;
  }
 
- article .textos h3 p a {
+ section .textos h3 p a {
      margin-left: 10px;
  }
 
- article .textos h3 a {
+ section .textos h3 a {
      font-size: 16px;
      font-weight: 400;
      color: rgb(133, 5, 5);
@@ -1162,13 +1188,13 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      font-family: sans-serif;
  }
 
- article .textos h3 a:hover {
+ section .textos h3 a:hover {
      color: black;
      background-color: rgba(255, 255, 255, 0.555);
 
  }
 
- article .textos {
+ section .textos {
      /*flex-grow: 1; */
      display: flex;
      flex-direction: column;
@@ -1176,7 +1202,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      margin-left: 10px;
  }
 
- article .textos p {
+section .textos p {
      line-height: 14px;
      color: rgb(87, 87, 87);
      font-family: sans-serif;
@@ -1184,7 +1210,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /* último párrafo del artículo */
- article .textos p:last-child {
+ section .textos p:last-child {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -1197,11 +1223,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /* elementos "hijos" de "p" */
- article .textos p>* {
+ section .textos p>* {
      width: 30%;
  }
 
- article .textos p a {
+ section .textos p a {
      width: 15%;
      line-height: 25px;
      background-color: rgba(3, 3, 3, 0.85);
@@ -1212,10 +1238,14 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      font-size: 15px;
  }
 
- article .textos p a:hover {
+ section .textos p a:hover {
      background-color: rgba(255, 246, 246, 0.993);
      color: black;
  }
+
+.inact{
+    display: none;
+}
 
  /********************************************************************************************************
 *                                               ESTILOS FOOTER
@@ -1479,16 +1509,17 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          padding: 30px;
      }
 
-     section.secciones-result {
+     section.secciones-result ul {
+         display: flex;
          flex-direction: row;
-         flex-wrap: wrap;
          justify-content: space-between;
-
      }
 
-     section.secciones-result article {
-         width: calc(50% - 2px);
+     section.secciones-result ul li{
+         width: calc(50% - 5px);
      }
+
+    
 
 
      /*seccion albumes*/
@@ -1649,7 +1680,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          width: calc(33% - 5px)
      }
 
-     /*Páginas albums*/
+     /*Páginas resultados*/
+     section.secciones-result ul li{
+        width: calc(33% - 5px);
+    }
+     /*Páginas artistas*/
      .sec-art-ppal {
          background-image: url("/images/bruno2.jpg");
      }
@@ -1662,15 +1697,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
          width: calc(50% - 5px);
      }
 
-     /* Pagina search-result*/
-
-     section.secciones-result article {
-         width: calc(33% - 1.5px);
-     }
 
      .leyenda p {
          font-size: 20px;
          padding: 20px;
      }
+ 
 
  }
