@@ -26,9 +26,7 @@ window.addEventListener("load", function () {
     let string = location.search;
     let stringObject = new URLSearchParams(string);
     let busqueda = stringObject.get("q");
-
     let artTodo = document.querySelector(".todo")
-
     let listSongs = document.querySelector(".listSongs")
     let listAlbums = document.querySelector(".listAlbums")
     let songsArticle = document.querySelector(".songsArticle")
@@ -39,16 +37,9 @@ window.addEventListener("load", function () {
     let artistResults = document.querySelector(".artistResults")
     let cancionEspecifico = document.querySelector(".cancionEspecifico")
     let albumEspecifico = document.querySelector(".albumEspecifico")
-    let artArt = document.querySelector(".artistas");
-    let artAlb = document.querySelector(".albumes")
-    let artCanc = document.querySelector(".canciones")
-
     let artistas = document.querySelector("#artistas");
     let canciones = document.querySelector("#canciones");
     let albumes = document.querySelector("#albumes");
-
-
-
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
         .then(function (response) {
@@ -59,19 +50,15 @@ window.addEventListener("load", function () {
             let resultados = datos.data;
             console.log(resultados)
 
-
             if (!resultados.length) {
                 artistResults.innerHTML = `<h2>No hay resultados para el artista buscado</h2>`
                 songResults.innerHTML = `<h2>No hay resultados para la canción buscada</h2>`
                 cancionEspecifico.innerHTML = `<h2>No hay resultados para la canción buscada</h2>`
-
-
-            } else {
+            }else {
                 let imgA = resultados[0].artist.picture_medium;
                 let infoAr = resultados[0].artist.id;
                 let artista = resultados[0].artist.name;
                 titulo.innerText += " " + artista;
-
                 artTodo.innerHTML += `<li>
                             <figure><img src="${imgA}" alt="${artista}"></figure>
                             <div class="textos">
@@ -110,14 +97,12 @@ window.addEventListener("load", function () {
                             </div>
                             </li>
                             `
-
                 }
             }
         })
         .catch(function (e) {
             console.log(e)
         })
-
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`)
         .then(function (response) {
@@ -130,16 +115,11 @@ window.addEventListener("load", function () {
             if (!resultados.length) {
                 albumResults.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
                 albumEspecifico.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
-
-
-            } else {
-
+            }else {
                 for (let i = 0; i < 4; i++) {
                     let albumFoto = resultados[i].cover_medium
                     let albumId = resultados[i].id
                     let album = resultados[i].title
-
-
                     listAlbums.innerHTML += `<li>
             <figure><img src="${albumFoto}" alt="${album}"></figure>
             <div class="textos">
@@ -192,6 +172,4 @@ window.addEventListener("load", function () {
         cancionEspecifico.classList.remove("inact")
         albumEspecifico.classList.add("inact")
     })
-
-
 })

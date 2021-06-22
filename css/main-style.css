@@ -196,6 +196,12 @@
      }
  }
 
+ header .validador {
+     color:white;
+     font-family: 'Heebo', sans-serif;
+
+ }
+
  /*Trabajamos en la sección principal del Inicio con una imágen de fondo con una tonalidad acorde a la paleta de colores escojida y nuevamente usamos flexbox para poder ubicar títulos y botones según lo deseado*/
  .sec-ppal {
      background-image: linear-gradient(rgba(186, 4, 4, 0.7), rgba(0, 0, 0, 0.5)), url("../images/pexels-sebastian-ervi-1763075.jpg");

@@ -2,13 +2,27 @@ window.addEventListener("load", function () {
     let sec = document.querySelector("#desapear");
     sec.classList.toggle("loaderSegundo")
 
+    
+    const form = document.querySelector("form")
+    const buscar = document.querySelector(".buscar")
+    const validador = document.querySelector(".validador")
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(!buscar.value.length) {
+            validador.innerText = "Debes completar este campo"
+        }else if (buscar.value.length < 3){
+             validador.innerText = "Debes introducir al menos 3 caracteres"
+        }else{
+            this.submit()
+        }
+    })
 
     /*Definiremos las variables con las cuales trabajremos en el menú*/
     const button = document.querySelector("header button");
     const icon = document.querySelector("header button span");
     const menuNav = document.querySelector("header nav ul");
     const items = document.querySelectorAll("header nav a");
-
     button.addEventListener('click', paraMenu);
     
     items.forEach( a => a.addEventListener('click', paraMenu));
@@ -36,10 +50,10 @@ window.addEventListener("load", function () {
         navegacion.classList.add("fixed")
     }else{
         navegacion.classList.remove("fixed")
-    }
-       
+    }   
     })
 
+   
 
     let list = document.querySelector(".artists ul");
     
