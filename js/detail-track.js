@@ -1,28 +1,5 @@
 window.addEventListener("load", function () {
-    /*Definiremos las variables con las cuales trabajremos en el menú*/
-    const button = document.querySelector("header button");
-    const icon = document.querySelector("header button span");
-    const menuNav = document.querySelector("header nav ul");
-    const items = document.querySelectorAll("header nav a");
-
-    button.addEventListener('click', paraMenu);
-
-    items.forEach(a => a.addEventListener('click', paraMenu));
-
-    function paraMenu(e) {
-        e.preventDefault();
-        menuNav.classList.toggle("visible");
-        if (icon.innerText == "menu") {
-            icon.innerText = "close";
-        }
-        else {
-            icon.innerText = "menu";
-        }
-        if (this.hasAttribute("href")) {
-            let destino = this.getAttribute("href");
-            window.location = destino;
-        }
-    }
+    
 
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
@@ -31,6 +8,7 @@ window.addEventListener("load", function () {
     let trackDetail = document.querySelector(".detail-track .play-ppal .data");
     let barraSec = document.querySelector(".detail-track .play-ppal .barra-sec ");
     let imgPort = document.querySelector(".detail-track .img");
+    let player = document.querySelector(".detail-track iframe");
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${canc}`)
         .then(function (response) {
@@ -45,7 +23,7 @@ window.addEventListener("load", function () {
             let imgCan = datos.album.cover_big;
             let albumId = datos.album.id;
             let link = datos.preview;
-            let dur = datos.duration;
+            trackId= datos.id;
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
@@ -59,6 +37,7 @@ window.addEventListener("load", function () {
 
             barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `
 
+            player.src = `https://widget.deezer.com/widget/dark/track/${canc}`;
         })
 
         .catch(function (error) {
@@ -73,22 +52,23 @@ window.addEventListener("load", function () {
     let recuperoStorage = localStorage.getItem("favorito");
     console.log(recuperoStorage);
     // utilizo un condicional para saber si hay algo guardado en "favoritos"
-    if (recuperoStorage != null) {
+    if (recuperoStorage !=null) {
         //transformamos la informacion recibida como string en array para que la podamos trabajar
         canFav = JSON.parse(recuperoStorage);
 
         // si el id de la cancion actual esta en la lista
         if (canFav.includes(canc)) {
-            document.querySelector(".but-fun .fav").innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`
+            let boton = document.querySelector(".but-fun .fav");
+            boton.innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`
         }
     }
     //agregar-sacar cancion actual de playlist
 
     //link "agregar a playlist"
     let fav = document.querySelector(".but-fun .fav");
-
+  
     //al clickear en el link
-    fav.addEventListener("click", function (e) {
+    fav.addEventListener("click", function(e) {
         //evitamos el comportamiento por default
         e.preventDefault();
 
@@ -102,16 +82,17 @@ window.addEventListener("load", function () {
             // si ya lo sacamos, cambiamos el texto del link
             document.querySelector(".but-fun .fav").innerHTML = ` <i class="far fa-heart"></i> Agregar a Playlist`
 
-            //chequeamos 
-            console.log(canFav);
+            
         } else { //si no esta en la lista
 
+            //chequeamos 
+            console.log(canc);
             //se agrega la cancion actual
             canFav.push(canc);
 
             // si ya fue agregrado, cambiamos el texto del link
             document.querySelector(".but-fun .fav").innerHTML = ` <i class="fas fa-heart"></i> Quitar de Playlist`
-
+        }
             // guardamos el array actualizado como string
             let canFavStorage = JSON.stringify(canFav);
             console.log(canFavStorage);
@@ -123,7 +104,7 @@ window.addEventListener("load", function () {
             console.log(localStorage);
 
             ///fin///
-        }
+       
     })
 
 

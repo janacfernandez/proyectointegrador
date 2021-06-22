@@ -294,6 +294,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .songs ul h4,
  .main-about h1,
  .main-about h2,
+ .track h1,
+ .play-info h2,
  .alb-info h2,
  .alb-info h3,
  .tracklist h3 {
@@ -353,7 +355,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /*Damos estilos a los 3 h2 de las secciones index*/
  .songs h2,
  .albums h2,
- .artists h2 {
+ .artists h2,
+ .playInd h2 {
      font-family: 'Open Sans', sans-serif;
      font-weight: 300;
      text-align: center;
@@ -367,30 +370,31 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /*Definimos para las secciones un área de trabajo con medidas relativas"*/
  .artists,
  .songs,
- .albums {
+ .albums,
+ .playInd {
      padding: 3% 5%;
      background-color: #2b2b2b;
  }
 
- .artists h4 {
+ .artists h4, .playInd .playSec h4 {
      font-size: 1.2em;
      color: white;
      margin: 10px 0px 40px 0px;
  }
 
  /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
- .artist {
+ .artist, .playSec  {
     display: flex;
     flex-direction: column;
     align-items: center;
  }
 
- .artist a{
+ .artist a, .playSec a{
      overflow: hidden;
      border-radius: 7%;
  }
  
- .artist img {
+ .artist img, .playSec img {
      filter: brightness(60%);
      transition: all .9s ease;
      max-width: 400px;
@@ -399,7 +403,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
- .artist img:hover{
+ .artist img:hover, .playSec img:hover{
      transform: scale(1.25);
      filter: brightness(100%);
  }
@@ -781,7 +785,36 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .canciones a{
      color:white;
  }
+ /********************************************************************************************************
+*                                               ESTILOS PÁGINA DETAIL PLAYLIST
+**********************************************************************************************************/
+.track {
+    background-color: black;
+}
+.track h1 {
+    color: white;
+    margin: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
 
+.track .play-info h2 {
+    font-size: 1.2em;
+     background-color: rgba(186, 4, 4, 0.7);
+    margin-top: 15px;
+    color: white;
+}
+
+.track .play-info p {
+    font-size: 1em;
+    margin: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+   font-family: sans-serif;
+   color: white;
+
+}
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
 **********************************************************************************************************/
@@ -1341,25 +1374,25 @@ section .textos p {
      }
 
      /*Sección artistas*/
-     .artists ul {
+     .artists ul, .playInd ul {
          display: flex;
          flex-direction: row;
          justify-content: space-between;
          flex-wrap: wrap;
      }
 
-     .artists ul li {
+     .artists ul li, .playInd ul li {
          width: calc(50% - 5px)
      }
 
-     .artists ul li a {
+     .artists ul li a, .playInd ul li a {
          display: flex;
          flex-direction: column;
          align-items: center;
          height: 80%
      }
 
-     .artists ul li img {
+     .artists ul li img , .playInd ul li img{
          height: 100%;
          object-fit: cover;
      }
@@ -1586,12 +1619,12 @@ section .textos p {
      }
 
 
-     /*Sección artistas*/
-     .artists h2 {
+     /*Sección artistas y playlist*/
+     .artists h2, .playInd h2  {
          padding-bottom: 40px;
      }
 
-     .artists ul li {
+     .artists ul li , .playInd ul li {
          align-items: center;
          justify-content: baseline;
          width: calc(17% - 15px);
@@ -1599,7 +1632,7 @@ section .textos p {
 
      }
 
-     .artists ul li img {
+     .artists ul li img , .playInd ul li img{
          height: 30vh;
          object-fit: cover;
      }

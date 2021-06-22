@@ -3,45 +3,6 @@ window.addEventListener("load", function () {
     sec.classList.toggle("loaderSegundo")
 
     
-    const form = document.querySelector("form")
-    const buscar = document.querySelector(".buscar")
-    const validador = document.querySelector(".validador")
-
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        if(!buscar.value.length) {
-            validador.innerText = "Debes completar este campo"
-        }else if (buscar.value.length < 3){
-             validador.innerText = "Debes introducir al menos 3 caracteres"
-        }else{
-            this.submit()
-        }
-    })
-
-    /*Definiremos las variables con las cuales trabajremos en el menú*/
-    const button = document.querySelector("header button");
-    const icon = document.querySelector("header button span");
-    const menuNav = document.querySelector("header nav ul");
-    const items = document.querySelectorAll("header nav a");
-    button.addEventListener('click', paraMenu);
-    
-    items.forEach( a => a.addEventListener('click', paraMenu));
-
-    function paraMenu(e) {
-        e.preventDefault();
-        menuNav.classList.toggle("visible");
-        if ( icon.innerText == "menu" ) {
-            icon.innerText = "close";
-        }
-        else {
-            icon.innerText = "menu";
-        }
-        if ( this.hasAttribute("href") ) {
-            let destino = this.getAttribute("href");
-            window.location = destino;
-        }
-    }
-    
     //A continuación definiremos el código necesario para hacer nuestro "Stiky menu", es decir nuestro menu que tenga position fixed cuando el usuario hace scroll, pero que cuando se está en la parte superior de la página vuelva a su posición por defecto
     let navegacion = document.querySelector("header")
 
@@ -94,7 +55,7 @@ window.addEventListener("load", function () {
             for (let i = 0; i < 6; i++) {
                 let canc = datos.data[i].id;
                 let title = canciones[i].title;
-                let url = canciones[i].artist.picture;
+                let url = canciones[i].artist.picture_big;
                 let cantante = canciones[i].artist.name;
                 let cantId = canciones[i].artist.id;
                 listaC.innerHTML += `
@@ -141,4 +102,29 @@ window.addEventListener("load", function () {
         .catch(function (error) {
             console.log("error: "+error)
         }) 
+
+        let listaP = document.querySelector(".playInd ul");
+    
+    fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/playlists')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let playlist = datos.data
+            for (let i = 0; i < 6; i++) {
+                let nombre = playlist[i].title;
+                let imagen = playlist[i].picture_big;
+                let canPlay = playlist[i].id;
+
+                listaP.innerHTML += `<li class="playSec">
+                <a href="detail-playlist.html?id=${canPlay}"><img src="${imagen}" alt="${nombre}"></a>
+                <h4>${nombre}</h4>
+                </li>`;
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
     })
