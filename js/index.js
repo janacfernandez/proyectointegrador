@@ -14,8 +14,6 @@ window.addEventListener("load", function () {
     }   
     })
 
-   
-
     let list = document.querySelector(".artists ul");
     
     fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists')
@@ -117,7 +115,7 @@ window.addEventListener("load", function () {
                 let imagen = playlist[i].picture_big;
                 let canPlay = playlist[i].id;
 
-                listaP.innerHTML += `<li class="playSec">
+                listaP.innerHTML += `<li class="artist">
                 <a href="detail-playlist.html?id=${canPlay}"><img src="${imagen}" alt="${nombre}"></a>
                 <h4>${nombre}</h4>
                 </li>`;

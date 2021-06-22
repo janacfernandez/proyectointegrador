@@ -290,7 +290,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .sec-sec h2,
  .sec-sec h3,
  .circles h4,
- .artists h4,
+ .artist h4,
  .songs ul h4,
  .main-about h1,
  .main-about h2,
@@ -376,36 +376,40 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      background-color: #2b2b2b;
  }
 
- .artists h4, .playInd .playSec h4 {
+ .artist h4 {
      font-size: 1.2em;
      color: white;
      margin: 10px 0px 40px 0px;
  }
 
  /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
- .artist, .playSec  {
+ .artist  {
     display: flex;
     flex-direction: column;
     align-items: center;
  }
 
- .artist a, .playSec a{
+ .artist a{
      overflow: hidden;
      border-radius: 7%;
  }
  
- .artist img, .playSec img {
+ .artist img {
      filter: brightness(60%);
      transition: all .9s ease;
      max-width: 400px;
      width: 100%;
-
  }
 
+
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
- .artist img:hover, .playSec img:hover{
+ .artists .artist img:hover{
      transform: scale(1.25);
      filter: brightness(100%);
+ }
+
+ .artist img:hover{
+    filter: brightness(100%);
  }
 
  /*Comenzamos a darle estilo a la sección de canciones*/
@@ -1195,7 +1199,7 @@ main.ppcal-result {
  section.secciones-result article ul li  {
      display: flex;
      background-color: rgba(175, 163, 163, 0.637);
-     margin: 5px;
+     margin-bottom: 5px;
      padding: 10px;
  }
 
@@ -1389,14 +1393,18 @@ section .textos p {
          display: flex;
          flex-direction: column;
          align-items: center;
-         height: 80%
+         height: 80%;
      }
 
-     .artists ul li img , .playInd ul li img{
+     .artists ul li img{
          height: 100%;
          object-fit: cover;
      }
 
+     .playInd ul li img{
+        height: 100%;
+        object-fit: contain;
+     }
      /*Sección Canciones */
 
      .songs ul {
@@ -1552,6 +1560,7 @@ section .textos p {
          display: flex;
          flex-direction: row;
          justify-content: space-between;
+         flex-wrap: wrap;
      }
 
      section.secciones-result ul li{
@@ -1634,7 +1643,6 @@ section .textos p {
 
      .artists ul li img , .playInd ul li img{
          height: 30vh;
-         object-fit: cover;
      }
 
      /*Sección Canciones */

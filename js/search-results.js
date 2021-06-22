@@ -45,7 +45,7 @@ window.addEventListener("load", function () {
                             </li>
                             `
 
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 6; i++) {
                     let cancion = resultados[i].title
                     let cancionId = resultados[i].id
                     let albumFoto = resultados[i].album.cover_medium
@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
 
                 }
 
-                for (let i = 0; i < 8; i++) {
+                for (let i = 0; i < 12; i++) {
                     let cancion = resultados[i].title
                     let cancionId = resultados[i].id
                     let albumFoto = resultados[i].album.cover_medium
@@ -93,7 +93,7 @@ window.addEventListener("load", function () {
                 albumResults.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
                 albumEspecifico.innerHTML = `<h2>No hay resultados para el album buscado</h2>`
             }else {
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 6; i++) {
                     let albumFoto = resultados[i].cover_medium
                     let albumId = resultados[i].id
                     let album = resultados[i].title
@@ -106,7 +106,7 @@ window.addEventListener("load", function () {
             </li>`
                 }
 
-                for (let i = 0; i < 8; i++) {
+                for (let i = 0; i < 12; i++) {
                     let albumFoto = resultados[i].cover_medium
                     let albumId = resultados[i].id
                     let album = resultados[i].title
