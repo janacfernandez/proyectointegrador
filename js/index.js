@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
     let sec = document.querySelector("#desapear");
-    sec.classList.toggle("loaderSegundo")
+    sec.classList.toggle("loaderSegundo");
 
 
     
@@ -9,16 +9,16 @@ window.addEventListener("load", function () {
 
     window.addEventListener("scroll", function(){
         if(window.pageYOffset != 0){
-        navegacion.classList.add("fixed")
+        navegacion.classList.add("fixed");
     }else{
-        navegacion.classList.remove("fixed")
+        navegacion.classList.remove("fixed");
     }   
     })
 
 //validacion de buscador
     let form = document.querySelector("form");
-    let buscar = document.querySelector(".buscar")
-    let validador = document.querySelector(".validador")
+    let buscar = document.querySelector(".buscar");
+    let validador = document.querySelector(".validador");
 
     form.addEventListener("submit", function(e){
         e.preventDefault();
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
         })
         .then(function (datos) {
             console.log(datos);
-            let artistas = datos.data
+            let artistas = datos.data;
             for (let i = 0; i < 6; i++) {
                 let artist = artistas[i].name;
                 let imagen = artistas[i].picture_big;
@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log(error)
+            console.log(error);
         })
 
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
@@ -94,12 +94,12 @@ window.addEventListener("load", function () {
         })
         .then(function (datos) {
             console.log(datos);
-            let albumes = datos.data
+            let albumes = datos.data;
 
             let listA= document.querySelector(".albums .liAlbum")
 
             for (let i = 0; i < 6; i++) {
-                let album = albumes[i].title
+                let album = albumes[i].title;
                 let imagen = albumes[i].cover_medium;
                 let artista= albumes[i].artist.name;
                 let albumId = albumes[i].id;
@@ -115,7 +115,7 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log("error: "+error)
+            console.log("error: "+error);
         }) 
 
         let listaP = document.querySelector(".playInd ul");
@@ -140,6 +140,6 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log(error)
+            console.log(error);
         })
     })

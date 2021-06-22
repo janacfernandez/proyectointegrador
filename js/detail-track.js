@@ -1,4 +1,4 @@
-window.addEventListener("load", function () { 
+window.addEventListener("load", function () {
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
     let canc = queryStringObjt.get("id");
@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
             let imgCan = datos.album.cover_big;
             let albumId = datos.album.id;
             let link = datos.preview;
-            trackId= datos.id;
+            trackId = datos.id;
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
@@ -50,7 +50,7 @@ window.addEventListener("load", function () {
     let recuperoStorage = localStorage.getItem("favorito");
     console.log(recuperoStorage);
     // utilizo un condicional para saber si hay algo guardado en "favoritos"
-    if (recuperoStorage !=null) {
+    if (recuperoStorage != null) {
         //transformamos la informacion recibida como string en array para que la podamos trabajar
         canFav = JSON.parse(recuperoStorage);
 
@@ -64,9 +64,9 @@ window.addEventListener("load", function () {
 
     //link "agregar a playlist"
     let fav = document.querySelector(".but-fun .fav");
-  
+
     //al clickear en el link
-    fav.addEventListener("click", function(e) {
+    fav.addEventListener("click", function (e) {
         //evitamos el comportamiento por default
         e.preventDefault();
 
@@ -80,7 +80,7 @@ window.addEventListener("load", function () {
             // si ya lo sacamos, cambiamos el texto del link
             document.querySelector(".but-fun .fav").innerHTML = ` <i class="far fa-heart"></i> Agregar a Playlist`
 
-            
+
         } else { //si no esta en la lista
 
             //chequeamos 
@@ -91,22 +91,22 @@ window.addEventListener("load", function () {
             // si ya fue agregrado, cambiamos el texto del link
             document.querySelector(".but-fun .fav").innerHTML = ` <i class="fas fa-heart"></i> Quitar de Playlist`
         }
-            // guardamos el array actualizado como string
-            let canFavStorage = JSON.stringify(canFav);
-            console.log(canFavStorage);
+        // guardamos el array actualizado como string
+        let canFavStorage = JSON.stringify(canFav);
+        console.log(canFavStorage);
 
-            // guardamos el string en el LocalStorage
-            localStorage.setItem("favorito", canFavStorage);
+        // guardamos el string en el LocalStorage
+        localStorage.setItem("favorito", canFavStorage);
 
-            //revisamos
-            console.log(localStorage);
+        //revisamos
+        console.log(localStorage);
 
-            ///fin///
-       
+        ///fin///
+
     })
 
 
-    
+
 
 
 

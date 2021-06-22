@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
                 let albumId = datos.album.id;
                 let link = datos.preview;
                 let dur = datos.duration;
-                let trackID = datos.id
+                let trackID = datos.id;
 
                 playlist.innerHTML += `   <li class="play-can">
             <img src="${imgCan}" alt="${cancion}">
