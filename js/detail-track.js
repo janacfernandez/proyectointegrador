@@ -1,6 +1,4 @@
-window.addEventListener("load", function () {
-    
-
+window.addEventListener("load", function () { 
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
     let canc = queryStringObjt.get("id");
