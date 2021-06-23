@@ -16,9 +16,10 @@ window.addEventListener("load", function () {
 
     let canRecuperadas = JSON.parse(recuperoStorage);
 
+    // hacemos un for para recorrer el array de canciones recuperadas del localStorage//
 
     for (let i = 0; i < canRecuperadas.length; i++) {
-        const cancion = canRecuperadas[i];
+        let cancion = canRecuperadas[i];
 
 
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${cancion}`)
@@ -27,23 +28,19 @@ window.addEventListener("load", function () {
                 return response.json();
             })
             .then(function (datos) {
-                let tracks = datos.album.title;
                 let nombreArt2 = datos.artist.name;
                 let artId = datos.artist.id;
-                let cancion = datos.title;
+                let cancion2 = datos.title;
                 let imgCan = datos.album.cover_big;
-                let albumId = datos.album.id;
-                let link = datos.preview;
-                let dur = datos.duration;
                 let trackID = datos.id;
 
                 playlist.innerHTML += `   <li class="play-can">
-            <img src="${imgCan}" alt="${cancion}">
+            <img src="${imgCan}" alt="${cancion2}">
             <div class="text">
-                <h4 class="canciones"><a href="detail-track.html?id=${trackID}">${cancion}</a></h4>
+                <h4 class="canciones"><a href="detail-track.html?id=${trackID}">${cancion2}</a></h4>
                 <a href="detail-artist.html?id=${artId}" class="artista"> ${nombreArt2}</a>
             </div>
-            <p class="favorito"> <a href="" class="fav"><i class="far fa-heart"></i></a></p></li>`;
+            <p class="favorito"> <a href="" class="fav"><i class="fas fa-heart"></i></a></p></li>`;
            
         
         })

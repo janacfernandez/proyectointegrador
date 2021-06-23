@@ -21,7 +21,6 @@ window.addEventListener("load", function () {
             let imgCan = datos.album.cover_big;
             let albumId = datos.album.id;
             let link = datos.preview;
-            trackId = datos.id;
 
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
@@ -54,7 +53,7 @@ window.addEventListener("load", function () {
         //transformamos la informacion recibida como string en array para que la podamos trabajar
         canFav = JSON.parse(recuperoStorage);
 
-        // si el id de la cancion actual esta en la lista
+        // si el id de la cancion actual esta en la lista (canc es la variable declarada que contiene el id)
         if (canFav.includes(canc)) {
             let boton = document.querySelector(".but-fun .fav");
             boton.innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`

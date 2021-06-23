@@ -102,12 +102,13 @@ window.addEventListener("load", function () {
                 let album = albumes[i].title;
                 let imagen = albumes[i].cover_medium;
                 let artista= albumes[i].artist.name;
+                let artistaId = albumes[i].artist.id;
                 let albumId = albumes[i].id;
 
                 listA.innerHTML += `<li>
                 <h4>${album}</h4>
                 <a href="detail-album.html?id=${albumId}"><img src="${imagen}" alt="${album}"></a>
-                <a href="detail-artist.html?id=${albumId}">
+                <a href="detail-artist.html?id=${artistaId}">
                     <p>${artista}</p>
                 </a>
             </li>`;
@@ -142,4 +143,38 @@ window.addEventListener("load", function () {
         .catch(function (error) {
             console.log(error);
         })
+
+
+       let lPod = document.querySelector(".podcast ul ")
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/podcasts')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let podcasts = datos.data;
+            console.log(podcasts);
+
+            for (let i = 0; i < 6; i++) {
+                let podcast = podcasts[i].title;
+                let imagen = podcasts[i].picture_big;
+                let desc= podcasts[i].description;
+                let podcastId = podcasts[i].id;
+
+                lPod.innerHTML += `<li>
+                <h4>${podcast}</h4>
+                <a href="detail-podcast.html?id=${podcastId}"><img src="${imagen}" alt="${podcast}"></a>
+                </a>
+            </li>`; 
+            }
+
+        })
+        .catch(function (error) {
+            console.log("error: "+error);
+        }) 
+
+
+
+
+
     })
