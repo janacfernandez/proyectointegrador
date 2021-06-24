@@ -298,7 +298,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .play-info h2,
  .alb-info h2,
  .alb-info h3,
- .tracklist h3 {
+ .tracklist h3 ,
+ .podcast h4{
      font-family: 'Open Sans', sans-serif;
      font-weight: 300;
      text-align: center;
@@ -356,7 +357,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .songs h2,
  .albums h2,
  .artists h2,
- .playInd h2 {
+ .playInd h2,
+ .podcast h2 {
      font-family: 'Open Sans', sans-serif;
      font-weight: 300;
      text-align: center;
@@ -371,7 +373,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .artists,
  .songs,
  .albums,
- .playInd {
+ .playInd,
+ .podcast {
      padding: 3% 5%;
      background-color: #2b2b2b;
  }
@@ -413,7 +416,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /*Comenzamos a darle estilo a la sección de canciones*/
- .songs {
+ .songs, .podcast {
      background-image: url("../images/background-canciones.jpg");
  }
 
@@ -943,13 +946,13 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /********************************************************************************************************
-*                                               ESTILOS PÁGINA ALBUMES (detail)
+*                                               ESTILOS PÁGINA ALBUMES (detail) y detail-podcast
 **********************************************************************************************************/
- .bod-alb {
+ .bod-alb , .bod-pod{
      background-image: url("../images/background-canciones.jpg");
  }
 
- .main-alb {
+ .main-alb , .pod{
      background-color: rgb(186, 4, 4);
      width: 80%;
      padding: 10px;
@@ -957,18 +960,19 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      max-width: 800px;
  }
 
- .alb-info {
+ .alb-info , .pod-info, .pod2 {
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: space-between;
+     text-align: center;
  }
 
- .alb-info img {
+ .alb-info img , .pod img {
      width: 80%;
  }
 
- .alb-info h2 {
+ .alb-info h2 , .pod-info h2{
      background-color: white;
      font-size: 1.5em;
      font-weight: bold;
@@ -977,15 +981,16 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      box-shadow: 1px 1px 1px black;
  }
 
- .alb-info h3 {
+ .alb-info h3  {
      color: white;
      font-weight: bold;
      font-size: 1em;
      margin-top: 10px;
  }
 
+ 
 
- .alb-info p {
+ .alb-info p  , .pod2 p{
      color: white;
      background-color: rgb(80, 80, 80);
      width: 80%;
@@ -997,11 +1002,14 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      font-family: sans-serif;
  }
 
+
  .alb-info a {
      color: white;
  }
 
- .alb-info a:hover {
+
+
+ .alb-info a:hover, .pod-info a:hover {
      color: rgb(186, 4, 4);
      font-weight: bold;
  }
@@ -1013,6 +1021,20 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      margin: 10px auto;
  }
 
+
+ .pod2 h3 {
+    background-color: white;
+    margin-top: 15px;
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+    }
+    .pod2 h3 a {
+        color: black;
+        align-content: center;
+       
+        
+    }
  .tracklist h3 {
      color: white;
      font-weight: bold;
@@ -1038,16 +1060,16 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .albums li h4,
- .albums li p {
+ .albums li p , .podcast li h4, .podcast li p{
      text-align: center;
      text-transform: uppercase;
  }
 
- .albums h2 {
+ .albums h2, .podcast h2 {
      color: white;
  }
 
- .albums h4 {
+ .albums h4, .podcast h4 {
      width: 90%;
      font-size: 1em;
      background-color: white;
@@ -1058,13 +1080,13 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      letter-spacing: 3px;
  }
 
- .albums ul {
+ .albums ul , .podcast ul {
      display: flex;
      flex-direction: column;
      align-items: center;
  }
 
- .albums li {
+ .albums li , .podcast li {
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -1073,14 +1095,14 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      width: 90%;
  }
 
- .albums a {
+ .albums a, .podcast a {
      width: 80%;
      display: flex;
      flex-direction: column;
      align-items: center;
  }
 
- .albums li img {
+ .albums li img , .podcast li img{
      width: 70%;
      transition: all .6s ease;
      margin-bottom: 10px;
@@ -1091,7 +1113,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      filter: sepia(0%)
  }
 
- .albums p {
+ .albums p, .podcast p{
      color: white;
      font-family: 'Open Sans', sans-serif;
      font-weight: bold;
@@ -1558,12 +1580,22 @@ section .textos p {
 
      /*sección de detalle albums*/
 
-     .main-alb {
+     .main-alb , .pod {
          display: flex;
      }
 
-     .main-alb article {
+     .main-alb article , .pod article {
          width: calc(50% - 5px);
+     }
+
+     .pod .pod2 {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+
+     .pod2 p {
+         width: 100%;
      }
 
      footer .integrantes ul {
@@ -1593,13 +1625,13 @@ section .textos p {
 
 
      /*seccion albumes*/
-     .albums ul {
+     .albums ul, .podcast ul{
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: space-between;
      }
 
-     .albums li {
+     .albums li, .podcast li {
          width: calc(50% - 5px)
      }
     
@@ -1669,7 +1701,7 @@ section .textos p {
 
      /*Sección Canciones */
      .songs h2,
-     .albums h2 {
+     .albums h2, .podcast h2 {
          padding: 20px;
      }
 
@@ -1745,7 +1777,7 @@ section .textos p {
 
 
      /*Páginas albums*/
-     .albums li {
+     .albums li , .podcast li {
          width: calc(33% - 5px)
      }
 

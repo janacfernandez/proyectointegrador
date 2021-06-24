@@ -6,19 +6,19 @@ window.addEventListener("load", function () {
     const items = document.querySelectorAll("header nav a");
 
     button.addEventListener('click', paraMenu);
-    
-    items.forEach( a => a.addEventListener('click', paraMenu));
+
+    items.forEach(a => a.addEventListener('click', paraMenu));
 
     function paraMenu(e) {
         e.preventDefault();
         menuNav.classList.toggle("visible");
-        if ( icon.innerText == "menu" ) {
+        if (icon.innerText == "menu") {
             icon.innerText = "close";
         }
         else {
             icon.innerText = "menu";
         }
-        if ( this.hasAttribute("href") ) {
+        if (this.hasAttribute("href")) {
             let destino = this.getAttribute("href");
             window.location = destino;
         }

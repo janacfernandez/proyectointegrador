@@ -1,22 +1,22 @@
 window.addEventListener("load", function () {
     let sec = document.querySelector("#desapear");
-    sec.classList.toggle("loaderSegundo")
+    sec.classList.toggle("loaderSegundo");
 
     //A continuación definiremos el código necesario para hacer nuestro "Stiky menu", es decir nuestro menu que tenga position fixed cuando el usuario hace scroll, pero que cuando se está en la parte superior de la página vuelva a su posición por defecto
     let navegacion = document.querySelector("header")
 
     window.addEventListener("scroll", function(){
         if(window.pageYOffset != 0){
-        navegacion.classList.add("fixed")
+        navegacion.classList.add("fixed");
     }else{
-        navegacion.classList.remove("fixed")
+        navegacion.classList.remove("fixed");
     }   
     })
 
 //validacion de buscador
     let form = document.querySelector("form");
-    let buscar = document.querySelector(".buscar")
-    let validador = document.querySelector(".validador")
+    let buscar = document.querySelector(".buscar");
+    let validador = document.querySelector(".validador");
 
     form.addEventListener("submit", function(e){
         e.preventDefault();
@@ -42,7 +42,7 @@ window.addEventListener("load", function () {
         })
         .then(function (datos) {
             console.log(datos);
-            let artistas = datos.data
+            let artistas = datos.data;
             for (let i = 0; i < 6; i++) {
                 let artist = artistas[i].name;
                 let imagen = artistas[i].picture_big;
@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log(error)
+            console.log(error);
         })
 
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
@@ -97,20 +97,21 @@ window.addEventListener("load", function () {
         })
         .then(function (datos) {
             console.log(datos);
-            let albumes = datos.data
+            let albumes = datos.data;
 
             let listA= document.querySelector(".albums .liAlbum")
 
             for (let i = 0; i < 6; i++) {
-                let album = albumes[i].title
+                let album = albumes[i].title;
                 let imagen = albumes[i].cover_medium;
                 let artista= albumes[i].artist.name;
+                let artistaId = albumes[i].artist.id;
                 let albumId = albumes[i].id;
 
                 listA.innerHTML += `<li>
                 <h4>${album}</h4>
                 <a href="detail-album.html?id=${albumId}"><img src="${imagen}" alt="${album}"></a>
-                <a href="detail-artist.html?id=${albumId}">
+                <a href="detail-artist.html?id=${artistaId}">
                     <p>${artista}</p>
                 </a>
             </li>`;
@@ -118,7 +119,7 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log("error: "+error)
+            console.log("error: "+error);
         }) 
 
         let listaP = document.querySelector(".playInd ul");
@@ -143,6 +144,40 @@ window.addEventListener("load", function () {
 
         })
         .catch(function (error) {
-            console.log(error)
+            console.log(error);
         })
+
+
+       let lPod = document.querySelector(".podcast ul ")
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/podcasts')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let podcasts = datos.data;
+            console.log(podcasts);
+
+            for (let i = 0; i < 6; i++) {
+                let podcast = podcasts[i].title;
+                let imagen = podcasts[i].picture_big;
+                let desc= podcasts[i].description;
+                let podcastId = podcasts[i].id;
+
+                lPod.innerHTML += `<li>
+                <h4>${podcast}</h4>
+                <a href="detail-podcast.html?id=${podcastId}"><img src="${imagen}" alt="${podcast}"></a>
+                </a>
+            </li>`; 
+            }
+
+        })
+        .catch(function (error) {
+            console.log("error: "+error);
+        }) 
+
+
+
+
+
     })

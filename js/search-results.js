@@ -201,7 +201,7 @@ window.addEventListener("load", function () {
             }
         })
         .catch(function (e) {
-            console.log(e)
+            console.log(e);
         })
 
     //Utilizaremos nuevamente el método fetch en este caso para obtener los albumes relacionados con la búsqueda del usuario.
@@ -210,8 +210,8 @@ window.addEventListener("load", function () {
             return response.json();
         })
         .then(function (datos) {
-            let resultados = datos.data
-            console.log(datos.data)
+            let resultados = datos.data;
+            console.log(datos.data);
 
             if (!resultados.length) {
                 albumResults.innerHTML += `<h3>No hay resultados para el album buscado</h3>`
