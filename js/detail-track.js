@@ -1,4 +1,6 @@
+// carga el documento antes de empezar los scripts
 window.addEventListener("load", function () {
+    //alojado todo el querystring
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
     let canc = queryStringObjt.get("id");
@@ -23,7 +25,7 @@ window.addEventListener("load", function () {
             let link = datos.preview;
 
             trackPlay.innerHTML += `<div class="head">
-        <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
+        <a href="" class="exit"> <i class="fas fa-angle-down"></i></a>
         <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
     </div> `
             imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`
@@ -31,7 +33,7 @@ window.addEventListener("load", function () {
 
             trackDetail.innerHTML += `<p> ${cancion} </p>
          <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a> `
-
+  
             barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `
 
             player.src = `https://widget.deezer.com/widget/dark/track/${canc}`;

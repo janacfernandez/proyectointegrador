@@ -27,8 +27,25 @@ window.addEventListener("load", function () {
             let tracklist = datos.tracks.data;
             let genero = datos.genres.data[0].name;
             let generoId = datos.genres.data[0].id;
-            //let tracklist = basico.tracks.data.title
-            cambioJava.innerHTML +=
+            let array = datos.genres.data;
+            console.log(array);
+
+            if (array === []) {
+                cambioJava.innerHTML +=
+                `<h2>${titulo}</h2><h2>${año}</h2>
+            <img src="${foto}" alt="Iluminate">
+            <a href="detail-artist.html?id=${artistaId}"><h3>${artista}</h3></a>
+            <p> No se encuentra Genero</p>`;
+            for (let i = 0; i < tracklist.length; i++) {
+                let track = tracklist[i].title;
+                let trackId = tracklist[i].id;
+                tracklistSec.innerHTML += `<li><a href="detail-track.html?id=${trackId}">${track}</a></li>`
+                console.log(track);
+            }
+        }
+
+            else {
+                cambioJava.innerHTML +=
                 `<h2>${titulo}</h2><h2>${año}</h2>
             <img src="${foto}" alt="Iluminate">
             <a href="detail-artist.html?id=${artistaId}"><h3>${artista}</h3></a>
@@ -39,6 +56,9 @@ window.addEventListener("load", function () {
                 tracklistSec.innerHTML += `<li><a href="detail-track.html?id=${trackId}">${track}</a></li>`
                 console.log(track);
             }
+
+            } 
+          
         })
         .catch(function (error) {
             console.log(error);
@@ -46,14 +66,4 @@ window.addEventListener("load", function () {
         })
 
 
-    /* fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idAlbum}`)
-         .then(function (response) {
-             return response.json();
-         })
-         .then(function (datos) {
-             console.log(datos)
-         })
-         .catch(function (error) {
-             console.log(error);
-         })*/
 })
