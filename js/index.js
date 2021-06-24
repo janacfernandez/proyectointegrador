@@ -2,8 +2,6 @@ window.addEventListener("load", function () {
     let sec = document.querySelector("#desapear");
     sec.classList.toggle("loaderSegundo")
 
-
-    
     //A continuación definiremos el código necesario para hacer nuestro "Stiky menu", es decir nuestro menu que tenga position fixed cuando el usuario hace scroll, pero que cuando se está en la parte superior de la página vuelva a su posición por defecto
     let navegacion = document.querySelector("header")
 
@@ -30,6 +28,11 @@ window.addEventListener("load", function () {
             this.submit();
         }
     })
+
+    buscar.addEventListener("input", function(){
+        validador.innerText = ""
+    })
+
 
     let list = document.querySelector(".artists ul");
     
