@@ -196,7 +196,7 @@ window.addEventListener("load", function () {
             }
         })
         .then(function () {
-            let sec = document.querySelector("#desapear");
+            let sec = document.querySelector("#cargando");
             sec.classList.toggle("loaderSegundo");
         })
         .catch(function (e) {

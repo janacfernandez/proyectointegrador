@@ -19,57 +19,67 @@
 
  /*para que el body se vea de todo el alto del dispositivo independientemente del contenido que tenga */
 
-/* body { 
+ /* body { 
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: space-between; 
 }*/
 
-.lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-  }
-.lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #0000;
-    border-color: #cef transparent #cef transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-  }
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+ .lds-dual-ring {
+     display: inline-block;
+     width: 80px;
+     height: 80px;
+ }
 
-.centrado{
-    background-color: rgb(133, 5, 5);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100000;
-    clip-path: circle(150% at 0% 100%);
-    transition: clip-path 1s ease-in-out;
-}
+ .lds-dual-ring:after {
+     content: " ";
+     display: block;
+     width: 64px;
+     height: 64px;
+     margin: 8px;
+     border-radius: 50%;
+     border: 6px solid #0000;
+     border-color: #cef transparent #cef transparent;
+     animation: lds-dual-ring 1.2s linear infinite;
+ }
 
-.loaderSegundo{
-    clip-path: circle(0% at 0% 0%);
-}
-    
+ @keyframes lds-dual-ring {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ .centrado {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 100000;
+     clip-path: circle(150% at 0% 100%);
+     transition: clip-path 1s ease-in-out;
+ }
+
+ .loaderSegundo {
+     clip-path: circle(0% at 0% 0%);
+ }
+
+ #desapear {
+     background-color: black;
+ }
+
+ #cargando {
+     background-color: rgb(133, 5, 5);
+ }
+
  /*Utilizaremos flexbox para lograr el layout deseado de nuestro header en la versión mobile*/
  header {
      background-color: black;
@@ -80,19 +90,19 @@
      transition: all 0.2s;
  }
 
- .fixed{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+ .fixed {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 100;
  }
 
- header .contenedor{
-    width:90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ header .contenedor {
+     width: 90%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
  }
 
  /*Al nav le daremos un ancho máximo para de esta forma si se visualiza en un dispositivo muy grande no se tenga que recorrer toda la pantalla para navegarlo*/
@@ -113,10 +123,10 @@
  }
 
  .visible {
-    height: auto;
-    transition: all .6s ease;
-    margin-top: 1em;
-}
+     height: auto;
+     transition: all .6s ease;
+     margin-top: 1em;
+ }
 
  header nav ul li {
      width: 45%;
@@ -161,16 +171,16 @@
  }
 
  #butMenu {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: none;
+     background-color: rgb(0, 0, 0);
+     color: white;
+     border: none;
  }
 
- #butMenu:hover{
-    color: red;
+ #butMenu:hover {
+     color: red;
  }
 
- .material-icons{
+ .material-icons {
      font-size: 2.5em;
  }
 
@@ -197,7 +207,7 @@
  }
 
  header .validador {
-     color:white;
+     color: white;
      font-family: 'Heebo', sans-serif;
 
  }
@@ -281,7 +291,7 @@
  /*---Comenzamos a darle estilo a la segunda sección, que será un brief de lo que ofreceremos en la plataforma---
 
 Definimos margenes iniciales de la sección mas abarcativa para que quede con una separación del borde del viewport*/
-.sec-sec {
+ .sec-sec {
      padding: 3% 5%;
      background-image: url("../images/background.jpg");
  }
@@ -298,8 +308,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .play-info h2,
  .alb-info h2,
  .alb-info h3,
- .tracklist h3 ,
- .podcast h4{
+ .tracklist h3,
+ .podcast h4 {
      font-family: 'Open Sans', sans-serif;
      font-weight: 300;
      text-align: center;
@@ -386,17 +396,17 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  /*Daremos estilos para todas las imágenes de los artistas cuando no esta el mouse sobre ellas*/
- .artist  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ .artist {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
  }
 
- .artist a{
+ .artist a {
      overflow: hidden;
      border-radius: 7%;
  }
- 
+
  .artist img {
      filter: brightness(60%);
      transition: all .9s ease;
@@ -406,17 +416,18 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
 
  /*Con la pseudo-class :hover modificaremos el brillo y la escala de la imágen de cada artista cuadno el mouse este sobre ellas*/
- .artists .artist img:hover{
+ .artists .artist img:hover {
      transform: scale(1.25);
      filter: brightness(100%);
  }
 
- .artist img:hover{
-    filter: brightness(100%);
+ .artist img:hover {
+     filter: brightness(100%);
  }
 
  /*Comenzamos a darle estilo a la sección de canciones*/
- .songs, .podcast {
+ .songs,
+ .podcast {
      background-image: url("../images/background-canciones.jpg");
  }
 
@@ -463,7 +474,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 **********************************************************************************************************/
  .sec-art-ppal {
      height: 82vh;
-     
+
      background-repeat: no-repeat;
      background-size: cover;
      background-position-x: center;
@@ -497,9 +508,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  }
 
- .top-songs, .top-albums{
+ .top-songs,
+ .top-albums {
      margin: 0 3%;
  }
+
  .sec-art-sec ol {
      padding-bottom: 15px;
  }
@@ -520,7 +533,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  .sec-art-sec ol li a {
      color: white;
  }
- 
+
 
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA CANCIONES (detail-track)
@@ -614,10 +627,10 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      color: red;
  }
 
-.widget {
-    width : 100%;
-    height: 150;
-}
+ .widget {
+     width: 100%;
+     height: 150;
+ }
 
 
  .barra-sec {
@@ -762,45 +775,48 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
  }
 
- .canciones a{
-     color:white;
+ .canciones a {
+     color: white;
  }
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA DETAIL PLAYLIST
 **********************************************************************************************************/
-.body-track {
-    background-color: black;
-    padding: auto;
-    margin: 5px;
-}
-.track h1 {
-    color: white;
-    margin: 20px;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
+ .body-track {
+     background-color: black;
+     padding: auto;
+     margin: 5px;
+ }
 
-.track .play-info h2 {
-    font-size: 1.2em;
+ .track h1 {
+     color: white;
+     margin: 20px;
+     letter-spacing: 3px;
+     font-weight: bold;
+ }
+
+ .track .play-info h2 {
+     font-size: 1.2em;
      background-color: rgba(186, 4, 4, 0.7);
-    margin-top: 15px;
-    color: white;
-}
+     margin-top: 15px;
+     color: white;
+ }
 
-.track .play-info p {
-    font-size: 1em;
-    margin: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-   font-family: sans-serif;
-   color: white;
+ .track .play-info p {
+     font-size: 1em;
+     margin: 15px;
+     text-transform: uppercase;
+     text-align: center;
+     font-weight: bold;
+     font-family: sans-serif;
+     color: white;
 
-}
+ }
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA GENRES
 **********************************************************************************************************/
-.genres {
+ .genres {
      background-color: rgb(133, 5, 5);
      padding: 10px;
  }
@@ -923,11 +939,13 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA ALBUMES (detail) y detail-podcast
 **********************************************************************************************************/
- .bod-alb , .bod-pod{
+ .bod-alb,
+ .bod-pod {
      background-image: url("../images/background-canciones.jpg");
  }
 
- .main-alb , .pod{
+ .main-alb,
+ .pod {
      background-color: rgb(186, 4, 4);
      width: 80%;
      padding: 10px;
@@ -935,7 +953,9 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      max-width: 800px;
  }
 
- .alb-info , .pod-info, .pod2 {
+ .alb-info,
+ .pod-info,
+ .pod2 {
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -943,11 +963,13 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      text-align: center;
  }
 
- .alb-info img , .pod img {
+ .alb-info img,
+ .pod img {
      width: 80%;
  }
 
- .alb-info h2 , .pod-info h2{
+ .alb-info h2,
+ .pod-info h2 {
      background-color: white;
      font-size: 1.5em;
      font-weight: bold;
@@ -956,16 +978,17 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      box-shadow: 1px 1px 1px black;
  }
 
- .alb-info h3  {
+ .alb-info h3 {
      color: white;
      font-weight: bold;
      font-size: 1em;
      margin-top: 10px;
  }
 
- 
 
- .alb-info p  , .pod2 p{
+
+ .alb-info p,
+ .pod2 p {
      color: white;
      background-color: rgb(80, 80, 80);
      width: 80%;
@@ -984,7 +1007,8 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
 
 
- .alb-info a:hover, .pod-info a:hover {
+ .alb-info a:hover,
+ .pod-info a:hover {
      color: rgb(186, 4, 4);
      font-weight: bold;
  }
@@ -998,27 +1022,29 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
 
 
  .pod2 h3 {
-    background-color: white;
-    margin-top: 15px;
-    padding: 5px;
-    align-content: center;
-    text-align: center;
-    }
-    .pod2 h3 a {
-        color: black;
-        align-content: center;
-       
-        
-    }
+     background-color: white;
+     margin-top: 15px;
+     padding: 5px;
+     align-content: center;
+     text-align: center;
+ }
+
+ .pod2 h3 a {
+     color: black;
+     align-content: center;
+
+
+ }
+
  .tracklist h3 {
      color: white;
      font-weight: bold;
  }
 
- .tracklist li{
+ .tracklist li {
      margin-bottom: 10px;
  }
- 
+
  .tracklist li a {
      color: white;
      margin: 5px 10px;
@@ -1035,16 +1061,20 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  }
 
  .albums li h4,
- .albums li p , .podcast li h4, .podcast li p{
+ .albums li p,
+ .podcast li h4,
+ .podcast li p {
      text-align: center;
      text-transform: uppercase;
  }
 
- .albums h2, .podcast h2 {
+ .albums h2,
+ .podcast h2 {
      color: white;
  }
 
- .albums h4, .podcast h4 {
+ .albums h4,
+ .podcast h4 {
      width: 90%;
      font-size: 1em;
      background-color: white;
@@ -1055,13 +1085,15 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      letter-spacing: 3px;
  }
 
- .albums ul , .podcast ul {
+ .albums ul,
+ .podcast ul {
      display: flex;
      flex-direction: column;
      align-items: center;
  }
 
- .albums li , .podcast li {
+ .albums li,
+ .podcast li {
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -1070,25 +1102,29 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      width: 90%;
  }
 
- .albums a, .podcast a {
+ .albums a,
+ .podcast a {
      width: 80%;
      display: flex;
      flex-direction: column;
      align-items: center;
  }
 
- .albums li img , .podcast li img{
+ .albums li img,
+ .podcast li img {
      width: 70%;
      transition: all .6s ease;
      margin-bottom: 10px;
      filter: sepia(70%)
  }
 
- .albums li img:hover, .podcast li img:hover{
+ .albums li img:hover,
+ .podcast li img:hover {
      filter: sepia(0%)
  }
 
- .albums p, .podcast p{
+ .albums p,
+ .podcast p {
      color: white;
      font-family: 'Open Sans', sans-serif;
      font-weight: bold;
@@ -1123,45 +1159,45 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      height: 100%;
  }
 
- 
+
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA SECCION DETALLE DE BUSQUEDA
 **********************************************************************************************************/
 
-.cont{
-    margin-top: 20px;
-}
+ .cont {
+     margin-top: 20px;
+ }
 
-.busq{
-    display:flex;
-    justify-content: space-between;
-    width:90%;
-    margin: auto;
-}
+ .busq {
+     display: flex;
+     justify-content: space-between;
+     width: 90%;
+     margin: auto;
+ }
 
-.busq li a{
-    text-decoration: none;
-    color: grey;
-    font-family: sans-serif;
-    font-size:1em;
-}
+ .busq li a {
+     text-decoration: none;
+     color: grey;
+     font-family: sans-serif;
+     font-size: 1em;
+ }
 
-.busq li a:hover{
-    border-bottom: 2px solid red;
+ .busq li a:hover {
+     border-bottom: 2px solid red;
 
-}
+ }
 
 
 
-.act{
-    display: block;
-}
+ .act {
+     display: block;
+ }
 
-main.ppcal-result {
+ main.ppcal-result {
      margin: 10px;
  }
 
- 
+
 
  main>section.sec-result {
      padding-top: 5px;
@@ -1193,29 +1229,33 @@ main.ppcal-result {
      width: 100%;
  }
 
-.ppcal-result h1{
-    font-family: sans-serif;
-    font-size: 1.7em;
-    color:rgb(133, 5, 5);
-}
+ .ppcal-result h1 {
+     font-family: sans-serif;
+     font-size: 1.7em;
+     color: rgb(133, 5, 5);
+ }
 
- section.secciones-result h2{
+ section.secciones-result h2 {
      font-size: 1.2em;
      margin: 10px 0px;
      font-family: sans-serif;
  }
 
- .secciones-result article h3{
+ .secciones-result article h3 {
      font-family: sans-serif;
      font-size: 1em;
      margin-bottom: 5%;
  }
 
-.artistResults, .artistEspecifico, .cancionEspecifico, .playlistEspecifico, .albumEspecifico{
-    margin-top: 3%;
+ .artistResults,
+ .artistEspecifico,
+ .cancionEspecifico,
+ .playlistEspecifico,
+ .albumEspecifico {
+     margin-top: 3%;
  }
 
- section.secciones-result article ul li  {
+ section.secciones-result article ul li {
      display: flex;
      background-color: rgba(175, 163, 163, 0.637);
      margin-bottom: 5px;
@@ -1264,7 +1304,7 @@ main.ppcal-result {
      margin-left: 10px;
  }
 
-section .textos p {
+ section .textos p {
      line-height: 14px;
      color: rgb(87, 87, 87);
      font-family: sans-serif;
@@ -1305,9 +1345,9 @@ section .textos p {
      color: black;
  }
 
-.inact{
-    display: none;
-}
+ .inact {
+     display: none;
+ }
 
  /********************************************************************************************************
 *                                               ESTILOS FOOTER
@@ -1317,7 +1357,7 @@ section .textos p {
      display: flex;
      justify-content: center;
      padding-top: 5px;
-     
+
 
  }
 
@@ -1375,13 +1415,13 @@ section .textos p {
          border-top: none;
      }
 
-     #butMenu{
+     #butMenu {
          display: none;
      }
 
-     header nav ul{
-        height: auto;
-        overflow: auto;
+     header nav ul {
+         height: auto;
+         overflow: auto;
 
      }
 
@@ -1397,33 +1437,37 @@ section .textos p {
      }
 
      /*Sección artistas*/
-     .artists ul, .playInd ul {
+     .artists ul,
+     .playInd ul {
          display: flex;
          flex-direction: row;
          justify-content: space-between;
          flex-wrap: wrap;
      }
 
-     .artists ul li, .playInd ul li {
+     .artists ul li,
+     .playInd ul li {
          width: calc(50% - 5px)
      }
 
-     .artists ul li a, .playInd ul li a {
+     .artists ul li a,
+     .playInd ul li a {
          display: flex;
          flex-direction: column;
          align-items: center;
          height: 80%;
      }
 
-     .artists ul li img{
+     .artists ul li img {
          height: 100%;
          object-fit: cover;
      }
 
-     .playInd ul li img{
-        height: 100%;
-        object-fit: contain;
+     .playInd ul li img {
+         height: 100%;
+         object-fit: contain;
      }
+
      /*Sección Canciones */
 
      .songs ul {
@@ -1555,11 +1599,13 @@ section .textos p {
 
      /*sección de detalle albums*/
 
-     .main-alb , .pod {
+     .main-alb,
+     .pod {
          display: flex;
      }
 
-     .main-alb article , .pod article {
+     .main-alb article,
+     .pod article {
          width: calc(50% - 5px);
      }
 
@@ -1592,45 +1638,47 @@ section .textos p {
          flex-wrap: wrap;
      }
 
-     section.secciones-result ul li{
+     section.secciones-result ul li {
          width: calc(50% - 5px);
      }
 
-    
+
 
 
      /*seccion albumes*/
-     .albums ul, .podcast ul{
+     .albums ul,
+     .podcast ul {
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: space-between;
      }
 
-     .albums li, .podcast li {
+     .albums li,
+     .podcast li {
          width: calc(50% - 5px)
      }
-    
-    /*Haremos flex los bodys para que el ancho del mismo no dependa del contenido y se vea bien en cualquier monitor*/
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-    }
 
-    footer {
-        margin-top: auto;
-    }
+     /*Haremos flex los bodys para que el ancho del mismo no dependa del contenido y se vea bien en cualquier monitor*/
+     body {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 100vh;
+     }
 
-    .main {
-        height: 100%;
-    }
+     footer {
+         margin-top: auto;
+     }
+
+     .main {
+         height: 100%;
+     }
 
  }
 
  @media (min-width: 1024px) {
 
-   
+
      /*Header y sección principal*/
      header {
          display: flex;
@@ -1647,7 +1695,7 @@ section .textos p {
          flex-wrap: nowrap;
      }
 
-     header .contenedor{
+     header .contenedor {
          width: auto;
      }
 
@@ -1658,11 +1706,13 @@ section .textos p {
 
 
      /*Sección artistas y playlist*/
-     .artists h2, .playInd h2  {
+     .artists h2,
+     .playInd h2 {
          padding-bottom: 40px;
      }
 
-     .artists ul li , .playInd ul li {
+     .artists ul li,
+     .playInd ul li {
          align-items: center;
          justify-content: baseline;
          width: calc(17% - 15px);
@@ -1670,13 +1720,15 @@ section .textos p {
 
      }
 
-     .artists ul li img , .playInd ul li img{
+     .artists ul li img,
+     .playInd ul li img {
          height: 30vh;
      }
 
      /*Sección Canciones */
      .songs h2,
-     .albums h2, .podcast h2 {
+     .albums h2,
+     .podcast h2 {
          padding: 20px;
      }
 
@@ -1752,14 +1804,16 @@ section .textos p {
 
 
      /*Páginas albums*/
-     .albums li , .podcast li {
+     .albums li,
+     .podcast li {
          width: calc(33% - 5px)
      }
 
      /*Páginas resultados*/
-     section.secciones-result ul li{
-        width: calc(33% - 5px);
-    }
+     section.secciones-result ul li {
+         width: calc(33% - 5px);
+     }
+
      /*Páginas artistas*/
      .sec-art-ppal {
          background-image: url("/images/bruno2.jpg");
@@ -1778,6 +1832,6 @@ section .textos p {
          font-size: 20px;
          padding: 20px;
      }
- 
+
 
  }
