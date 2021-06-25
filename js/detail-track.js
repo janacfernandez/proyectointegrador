@@ -1,9 +1,9 @@
+// carga el documento antes de empezar los scripts
 window.addEventListener("load", function () {
-
+    //alojado todo el querystring
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
-    let canc = queryStringObjt.get("id");
-
+    let canc = queryStringObjt.get("id"); //permite obtener el valor del querystring
     let trackPlay = document.querySelector(".detail-track .head");
     let trackDetail = document.querySelector(".detail-track .play-ppal .data");
     let barraSec = document.querySelector(".detail-track .play-ppal .barra-sec ");
@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
             let link = datos.preview;
 
             trackPlay.innerHTML += `<div class="head">
-        <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
+        <a href="" class="exit"> <i class="fas fa-angle-down"></i></a>
         <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
         </div> `;
             imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`;
@@ -39,7 +39,9 @@ window.addEventListener("load", function () {
         })
 
 
-    // Declaro un array vacio, para almacenar las canciones.
+
+    //webstorage herramienta para almacenar información en el navegador del usuario , es decir, del lado del cliente//
+    // declaro un array vacio, para almacenar las canciones
     let canFav = [];
 
     //Recupero datos del storage
@@ -53,13 +55,13 @@ window.addEventListener("load", function () {
         // si el id de la cancion actual esta en la lista (canc es la variable declarada que contiene el id)
         if (canFav.includes(canc)) {
             let boton = document.querySelector(".but-fun .fav");
-            boton.innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`
+            boton.innerHTML = ` Quitar de Playlist <i class="fas fa-heart"></i>`;
         }
     }
     //agregar-sacar cancion actual de playlist
 
     //link "agregar a playlist"
-    let fav = document.querySelector(".but-fun .fav");
+    let fav = document.querySelector(".but-fun .fav"); //capturamos el elemento de html
 
     //al clickear en el link
     fav.addEventListener("click", function (e) {
