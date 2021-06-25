@@ -1,7 +1,9 @@
 window.addEventListener("load", function () {
+
     let queryString = location.search;
     let queryStringObjt = new URLSearchParams(queryString);
     let canc = queryStringObjt.get("id");
+
     let trackPlay = document.querySelector(".detail-track .head");
     let trackDetail = document.querySelector(".detail-track .play-ppal .data");
     let barraSec = document.querySelector(".detail-track .play-ppal .barra-sec ");
@@ -25,27 +27,22 @@ window.addEventListener("load", function () {
             trackPlay.innerHTML += `<div class="head">
         <a href="#" class="exit"> <i class="fas fa-angle-down"></i></a>
         <a href="detail-album.html?id=${albumId}" class="album">${tracks}</a>
-    </div> `
-            imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`
-
-
+        </div> `;
+            imgPort.innerHTML += `<img class="i-port" src="${imgCan}" alt="imagendeportada">`;
             trackDetail.innerHTML += `<p> ${cancion} </p>
-         <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a> `
-
-            barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `
-
+         <a href="detail-artist.html?id=${artId}"> ${nombreArt2}</a> `;
+            barraSec.innerHTML += `<audio src="${link}" controls loop></audio> `;
             player.src = `https://widget.deezer.com/widget/dark/track/${canc}`;
         })
-
         .catch(function (error) {
             console.log(error);
         })
 
 
-    // declaro un array vacio, para almacenar las canciones
+    // Declaro un array vacio, para almacenar las canciones.
     let canFav = [];
 
-    //recupero datos del storage
+    //Recupero datos del storage
     let recuperoStorage = localStorage.getItem("favorito");
     console.log(recuperoStorage);
     // utilizo un condicional para saber si hay algo guardado en "favoritos"
@@ -103,10 +100,4 @@ window.addEventListener("load", function () {
         ///fin///
 
     })
-
-
-
-
-
-
 })

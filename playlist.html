@@ -1,141 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Indicamos el conjunto de caracters a utilizar-->
-        <meta charset="utf-8">
-        <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--A continuación linkearemos todas las fuentes utilizadas-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-        <link rel="stylesheet" href="css/main-style.css">
-        <script src="js/general.js"></script>
-        <script src="js/playlist.js"></script>
-    </head>
 
-    <body>
-        <header>
-            <div class="contenedor">
-                <img src="images/logo.png" alt="Logo wow music">
-            
-                <button id="butMenu" title="Menu">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div> 
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="/#art-sec">Artistas</a></li>
-                    <li><a href="/#canc-sec">Canciones</a></li>
-                    <li><a href="/#alb-sec">Albumes</a></li>
-                    <li><a href="genres.html">Géneros</a></li>
-                    <li><a href="playlist.html">Playlists</a></li>
-                    <li><a href="about-us.html">Conocenos</a></li>
-                    <li>
-                        <form action="search-results.html" method="GET">
-                            <input type="text" name="q" placeholder="Buscar" required>
-                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
-                                    alt="Busqueda" /></button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </header> 
-        <main class="play-track">
-            <div class="sec-play-ppal">
-                <h1> Mi Playlist </h1>
-                <img src="images/playlist.jpg" alt="imagenplaylist">
-            </div>
-            <section class="sec-play-sec">
-                <h2>Mis Canciones </h2>
+<head>
+    <!--Indicamos el conjunto de caracters a utilizar-->
+    <meta charset="utf-8">
+    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A continuación linkearemos todas las fuentes utilizadas-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+    <link rel="stylesheet" href="css/main-style.css">
+    <script src="js/general.js"></script>
+    <script src="js/playlist.js"></script>
+</head>
 
-           <ul class="playlist">
+<body>
+    <header>
+        <div class="contenedor">
+            <img src="images/logo.png" alt="Logo wow music">
 
-                       <!---  <li class="play-can">
-                        <img src="images/yesterday.jpg" alt="cancion1">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">Yesterday</a></h4>
-                            <a href="detail-artist.html" class="artista"> THE BEATLES</a>
-                        </div>
-                        <div class="play-play">
-                             <audio src="" controls loop></audio> 
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></a></p>
-                      
+            <button id="butMenu" title="Menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/#art-sec">Artistas</a></li>
+                <li><a href="/#canc-sec">Canciones</a></li>
+                <li><a href="/#alb-sec">Albumes</a></li>
+                <li><a href="genres.html">Géneros</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="about-us.html">Conocenos</a></li>
+                <li>
+                    <form action="search-results.html" method="GET">
+                        <input class="buscar" type="text" name="q" placeholder="Buscar">
+                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                alt="Busqueda" /></button>
+                    </form>
+                </li>
+                <li class="validador"></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="play-track">
+        <div class="sec-play-ppal">
+            <h1> Mi Playlist </h1>
+            <img src="images/playlist.jpg" alt="imagenplaylist">
+        </div>
+        <section class="sec-play-sec">
+            <h2>Mis Canciones </h2>
 
-                    </li>
-                    <li class="play-can">
-                        <img src="images/syt.jpg" alt="cancion2">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">Save Your Tears</a></h4>
-                            <a href="detail-artist.html" class="artista"> THE WEEKEND</a>
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></a></p>
-                    </li>
-                    <li class="play-can">
-                        <img src="images/imagine.jpg" alt="cancion3">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">IMAGINE</a></h4>
-                            <a href="detail-artist.html" class="artista">JOHN LENNON</a>
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></p></a>
-                    </li>
-                    <li class="play-can">
-                        <img src="images/loseyourself.jpg" alt="cancion4">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">Lose yourself</a></h4>
-                            <a href="detail-artist.html" class="artista">EMINEM</a>
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></a></p>
-                    </li>
-                    <li class="play-can">
-                        <img src="images/slts.jpg" alt="cancion5">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">Smells like Teen Spirit</a></h4>
-                            <a href="detail-artist.html" class="artista"> NIRVANA</a>
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></a></p>
-                    </li>
-                    <li class="play-can">
-                        <img src="images/Bohemianrhapsody.jpg" alt="cancion6">
-                        <div class="text">
-                            <h4 class="canciones"><a href="detail-track.html">Bohemian Rhapsody</h4></a>
-                            <a href="detail-artist.html" class="artista">QUEEN</a>
-                        </div>
-                        <p class="duracion">4:20</p>
-                        <p class="favorito"> <a href="#"><i class="far fa-heart"></i></a></p>
-                    </li> -->
-                </ul>
-            </section>
-        </main>
-        <!-- INICIO contenedor elementos de pie -->
-        <footer class="contenedor">
-            <img src="images/logo.png" alt="Logo">
-            <div class="integrantes">
-                <ul>
-                    <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
-                    <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
-                    <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
-                </ul>
-                <p>Copyright 2021- wowmusic </p>
-            </div>
-        </footer>
-        <!-- FIN footer -->
+            <ul class="playlist">
+                <!--Información provista por la API-->
+            </ul>
+        </section>
+    </main>
+    <!-- INICIO contenedor elementos de pie -->
+    <footer class="contenedor">
+        <img src="images/logo.png" alt="Logo">
+        <div class="integrantes">
+            <ul>
+                <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
+                <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
+                <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
+            </ul>
+            <p>Copyright 2021- wowmusic </p>
+        </div>
+    </footer>
+    <!-- FIN footer -->
+</body>
 
-       
-    </body>
 </html>
-
-

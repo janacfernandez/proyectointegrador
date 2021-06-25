@@ -1,15 +1,10 @@
 window.addEventListener("load", function () {
-   
 
     console.log(window);
-
     console.log(window.location);
-
     console.log(window.location.search);
 
-
     let playlist = document.querySelector(".sec-play-sec .playlist");
-
     let recuperoStorage = localStorage.getItem("favorito");
 
     console.log(recuperoStorage);
@@ -20,7 +15,6 @@ window.addEventListener("load", function () {
 
     for (let i = 0; i < canRecuperadas.length; i++) {
         let cancion = canRecuperadas[i];
-
 
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${cancion}`)
             .then(function (response) {
@@ -41,15 +35,9 @@ window.addEventListener("load", function () {
                 <a href="detail-artist.html?id=${artId}" class="artista"> ${nombreArt2}</a>
             </div>
             <p class="favorito"> <a href="" class="fav"><i class="fas fa-heart"></i></a></p></li>`;
-           
-        
-        })
-
-                .catch(function (error) {
-                    console.log("el error fue" + error);
-                })
-            }
-
-
-
+            })
+            .catch(function (error) {
+                console.log("el error fue" + error);
+            })
+    }
 })

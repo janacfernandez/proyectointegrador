@@ -1,8 +1,10 @@
 window.addEventListener("load", function () {
 
     let list = document.querySelector(".genres")
+    //Guardaremos en un array los ids de los géneros que querramos que nuestra web ofrezca, ya que para esto la API de Deezer no nos ofrecia un chart (o generos en tendencia) como si lo hacia por ejemplo con artistas.
     let generos = [132, 116, 122, 152, 106, 144]
 
+    //Utilizamos un bucle for para recorrer el array que definimos anteriormente y para que por cada género haga las acciones que queríamos (especificadas en el .then())
     for (let i = 0; i < generos.length; i++) {
         let genre = generos[i];
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${genre}`)
@@ -17,9 +19,9 @@ window.addEventListener("load", function () {
                             <h2>${nombreGenero}</h2>
                         </li>
                     </a>`;
-                /* let seccion = document.querySelector(`.genres li`)
-                 console.log(seccion)
-                 seccion.style.backgroundImage += `url('${imagenGenero}')`;*/
+            })
+            .catch(function (e) {
+                console.log(e);
             })
     }
 })

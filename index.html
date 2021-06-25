@@ -1,151 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Indicamos el conjunto de caracters a utilizar-->
-        <meta charset="utf-8">
-        <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--A continuación linkearemos todas las fuentes utilizadas-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-        <link rel="stylesheet" href="css/main-style.css">
-        <script src="js/general.js"></script>
-        <script src="js/index.js"></script>
-    </head>
 
-    <body class="bod-index">
-        <div class= "centrado" id="desapear"><div class="lds-dual-ring"></div></div>
-        <!----------------------------------Comienzo del encabezado---------------------------------->
-        <header class="head-index">
-            <div class="contenedor">
-                <img src="images/logo.png" alt="Logo wow music">
-            
-                <button id="butMenu" title="Menu">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div>
-            
-            <nav id="menu">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#art-sec">Artistas</a></li>
-                    <li><a href="#canc-sec">Canciones</a></li>
-                    <li><a href="#alb-sec">Albumes</a></li>
-                    <li><a href="genres.html">Géneros</a></li>
-                    <li><a href="playlist.html">Playlists</a></li>
-                    <li><a href="about-us.html">Conocenos</a></li>
-                    <li>
-                        <form action="search-results.html" method="GET">
-                            <input class="buscar" type="text" name="q" placeholder="Buscar">
-                            <button type="submit" name=""><img src="https://img.icons8.com/metro/15/search.png"
-                                    alt="Busqueda" /></button>
-                        </form>
-                    </li>
-                    <li class="validador"></li>
-                </ul>
-            </nav>
-        </header>
-        <!------------------------------------Fin del encabezado------------------------------------>
+<head>
+    <!--Indicamos el conjunto de caracters a utilizar-->
+    <meta charset="utf-8">
+    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A continuación linkearemos todas las fuentes utilizadas-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+    <link rel="stylesheet" href="css/main-style.css">
+    <script src="js/general.js"></script>
+    <script src="js/index.js"></script>
+</head>
 
-        <!------------------------------------Comienzo Principal------------------------------------>
-        <main>
-            <!--inicio sección inicial-->
-            <section class="sec-ppal">
-                <!--Dijimos que el idioma de la web era español pero como el título está en ingles lo aclaramos con el atributo lang=""-->
-                <hgroup>
-                    <h1 lang="en">Wow music</h1>
-                    <h2>Tus canciones favoritas en todo momento y lugar</h2>
-                </hgroup>
-                <div class="but">
-                    <a href="/#art-sec" class="but-ppal">Comenzar ahora</a>
-                    <a href="/#sec" class="but-sec">Saber más</a>
-                </div>
-            </section>
-            <!--inicio segunda sección-->
-            <section class="sec-sec" id="sec">
-                <hgroup>
-                    <h2>Explora la mejor música</h2>
-                    <h3>Disfrutá de los mejores éxitos del mundo musical</h3>
-                </hgroup>
-                <section class="circles">
-                    <article class="icon">
-                        <img src="https://img.icons8.com/material/80/ffffff/sound-cloud-.png" alt="Icono nube musical">
-                        <h4 lang="en">Top songs</h4>
-                        <p>Las canciones más escuchadas</p>
-                    </article>
-                    <article class="icon">
-                        <img src="https://img.icons8.com/material/80/ffffff/dj.png" alt="Icono DJ" />
-                        <h4 lang="en">Top artists</h4>
-                        <p>Los mejores artistas de todos los tiempos</p>
-                    </article>
-                    <article class="icon">
-                        <img src="https://img.icons8.com/material/80/ffffff/80s-music.png" alt="Icono album" />
-                        <h4 lang="en">Top albums</h4>
-                        <p>Los albumes que han hecho historia</p>
-                    </article>
-                    <article class="icon">
-                        <img src="https://img.icons8.com/material/80/ffffff/photos-folder--v1.png"
-                            alt="Icono de carpeta musical" />
-                        <h4>Tu playlist</h4>
-                        <p>Armala con tus canciones favoritas</p>
-                    </article>
-                </section>
-            </section>
-            <!--inicio sección artistas-->
-            <section class="artists" id="art-sec">
-                <h2>Nuestros artistas</h2>
-                <ul>
-                   
-                </ul>
-            </section>
-            <!--inicio sección canciones-->
-            <section class="songs" id="canc-sec">
-                <h2>Nuestras canciones</h2>
-                <ul>
-                    <!-- Área vacia a completar con Api-->
-                </ul>
-            </section>
-            <!--inicio sección albumes-->
-            <section class="albums" id="alb-sec">
-                <h2>Nuestros albumes</h2>
-                <ul class="liAlbum">
-                    <!-- Área vacia a completar con Api-->
-                </ul>
-            </section>
-             <!--inicio sección playlist-->
-             <section class="playInd" id="play-sec">
-                <h2>Nuestras Playlists</h2>
-                <ul>
-                    <!-- Área vacia a completar con Api-->
-                </ul>
-            </section>
-            <!--inicio sección podcasts-->
-            <section class="podcast" >
-                <h2>Nuestros Podcasts</h2>
-                <ul class="liPodcast">
-                    <!-- Área vacia a completar con Api-->
-                </ul>
-            </section>
-        </main>
-        <!--------------------------------------Fin Principal-------------------------------------->
-        <!--------------------------------------Comienzo Footer-------------------------------------->
-        <footer>
-            <!-- INICIO contenedor elementos de pie -->
-            <img src="images/logo.png" alt="Logo">
-            <div class="integrantes">
-                <ul>
-                    <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
-                    <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
-                    <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
-                </ul>
-                <p>Copyright 2021- wowmusic </p>
+<body class="bod-index">
+
+    <!----------------------------------Comienzo del encabezado---------------------------------->
+    <header class="head-index">
+        <div class="contenedor">
+            <img src="images/logo.png" alt="Logo wow music">
+
+            <button id="butMenu" title="Menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#art-sec">Artistas</a></li>
+                <li><a href="#canc-sec">Canciones</a></li>
+                <li><a href="#alb-sec">Albumes</a></li>
+                <li><a href="genres.html">Géneros</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="about-us.html">Conocenos</a></li>
+                <li>
+                    <form action="search-results.html" method="GET">
+                        <input class="buscar" type="text" name="q" placeholder="Buscar">
+                        <button type="submit" name=""><img src="https://img.icons8.com/metro/15/search.png"
+                                alt="Busqueda" /></button>
+                    </form>
+                </li>
+                <li class="validador"></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------------------------Fin del encabezado------------------------------------>
+
+    <!------------------------------------Comienzo Principal------------------------------------>
+    <main>
+        <div class="centrado" id="desapear">
+            <div class="lds-dual-ring"></div>
+        </div>
+        <!--inicio sección inicial-->
+        <section class="sec-ppal">
+            <!--Dijimos que el idioma de la web era español pero como el título está en ingles lo aclaramos con el atributo lang=""-->
+            <hgroup>
+                <h1 lang="en">Wow music</h1>
+                <h2>Tus canciones favoritas en todo momento y lugar</h2>
+            </hgroup>
+            <div class="but">
+                <a href="/#art-sec" class="but-ppal">Comenzar ahora</a>
+                <a href="/#sec" class="but-sec">Saber más</a>
             </div>
-        </footer>
-        <!--------------------------------------Fin del Footer-------------------------------------->
-    </body>
+        </section>
+        <!--inicio segunda sección-->
+        <section class="sec-sec" id="sec">
+            <hgroup>
+                <h2>Explora la mejor música</h2>
+                <h3>Disfrutá de los mejores éxitos del mundo musical</h3>
+            </hgroup>
+            <section class="circles">
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/sound-cloud-.png" alt="Icono nube musical">
+                    <h4 lang="en">Top songs</h4>
+                    <p>Las canciones más escuchadas</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/dj.png" alt="Icono DJ" />
+                    <h4 lang="en">Top artists</h4>
+                    <p>Los mejores artistas de todos los tiempos</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/80s-music.png" alt="Icono album" />
+                    <h4 lang="en">Top albums</h4>
+                    <p>Los albumes que han hecho historia</p>
+                </article>
+                <article class="icon">
+                    <img src="https://img.icons8.com/material/80/ffffff/photos-folder--v1.png"
+                        alt="Icono de carpeta musical" />
+                    <h4>Tu playlist</h4>
+                    <p>Armala con tus canciones favoritas</p>
+                </article>
+            </section>
+        </section>
+        <!--inicio sección artistas-->
+        <section class="artists" id="art-sec">
+            <h2>Nuestros artistas</h2>
+            <ul>
+                <!--Información provista por la API-->
+            </ul>
+        </section>
+        <!--inicio sección canciones-->
+        <section class="songs" id="canc-sec">
+            <h2>Nuestras canciones</h2>
+            <ul>
+                <!-- Área vacia a completar con Api-->
+            </ul>
+        </section>
+        <!--inicio sección albumes-->
+        <section class="albums" id="alb-sec">
+            <h2>Nuestros albumes</h2>
+            <ul class="liAlbum">
+                <!-- Área vacia a completar con Api-->
+            </ul>
+        </section>
+        <!--inicio sección playlist-->
+        <section class="playInd" id="play-sec">
+            <h2>Nuestras Playlists</h2>
+            <ul>
+                <!-- Área vacia a completar con Api-->
+            </ul>
+        </section>
+        <!--inicio sección podcasts-->
+        <section class="podcast">
+            <h2>Nuestros Podcasts</h2>
+            <ul class="liPodcast">
+                <!-- Área vacia a completar con Api-->
+            </ul>
+        </section>
+    </main>
+    <!--------------------------------------Fin Principal-------------------------------------->
+    <!--------------------------------------Comienzo Footer-------------------------------------->
+    <footer>
+        <!-- INICIO contenedor elementos de pie -->
+        <img src="images/logo.png" alt="Logo">
+        <div class="integrantes">
+            <ul>
+                <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
+                <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
+                <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
+            </ul>
+            <p>Copyright 2021- wowmusic </p>
+        </div>
+    </footer>
+    <!--------------------------------------Fin del Footer-------------------------------------->
+</body>
+
 </html>

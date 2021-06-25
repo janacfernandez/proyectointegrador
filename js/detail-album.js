@@ -1,23 +1,15 @@
 window.addEventListener("load", function () {
-
-
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
     let idAlbum = queryStringObj.get('id');
     let cambioJava = document.querySelector("main .alb-info ");
     let tracklistSec = document.querySelector("main .tracklist ol");
 
-    console.log(idAlbum)
-
-
-
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${idAlbum}`)
         .then(function (response) {
             return response.json();
-
         })
         .then(function (datos) {
-            console.log(datos);
             let titulo = datos.title;
             let artista = datos.artist.name;
             let artistaId = datos.artist.id;
@@ -27,7 +19,6 @@ window.addEventListener("load", function () {
             let tracklist = datos.tracks.data;
             let genero = datos.genres.data[0].name;
             let generoId = datos.genres.data[0].id;
-            //let tracklist = basico.tracks.data.title
             cambioJava.innerHTML +=
                 `<h2>${titulo}</h2><h2>${año}</h2>
             <img src="${foto}" alt="Iluminate">
@@ -44,16 +35,4 @@ window.addEventListener("load", function () {
             console.log(error);
 
         })
-
-
-    /* fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idAlbum}`)
-         .then(function (response) {
-             return response.json();
-         })
-         .then(function (datos) {
-             console.log(datos)
-         })
-         .catch(function (error) {
-             console.log(error);
-         })*/
 })

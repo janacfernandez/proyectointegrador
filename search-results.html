@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--Indicamos el conjunto de caracters a utilizar-->
-        <meta charset="utf-8">
-        <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--A continuación linkearemos todas las fuentes utilizadas-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
-        <link rel="stylesheet" href="css/main-style.css">
-        <script src="js/general.js"></script>
-        <script src="js/search-results.js"></script>
-    </head>
 
-    <body class="bod-search">
-        <header>
-            <div class="contenedor">
-                <img src="images/logo.png" alt="Logo wow music">
-            
-                <button id="butMenu" title="Menu">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div> 
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="/#art-sec">Artistas</a></li>
-                    <li><a href="/#canc-sec">Canciones</a></li>
-                    <li><a href="/#alb-sec">Albumes</a></li>
-                    <li><a href="genres.html">Géneros</a></li>
-                    <li><a href="playlist.html">Playlists</a></li>
-                    <li><a href="about-us.html">Conocenos</a></li>
-                    <li>
-                        <form action="search-results.html" method="GET">
-                            <input type="text" name="q" placeholder="Buscar" required>
-                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
-                                    alt="Busqueda" /></button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="ppcal-result">
+<head>
+    <!--Indicamos el conjunto de caracters a utilizar-->
+    <meta charset="utf-8">
+    <!--Utilizamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A continuación linkearemos todas las fuentes utilizadas-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Linkeamos con la hoja .css donde daremos todos los estilos necesarios-->
+    <link rel="stylesheet" href="css/main-style.css">
+    <script src="js/general.js"></script>
+    <script src="js/search-results.js"></script>
+</head>
 
-         <h1>Resultados de búsqueda para: </h1>
-         
-         <div class="cont">
+<body class="bod-search">
+    <header>
+        <div class="contenedor">
+            <img src="images/logo.png" alt="Logo wow music">
+
+            <button id="butMenu" title="Menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/#art-sec">Artistas</a></li>
+                <li><a href="/#canc-sec">Canciones</a></li>
+                <li><a href="/#alb-sec">Albumes</a></li>
+                <li><a href="genres.html">Géneros</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="about-us.html">Conocenos</a></li>
+                <li>
+                    <form action="search-results.html" method="GET">
+                        <input class="buscar" type="text" name="q" placeholder="Buscar">
+                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                alt="Busqueda" /></button>
+                    </form>
+                </li>
+                <li class="validador"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="ppcal-result">
+
+        <h1>Resultados de búsqueda para: </h1>
+
+        <div class="cont">
             <ul class="busq">
                 <li><a href="" id="todo">Todo &or;</a></li>
                 <li><a href="" id="artistas">Artista &or;</a></li>
@@ -62,31 +65,34 @@
             </ul>
         </div>
 
-       
         <section class="secciones-result">
-            <div class= "centrado" id="desapear"><div class="lds-dual-ring"></div></div>
+            <div class="centrado" id="desapear">
+                <div class="lds-dual-ring"></div>
+            </div>
             <article class="artistResults filtro">
                 <h2>Artista:</h2>
                 <ul class="listArtist">
-
+                    <!--Información provista por la API-->
                 </ul>
 
             </article>
             <article class="songResults filtro">
                 <h2>Canciones:</h2>
                 <ul class="listSongs">
-
+                    <!--Información provista por la API-->
                 </ul>
             </article>
             <article class="albumResults filtro">
                 <h2>Albumes:</h2>
                 <ul class="listAlbums">
+                    <!--Información provista por la API-->
                 </ul>
             </article>
 
             <article class="playlistResults filtro">
                 <h2>Playlists:</h2>
                 <ul class="listPlaylists">
+                    <!--Información provista por la API-->
                 </ul>
             </article>
 
@@ -94,28 +100,28 @@
             <article class="artistEspecifico filtro inact">
                 <h2>Artista:</h2>
                 <ul class="artistArticle">
-
+                    <!--Información provista por la API-->
                 </ul>
-
             </article>
 
             <article class="albumEspecifico filtro inact">
                 <h2>Albumes:</h2>
                 <ul class="albumsArticle">
-
+                    <!--Información provista por la API-->
                 </ul>
             </article>
+
             <article class=" cancionEspecifico filtro inact">
                 <h2>Canciones:</h2>
                 <ul class="songsArticle">
-
+                    <!--Información provista por la API-->
                 </ul>
             </article>
 
             <article class=" playlistEspecifico filtro inact">
                 <h2>Playlists:</h2>
                 <ul class="playlistArticle">
-
+                    <!--Información provista por la API-->
                 </ul>
             </article>
         </section>

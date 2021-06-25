@@ -1,86 +1,84 @@
-<html>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
 
-        <!--Indicamos el conjunto de caracters -->
-        <meta charset="utf-8">
+<head>
 
-        <!--Usamos la meta tag name="viewport" para lograr una página responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Indicamos el conjunto de caracters -->
+    <meta charset="utf-8">
 
-        <!--Linkeo de fuentes-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <!--Linkeo con la hoja css-->
-        <link rel="stylesheet" href="css/main-style.css">
-        <script src="js/general.js"></script>
-        <script src="js/detail-album.js"></script>
-       
-    </head>
+    <!--Usamos la meta tag name="viewport" para lograr una página responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body class="bod-alb">
+    <!--Linkeo de fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--Linkeo con la hoja css-->
+    <link rel="stylesheet" href="css/main-style.css">
+    <script src="js/general.js"></script>
+    <script src="js/detail-album.js"></script>
 
-        <!----------------------------------Comienzo del encabezado---------------------------------->
-        <header>
-            <div class="contenedor">
-                <img src="images/logo.png" alt="Logo wow music">
-            
-                <button id="butMenu" title="Menu">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div> 
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="/#art-sec">Artistas</a></li>
-                    <li><a href="/#canc-sec">Canciones</a></li>
-                    <li><a href="/#alb-sec">Albumes</a></li>
-                    <li><a href="genres.html">Géneros</a></li>
-                    <li><a href="playlist.html">Playlists</a></li>
-                    <li><a href="about-us.html">Conocenos</a></li>
-                    <li>
-                        <form action="search-results.html">
-                            <input type="text" name="q" placeholder="Buscar" required>
-                            <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
-                                    alt="Busqueda" /></button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!------------------------------------Fin del encabezado------------------------------------>
-        <main>   
-            <section class="main-alb">
-              <article class="alb-info">
+</head>
 
-                </article>
-                <article class="tracklist">
-                    <h3>Tracklist</h3>
-                    <ol>
-                        
-                    </ol>
-                </article>
-            </section>
+<body class="bod-alb">
+    <!----------------------------------Comienzo del encabezado---------------------------------->
+    <header>
+        <div class="contenedor">
+            <img src="images/logo.png" alt="Logo wow music">
 
-    
-        </main>
+            <button id="butMenu" title="Menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/#art-sec">Artistas</a></li>
+                <li><a href="/#canc-sec">Canciones</a></li>
+                <li><a href="/#alb-sec">Albumes</a></li>
+                <li><a href="genres.html">Géneros</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="about-us.html">Conocenos</a></li>
+                <li>
+                    <form action="search-results.html">
+                        <input class="buscar" type="text" name="q" placeholder="Buscar">
+                        <button type="submit" name="search-but"><img src="https://img.icons8.com/metro/15/search.png"
+                                alt="Busqueda" /></button>
+                    </form>
+                </li>
+                <li class="validador"></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------------------------Fin del encabezado------------------------------------>
+    <main>
+        <section class="main-alb">
+            <article class="alb-info">
+                <!--Información provista por la API-->
+            </article>
+            <article class="tracklist">
+                <h3>Tracklist</h3>
+                <ol>
+                    <!--Información provista por la API-->
+                </ol>
+            </article>
+        </section>
+    </main>
+    <!-- INICIO footer -->
+    <footer class="contenedor">
+        <img src="images/logo.png" alt="Logo">
+        <div class="integrantes">
+            <ul>
+                <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
+                <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
+                <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
+            </ul>
+            <p>Copyright 2021- wowmusic </p>
+        </div>
+    </footer>
+</body>
 
-
-        <!-- INICIO footer -->
-        <footer class="contenedor">
-            <img src="images/logo.png" alt="Logo">
-            <div class="integrantes">
-                <ul>
-                    <li><a href="https://github.com/barralaugusto" target="_blank">Augusto</a></li>
-                    <li><a href="https://github.com/janacfernandez" target="_blank">Jana</a></li>
-                    <li><a href="https://github.com/SantinoTabossi" target="_blank">Santino</a></li>
-                </ul>
-                <p>Copyright 2021- wowmusic </p>
-            </div>
-        </footer>
-    </body>
 </html>
