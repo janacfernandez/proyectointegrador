@@ -614,39 +614,11 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      color: red;
  }
 
- .barra {
-     width: 100%;
-     justify-content: space-between;
-     margin: 15px auto 10px auto;
-     height: 3px;
-     background-color: #B1ADAD;
-     border-radius: 5px;
- }
+.widget {
+    width : 100%;
+    height: 150;
+}
 
- .barra p {
-     margin: 5px 0px;
-     font-size: 15px;
-     font-weight: bold;
- }
-
- .funciones {
-     width: 100%;
-     justify-content: space-around;
-     align-items: center;
-     margin: 0px auto;
- }
-
- .funciones a:hover {
-     color: grey;
- }
-
- .funciones .min {
-     font-size: 20px;
- }
-
- .funciones .max {
-     font-size: 50px;
- }
 
  .barra-sec {
      margin: 0;
@@ -752,6 +724,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  ul.playlist .play-can .text {
      text-align: start;
      width: 60%;
+     margin-left: 10px;
  }
 
  ul.playlist .play-can h4 {
@@ -795,8 +768,10 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
  /********************************************************************************************************
 *                                               ESTILOS PÁGINA DETAIL PLAYLIST
 **********************************************************************************************************/
-.track {
+.body-track {
     background-color: black;
+    padding: auto;
+    margin: 5px;
 }
 .track h1 {
     color: white;
@@ -1109,7 +1084,7 @@ Definimos margenes iniciales de la sección mas abarcativa para que quede con un
      filter: sepia(70%)
  }
 
- .albums li img:hover {
+ .albums li img:hover, .podcast li img:hover{
      filter: sepia(0%)
  }
 
