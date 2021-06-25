@@ -1,10 +1,15 @@
 window.addEventListener("load", function () {
+    
+      //Definimos las variables que necesitamos para quedarnos con la querystring (ID del artista) alojada en una variable, en este caso en idAlbum.
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
     let idAlbum = queryStringObj.get('id');
+    
+        //Capturamos  los elementos del DOM (nodos) que utilizaremos  y los almacenamos en variables.
     let cambioJava = document.querySelector("main .alb-info ");
     let tracklistSec = document.querySelector("main .tracklist ol");
 
+     //Con este método fetch consumiremos de la API los datos del album cuyo ID esta almacenado en la variable idAlbum.
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${idAlbum}`)
         .then(function (response) {
             return response.json();
@@ -15,6 +20,8 @@ window.addEventListener("load", function () {
             let artistaId = datos.artist.id;
             let foto = datos.cover_medium;
             let fecha = datos.release_date;
+
+            //metodo para seleccionar solo los primeros 4 caracteres 
             let año = fecha.substring(0, 4);
             let tracklist = datos.tracks.data;
             let genero = datos.genres.data[0].name;
